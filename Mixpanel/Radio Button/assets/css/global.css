@@ -1,0 +1,103 @@
+/************* ANIMATIONS ************/
+@-webkit-keyframes fade {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: .4;
+  }
+  90% {
+    opacity: .4;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+#pagewrap {
+  width: 400px;
+  margin: 30px auto 0;
+  position: relative;
+}
+
+.circle {
+  background: #D9E4EC;
+  border-radius: 50em;
+  width: 24px;
+  height: 24px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.ring,
+.dot,
+.fade {
+  display: block;
+  border-radius: 50em;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.ring {
+  background: #fff;
+  margin: 0 auto;
+  width: 18px;
+  height: 18px;
+  transform: translate3d(0, 3px, 0) scale(0);
+  transition: transform 150ms ease-in-out;
+}
+
+.circle.active .ring {
+  visibility: visible;
+  transform: translate3d(0, 3px, 0) scale(1);
+  transition: transform 150ms ease-in-out;
+}
+
+.dot {
+  background: #6FB7F3;
+  margin: 0 auto;
+  width: 14px;
+  height: 14px;
+  transform: translate3d(0, -13px, 0) scale(0);
+  transition: transform 100ms ease-in-out 120ms;
+}
+
+.circle.active .dot {
+  visibility: visible;
+  transform: translate3d(0, -13px, 0) scale(1);
+  transition: transform 100ms ease-in-out 120ms;
+}
+
+.fade {
+  background: #000;
+  margin: 0 auto;
+  width: 46px;
+  height: 46px;
+  visibility: visible;
+  position: relative;
+  top: 35px;
+  transform: translate3d(0, 0, 0) scale(0);
+}
+
+.fade.active {
+  visibility: visible;
+  -webkit-animation: fade 550ms 100ms linear 1;
+}
+
+/*# sourceMappingURL=global.css.map */

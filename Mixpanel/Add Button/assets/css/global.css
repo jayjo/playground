@@ -1,0 +1,245 @@
+/************* ANIMATIONS ************/
+@-webkit-keyframes growth {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.85);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(0.85);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+#pagewrap {
+  width: 400px;
+  margin: 30px auto 0;
+  position: relative;
+}
+
+label {
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #66AEEB;
+  font-size: 21px;
+  font-weight: lighter;
+  display: block;
+  margin: 30px auto 10px;
+}
+
+.plus {
+  background: #fff;
+  border: 2px solid #CAD0D9;
+  width: 50px;
+  height: 50px;
+  display: block;
+  border-radius: 50em;
+  margin: 0 auto;
+  position: relative;
+}
+
+/************ PLUS ONE ********/
+.plus.one span {
+  display: inline-block;
+  height: 4px;
+  width: 24px;
+  background: #747D92;
+  border-radius: 50px;
+  position: absolute;
+}
+
+.plus.one {
+  transition: background 150ms, border 200ms;
+}
+
+.plus.one span:first-child {
+  transform: translate3d(11px, 21px, 0) rotateZ(0);
+  transition: transform 250ms ease-in-out 225ms, background 200ms;
+}
+
+.plus.one span:last-child {
+  transform: translate3d(11px, 21px, 0) rotateZ(90deg);
+  transition: transform 250ms ease-in-out 200ms, background 200ms;
+}
+
+.plus.one:hover {
+  background: #66AEEB;
+  border-color: #66AEEB;
+  transition: background 150ms, border 200ms;
+}
+
+.plus.one:hover span:first-child,
+.plus.one:hover span:last-child {
+  background: #fff;
+  transition: background 200ms;
+}
+
+.plus.one:hover span:first-child {
+  transform: translate3d(11px, 21px, 0) rotateZ(360deg);
+  transition: transform 250ms ease-in-out 200ms, background 200ms;
+}
+
+.plus.one:hover span:last-child {
+  transform: translate3d(11px, 21px, 0) rotateZ(450deg);
+  transition: transform 250ms ease-in-out 225ms, background 200ms;
+}
+
+/************ PLUS TWO ********/
+.plus.two {
+  transition: background 200ms;
+}
+
+.plus.two span {
+  display: inline-block;
+  background: #747D92;
+  border-radius: 50px;
+  position: absolute;
+}
+
+.plus.two span:first-child {
+  height: 4px;
+  width: 24px;
+  transform: translate3d(11px, 21px, 0);
+  transition: width 250ms ease-in-out 200ms, height 250ms ease-in-out 200ms, transform 250ms ease-in-out 200ms;
+}
+
+.plus.two span:last-child {
+  width: 4px;
+  height: 24px;
+  transform: translate3d(21px, 11px, 0);
+  transition: width 250ms ease-in-out 200ms, height 250ms ease-in-out 200ms, transform 250ms ease-in-out 200ms;
+}
+
+.plus.two:hover {
+  background: #66AEEB;
+  border-color: #66AEEB;
+  transition: background 150ms, border 200ms;
+}
+
+.plus.two:hover span:first-child,
+.plus.two:hover span:last-child {
+  background: #fff;
+  transition: background 200ms;
+}
+
+.plus.two:hover span:first-child {
+  width: 4px;
+  height: 24px;
+  transform: translate3d(21px, 11px, 0);
+  transition: width 250ms ease-in-out 200ms, height 250ms ease-in-out 200ms, transform 250ms ease-in-out 200ms;
+}
+
+.plus.two:hover span:last-child {
+  height: 4px;
+  width: 24px;
+  transform: translate3d(11px, 21px, 0);
+  transition: width 250ms ease-in-out 200ms, height 250ms ease-in-out 200ms, transform 250ms ease-in-out 200ms;
+}
+
+/************ PLUS THREE ********/
+.plus.three {
+  transform: scale(1);
+  transition: background 175ms ease-in-out, transform 175ms ease-in-out;
+}
+
+.plus.three span {
+  display: inline-block;
+  background: #747D92;
+  border-radius: 50px;
+  position: absolute;
+}
+
+.plus.three span:first-child {
+  width: 24px;
+  height: 4px;
+  transform: translate3d(11px, 21px, 0);
+  transition: width 175ms ease-in-out, transform 175ms ease-in-out;
+}
+
+.plus.three span:last-child {
+  height: 24px;
+  width: 4px;
+  transform: translate3d(21px, 11px, 0);
+  transition: height 175ms ease-in-out, transform 175ms ease-in-out;
+}
+
+.plus.three:hover {
+  background: #66AEEB;
+  border-color: #66AEEB;
+  transform: scale(1.1);
+  transition: background 175ms ease-in-out, border 175ms ease-in-out, transform 175ms ease-in-out;
+}
+
+.plus.three:hover span:first-child,
+.plus.three:hover span:last-child {
+  background: #fff;
+  transition: background 175ms ease-in-out;
+}
+
+.plus.three:hover span:first-child {
+  width: 28px;
+  transform: translate3d(9px, 21px, 0);
+  transition: width 175ms ease-in-out, transform 175ms ease-in-out;
+}
+
+.plus.three:hover span:last-child {
+  height: 28px;
+  transform: translate3d(21px, 9px, 0);
+  transition: height 175ms ease-in-out, transform 175ms ease-in-out;
+}
+
+/************ PLUS FOUR ********/
+.plus.four:hover {
+  -webkit-animation: growth 3s linear infinite;
+}
+
+.plus.four span {
+  display: inline-block;
+  background: #747D92;
+  border-radius: 50px;
+  position: absolute;
+}
+
+.plus.four span:first-child {
+  height: 4px;
+  width: 24px;
+  transform: translate3d(11px, 21px, 0);
+}
+
+.plus.four span:last-child {
+  width: 4px;
+  height: 24px;
+  transform: translate3d(21px, 11px, 0);
+}
+
+.plus.four:hover {
+  background: #66AEEB;
+  border-color: #66AEEB;
+  transition: background 150ms, border 200ms;
+}
+
+.plus.four:hover span:first-child,
+.plus.four:hover span:last-child {
+  background: #fff;
+  transition: background 200ms;
+}
+
+/*# sourceMappingURL=global.css.map */
