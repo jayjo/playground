@@ -27,18 +27,31 @@ body, html {
   font-size: 100%;
   padding: 0;
   margin: 0;
+}
+
+body.pict {
+  background: url(http://f.cl.ly/items/3F2e1j2x2X0X1u3j3k09/DSC00831.jpg);
+  background-size: cover;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   height: 100%;
 }
 
-body {
-  background: url(http://f.cl.ly/items/3F2e1j2x2X0X1u3j3k09/DSC00831.jpg);
-  background-size: cover;
+body.mix {
+  background: #8F81AD; /* Old browsers */
+  background-size: auto;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 #pagewrap {
   width: 600px;
-  margin: 0 auto 0;
+  margin: 0 auto;
+  position: relative;
+}
+
+#pagewrap.mix {
+  width: 1206px;
+  padding: 30px 0;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -57,6 +70,15 @@ body {
   transform: translate3d(150%, 650%, 0);
 }
 
+.mix .open {
+  position: absolute;
+  top: -40px;
+  right: 626px;
+  background: #fff;
+  border-color: #15A4FA;
+  color: #15A4FA;
+}
+
 .modal-cover {
   overflow: hidden;
   position: fixed;
@@ -67,6 +89,50 @@ body {
   visibility: hidden;
 }
 
+.holder {
+  top: 93px;
+  right: 4px;
+  width: 996px;
+  height: 799px;
+  position: absolute;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.modal-cover.blur {
+  background: url(http://f.cl.ly/items/3S3W46180P0S3T0Y381m/content-bg.png) no-repeat;
+  width: 996px;
+  height: 799px;
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-filter: blur(0);
+  min-height: 0;
+  background-size: auto;
+  overflow: hidden;
+  margin: -10px;
+}
+
+.blurry {
+  background: rgba(255,255,255,0);
+  z-index: 2;
+  height: 799px;
+}
+
+.modal-cover.blur.active .blurry {
+  background: rgba(255,255,255,0);
+  transition: background 400ms 100ms;
+}
+
+.modal-cover.blur.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-filter: blur(15px);
+  transition: opacity 100ms, -webkit-filter 250ms ease-in 100ms;
+}
+
 .modal-cover.active {
   opacity: 1;
   visibility: visible;
@@ -74,7 +140,7 @@ body {
 }
 
 .grad.one {
-  background: -webkit-radial-gradient(70% 30%, cover,  rgba(174,129,255,1) 0%, rgba(5,171,224,0) 100%); 
+  background: -webkit-radial-gradient(70% 30%, cover,  rgba(174,129,255,1) 0%, rgba(5,171,224,0) 100%);
   width: 100%;
   min-height: 100%;
   display: block;
@@ -100,6 +166,24 @@ body {
   opacity: 0;
 }
 
+.grad.six {
+  background: -webkit-radial-gradient(-55% 5%, cover, rgb(92,86,153) 0%, rgb(92,86,153) 100%);
+  width: 100%;
+  min-height: 100%;
+  display: block;
+  position: absolute;
+  opacity: 0;
+}
+
+.grad.seven {
+  background: -webkit-radial-gradient(85% 75%, cover, rgb(111,183,243) 0%, rgba(92,86,153, 0) 100%);
+  width: 100%;
+  min-height: 100%;
+  display: block;
+  position: absolute;
+  opacity: 0;
+}
+
 .modal-cover.active .grad.one {
   opacity: .9;
   transition: opacity 225ms ease-in 25ms;
@@ -113,6 +197,18 @@ body {
 .modal-cover.active .grad.three {
   opacity: .9;
   transition: opacity 225ms ease-in 225ms;
+}
+
+.modal-cover.active .grad.six {
+  opacity: 1;
+  transition: opacity 225ms ease-in 225ms;
+}
+
+// Modal Stuff
+
+.modal-cover.active .grad.seven {
+  opacity: 1;
+  transition: opacity 225ms ease-in 450ms;
 }
 
 .modal {
@@ -135,6 +231,26 @@ body {
   visibility: visible;
   transform: translate3d(25%,50%,0);
   transition: opacity 200ms ease-in 800ms, transform 450ms ease-out 850ms;
+}
+
+.modal.default {
+  width: 522px;
+  height: 423px;
+  background: url(http://f.cl.ly/items/0a2n0g0L1N263v270y2L/modal.png) no-repeat;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 5;
+  top: -40px;
+  right: 373px;
+  box-shadow: none;
+}
+
+.modal.default.active {
+  top: -70px;
+  visibility: visible;
+  opacity: 1;
+  transition: top 300ms 400ms, opacity 300ms 400ms;
 }
 
 h1 {

@@ -5,4 +5,9 @@ jQuery(document).ready(function($) {
 		$('.modal').addClass('active');
 	});
 
+	$('.open').on('click', function(){
+		$('.modal-cover.blur').addClass('active');
+		$('.modal.default').addClass('active');
+	});
+
 });
