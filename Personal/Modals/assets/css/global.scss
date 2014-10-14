@@ -99,6 +99,15 @@ body.mix {
   margin: 10px;
 }
 
+.container {
+  top: 93px;
+  right: 5px;
+  width: 996px;
+  height: 799px;
+  position: absolute;
+  overflow: hidden;
+}
+
 .modal-cover.blur {
   background: url(http://f.cl.ly/items/3S3W46180P0S3T0Y381m/content-bg.png) no-repeat;
   width: 996px;
@@ -137,6 +146,42 @@ body.mix {
   opacity: 1;
   visibility: visible;
   transition: opacity 5ms;
+}
+
+.squares ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 996px;
+  height: 799px;
+  overflow: hidden;
+}
+
+.squares ul li {
+  display: inline-block;
+  background: #233349;
+  padding: 0;
+  margin: 0;
+  width: 20%;
+  height: 161px;
+  margin-top: -2px;
+  width: 20%;
+  background: transparent;
+}
+
+.modal-cover.squares.active ul li {
+  transition: background 250ms;
+  background: #233349;
+}
+
+.modal-cover.squares.active ul li:nth-child(2n+0) {
+  background: #3DC7C8;
+  transition: background 250ms 75ms;
+}
+
+.modal-cover.squares.active ul li:nth-child(3n+0) {
+  transition: background 250ms 150ms;
+  background: #15A4FA;
 }
 
 .grad.one {
