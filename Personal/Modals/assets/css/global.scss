@@ -295,7 +295,7 @@ body.mix {
   top: -70px;
   visibility: visible;
   opacity: 1;
-  transition: top 300ms 400ms, opacity 300ms 400ms;
+  transition: top 300ms cubic-bezier(.06,.4,.27,.92) 400ms, opacity 300ms 400ms;
 }
 
 h1 {
@@ -312,4 +312,26 @@ h1 {
 p {
   color: #777;
   margin-top: 90px;
+}
+
+//// BOXES CSS
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  min-width: 100%;
+}
+
+.boxes {
+  min-height: 100%;
+  min-width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.boxes li {
+  display: inline-block;
+  width: 25%;
+  background: rgba(255,255,255,.5);
 }
