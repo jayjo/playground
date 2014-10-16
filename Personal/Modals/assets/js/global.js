@@ -5,4 +5,15 @@ jQuery(document).ready(function($) {
 		$('.modal').addClass('active');
 	});
 
+	$('.open').on('click', function(){
+		$('.modal-cover.blur').addClass('active');
+		$('.modal.default').addClass('active');
+	});
+
+	// if ($('body').hasClass('cozy')) {
+	// 	$('body').on('click', function(){
+	// 		alert("Start a support request.");
+	// 	});
+	// }
+
 });
