@@ -10,4 +10,10 @@ jQuery(document).ready(function($) {
 		$('.modal.default').addClass('active');
 	});
 
+	// if ($('body').hasClass('cozy')) {
+	// 	$('body').on('click', function(){
+	// 		alert("Start a support request.");
+	// 	});
+	// }
+
 });

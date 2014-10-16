@@ -320,6 +320,7 @@ p {
   min-height: 100%;
   width: 100%;
   min-width: 100%;
+  align-content: stretch;
 }
 
 .boxes {
@@ -335,3 +336,4 @@ p {
   width: 25%;
   background: rgba(255,255,255,.5);
 }
+
