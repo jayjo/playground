@@ -34,6 +34,7 @@ body.gobbble {
   background-size: cover;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   height: 100%;
+  width: 100%;
 }
 
 body.pict {
@@ -334,9 +335,10 @@ p {
 .boxes {
   height: 100%;
   width: 100%;
-  margin-left: 1%;
+  min-height: 100%;
+  margin-left: 0;
   overflow: hidden;
-  position: relative;
+  position: absolute;
   -webkit-backface-visibility: hidden;
 }
 
@@ -347,8 +349,7 @@ p {
   width: 25%;
   height: 50%;
   top: 0%;
-  padding-top: 1%;
-  padding-left: 1%;
+  padding: 1%;
 
   &.one, &.five {
     left: 0%;
@@ -420,6 +421,3 @@ p {
 .boxes p, .boxes h2 {
   margin-top: 20px;
 }
-
-
-
