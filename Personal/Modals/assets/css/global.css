@@ -169,10 +169,9 @@ body.mix {
   background: #233349;
   padding: 0;
   margin: 0;
-  width: 20%;
-  height: 161px;
+  width: 10%;
+  height: 69px;
   margin-top: -2px;
-  width: 20%;
   background: transparent;
 }
 
@@ -183,12 +182,120 @@ body.mix {
 
 .modal-cover.squares.active ul li:nth-child(2n+0) {
   background: #3DC7C8;
-  transition: background 250ms 75ms;
+  transition: background 250ms 50ms;
 }
 
 .modal-cover.squares.active ul li:nth-child(3n+0) {
+  transition: background 250ms 100ms;
+  background: #F12449;
+}
+
+.modal-cover.squares.active ul li:nth-child(4n+0) {
   transition: background 250ms 150ms;
-  background: #15A4FA;
+  background: #9DB324;
+}
+
+.modal-cover.squares.active ul li:nth-child(5n+0) {
+  transition: background 250ms 200ms;
+  background: #AE81FF;
+}
+
+.modal-cover.squares.active ul li:nth-child(6n+0) {
+  transition: background 250ms 250pms;
+  background: #C24109;
+}
+
+.modal-cover.squares.active ul li:nth-child(7n+0) {
+  transition: background 250ms 300ms;C28B09z
+  background: #F8F4C4;
+}
+
+.modal-cover.squares.active ul li:nth-child(8n+0) {
+  transition: background 250ms 350ms;
+  background: #313437;
+}
+
+.modal-cover.squares.active ul li:nth-child(9n+0) {
+  transition: background 250ms 400ms;
+  background: #62D9EF;
+}
+
+.modal-cover.spiral {
+  position: absolute;
+}
+
+.spiral ul li {
+  display: block;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  background: transparent;
+}
+
+.modal-cover.spiral.active ul li {
+  z-index: 1;
+  transition: background 250ms;
+  /*background: #2DE0DD;*/
+  background: rgba(0,0,0,.35);
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.modal-cover.spiral.active ul li:nth-child(2n+0) {
+  z-index: 2;
+  /*background: #69CCA2;*/
+  background: rgba(0,0,0,.35);
+  transition: background 250ms 75ms;
+  background-size: cover;
+  min-width: 90%;
+  min-height: 90%;
+  top: 5%;
+  left: 5%;
+  bottom: 5%;
+  right: 5%;
+}
+
+.modal-cover.spiral.active ul li:nth-child(3n+0) {
+  z-index: 3;
+  transition: background 250ms 150ms;
+  background-size: cover;
+  min-width: 80%;
+  min-height: 80%;
+  /*background: #A4B968;*/
+  background: rgba(0,0,0,.35);
+  top: 10%;
+  left: 10%;
+  bottom: 10%;
+  right: 10%;
+}
+
+.modal-cover.spiral.active ul li:nth-child(4n+0) {
+  z-index: 4;
+  transition: background 250ms 225ms;
+  background-size: cover;
+  min-width: 70%;
+  min-height: 70%;
+  /*background: #E0A52D;*/
+  background: rgba(0,0,0,.35);
+  top: 15%;
+  left: 15%;
+  bottom: 15%;
+  right: 15%;
+}
+
+.modal-cover.spiral.active ul li:nth-child(5n+0) {
+  z-index: 5;
+  transition: background 250ms 300ms;
+  background-size: cover;
+  min-width: 60%;
+  min-height: 60%;
+  /*background: #FFF;*/
+  background: rgba(0,0,0,.35);
+  top: 20%;
+  left: 20%;
+  bottom: 20%;
+  right: 20%;
 }
 
 .grad.one {
@@ -264,7 +371,7 @@ body.mix {
 .modal {
   background: #fff;
   position: fixed;
-  z-index: 1;
+  z-index: 7;
   width: 400px;
   height: 300px;
   border-radius: 5px;
