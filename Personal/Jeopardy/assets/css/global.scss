@@ -49,7 +49,7 @@ li.header {
 }
 
 li.amount {
-  color: #F1FD6C;
+  color: #EEBD68;
   text-shadow: 0 2px 2px rgba(0,0,0,.5);
   font-size: 70px;
   padding: 0;
@@ -73,7 +73,7 @@ li.amount:hover {
 }
 
 figure.answer {
-  min-width: 1280px;
+  min-width: 1440px;
   min-height: 800px;
   background-size: cover;
   position: fixed;
@@ -97,7 +97,7 @@ figure.answer {
 
 figure.answer.active {
   position: fixed;
-  min-width: 1280px;
+  min-width: 1440px;
   min-height: 800px;
   background-size: cover;
   background: #005CC3;
@@ -113,7 +113,7 @@ figure.answer.active {
 
 figure.answer p {
   max-width: 90%;
-  margin: -88px 0 0 0;
+  margin: -70px 0 0 0;
 }
 
 figure.answer span {
@@ -136,4 +136,17 @@ figure.answer span {
 
 figure.answer span:hover {
   opacity: 1;
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1440px) {
+
+  li.header {
+    padding: 16px 40px 12px;
+    margin-top: 4px;
+  }
+
+  li.amount {
+    height: 131px;
+  }
+
 }
