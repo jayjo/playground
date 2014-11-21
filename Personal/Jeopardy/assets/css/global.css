@@ -35,21 +35,104 @@ li {
   background: #005CC3;
   text-align: center;
   margin: 0px 2px 4px;
-  font-family: 'GothamCondensedBold', Helvetica, sans-serif;
-}
-
-li.amount {
-  color: #DAA51F;
-  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
-  font-size: 30px;
-  padding: 5px;
 }
 
 li.header {
   color: #fff;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
-  font-size: 28px;
-  padding: 18px 5px;
-  margin-top: 4px;
+  font-size: 36px;
+  padding: 16px 20px 12px;
+  margin-top: 5px;
   text-transform: uppercase;
+  font-family: "jaf-bernino-sans-comp";
+}
+
+li.amount {
+  color: #F1FD6C;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  font-size: 70px;
+  padding: 0;
+  cursor: pointer;
+  height: 115px;
+  font-family: "proxima-nova";
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+li.amount p {
+  padding: 15px 40px;
+  margin: 0;
+}
+
+li.amount:hover {
+  background: rgba(0, 92, 195, 0.8);
+}
+
+figure.answer {
+  min-width: 1280px;
+  min-height: 800px;
+  background-size: cover;
+  position: fixed;
+  display: block;
+  font-family: "legitima";
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  font-size: 56px;
+  line-height: 65px;
+  transform: scale(1);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+figure.answer.active {
+  position: fixed;
+  min-width: 1280px;
+  min-height: 800px;
+  background-size: cover;
+  background: #005CC3;
+  opacity: 1;
+  z-index: 1000;
+  visibility: visible;
+  top: 0;
+  left: 0;
+  cursor: auto;
+  -webkit-transform: opacity 250ms;
+  -webkit-transition: 200ms;
+}
+
+figure.answer p {
+  max-width: 90%;
+  margin: -88px 0 0 0;
+}
+
+figure.answer span {
+  position: fixed;
+  display: block;
+  right: 15px;
+  top: 15px;
+  opacity: .3;
+  cursor: pointer;
+  font-family: "proxima-nova";
+  font-size: 25px;
+  line-height: 1;
+  border-radius: 50em;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+}
+
+figure.answer span:hover {
+  opacity: 1;
 }
