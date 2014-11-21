@@ -1,19 +1,12 @@
 jQuery(document).ready(function($) {
 
-	$('.open').on('click', function() {
-		$('.modal-cover').addClass('active');
-		$('.modal').addClass('active');
+	$('.amount p').on('click', function(){
+		$(this).siblings('.answer').addClass('active');
 	});
 
-	$('.open').on('click', function(){
-		$('.modal-cover.blur').addClass('active');
-		$('.modal.default').addClass('active');
+	$('.answer span').on('click', function(){
+		$(this).parent().removeClass('active');
+		$(this).parent().siblings('p').hide();
 	});
-
-	// if ($('body').hasClass('cozy')) {
-	// 	$('body').on('click', function(){
-	// 		alert("Start a support request.");
-	// 	});
-	// }
 
 });
