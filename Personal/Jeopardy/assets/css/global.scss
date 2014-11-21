@@ -1,0 +1,56 @@
+/************* ANIMATIONS ************/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfloat {
+  clear: both;
+}
+
+body, html {
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #000;
+}
+
+.col {
+  float: left;
+  display: inline-block;
+  width: 16.66666666%;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  background: #005CC3;
+  text-align: center;
+  margin: 0px 2px 4px;
+  font-family: 'GothamCondensedBold', Helvetica, sans-serif;
+}
+
+li.amount {
+  color: #DAA51F;
+  text-shadow: 0 2px 2px rgba(0,0,0,.5);
+  font-size: 30px;
+  padding: 5px;
+}
+
+li.header {
+  color: #fff;
+  text-shadow: 0 2px 2px rgba(0,0,0,.5);
+  font-size: 28px;
+  padding: 18px 5px;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
