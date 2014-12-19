@@ -1,0 +1,159 @@
+/************* ANIMATIONS ************/
+
+@-webkit-keyframes growth {
+
+	0% {
+		transform: scale(1)
+	}
+	25% {
+		transform: scale(.85)
+	}
+	50% {
+		transform: scale(1.1)
+	}
+	75% {
+		transform: scale(.85)
+	}
+	100% {
+		transform: scale(1)
+	}
+
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body, html { font-size: 100%; padding: 0; margin: 0; height: 100%; font-family: helvetica;}
+
+#pagewrap {
+	width: 400px;
+	margin: 30px auto 0;
+	position: relative;
+}
+
+.widget {
+	width: 326px;
+	height: 149px;
+	background: url(../img/tip.png) no-repeat;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.links {
+	position: absolute;
+	top: 59px;
+	left: 2px;
+	width: 322px;
+	display: block;
+}
+
+.links a {
+	font-size: 13px;
+	float: left;
+	width: 161px;
+	margin: 0;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 15.5px 0;
+}
+
+.set {
+	background: #60ACEB;
+	color: #fff;
+	border: 1px solid transparent;
+}
+
+.set.active {
+	position: absolute;
+	left: -163px;
+	transition: left 200ms;
+}
+
+.set.white {
+	background: #fff;
+	color: #8390a0;
+}
+
+.custom {
+	font-size: 12px;
+	background: #FFF;
+	font-weight: bold;
+	color: #8390A0;
+	border: 1px solid transparent;
+	padding: 15px 0px;
+	text-align: center;
+	width: 161px;
+}
+
+.custom:hover {
+	border: 1px solid #60ACEB;
+}
+
+.custom:focus {
+	text-align: left;
+	width: 322px;
+	transition: width 300ms, padding 200ms;
+	padding: 15px 0px 15px 8px;
+}
+
+.custom.blue {
+	background: #60ACEB;
+	color: #fff;
+}
+
+.custom.blue:focus {
+	background: #fff;
+	color: #8390A0;
+}
+
+.or {
+	position: absolute;
+	display: block;
+	text-transform: uppercase;
+	color: #B0B9D0;
+	background: #fff;
+	font-size: 10px;
+	border: 1px solid #D7DDE9;
+	text-align: center;
+	border-radius: 50em;
+	padding: 7px 5px;
+	position: absolute;
+	left: 147px;
+	top: 10px;
+}
+
+.or.active {
+	left: -177px;
+	transition: left 200ms;
+}
+
+.cval {
+	position: absolute;
+	display: none;
+}
+
+.x {
+	position: absolute;
+	display: block;
+	width: 15px;
+	height: 15px;
+	background: url(../img/x.png) no-repeat;
+	right: 10px;
+	top: 18px;
+	opacity: 0;
+	visibility: hidden;
+	cursor: pointer;
+}
+
+.x.active {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 200ms;
+}
+
+
