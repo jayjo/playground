@@ -119,6 +119,33 @@ body, html {
 
 /**** SET TWO STUFF******/
 
+.x.cover {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  position: absolute;
+  text-align: center;
+  padding: 8px;
+}
+
+.x.cover.one {
+  top: 130px;
+  right: 43px;
+}
+
+.x.cover.two {
+  top: 184px;
+  right: 43px;
+}
+
+.links.two {
+  height: 39px;
+  width: 712px;
+  left: 39px;
+  bottom: 33px;
+  overflow: hidden;
+}
+
 .cover {
   width: 300px;
   height: 60px;
@@ -130,22 +157,65 @@ body, html {
 }
 
 .hidden {
+  width: 0;
+  height: 39px;
+  background: #CE5D73;
   position: absolute;
   font-size: 13px;
   font-weight: bold;
-  color: #737C93;
-  z-index: 0;
-  right: 30px;
+  color: #B9495E;
+  z-index: 3;
+  right: 40px;
   bottom: 0;
+  opacity: 0;
+
+  padding: 0 16px;
+  border-radius: 2px 0 0 2px;
+  text-align: center;
+  transition: opacity 150ms 125ms, width 200ms 75ms, padding 100ms 75ms;
+}
+
+.hidden.active {
   opacity: 1;
   visibility: visible;
-  display: none;
+  width: 255px;
+  padding: 12px 16px;
+  transition: opacity 150ms, width 200ms, padding 100ms 75ms;
+}
+
+.sure-two {
+  color: #fff;
+  margin-right: 10px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+a.yes, a.no {
+  color: #FFBAC8;
+  text-decoration: none;
+  text-transform: none;
+  margin: 0 3px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 75ms;
+}
+
+a.yes:hover, a.no:hover {
+  color: #fff;
+}
+
+.sure-two.active,
+a.yes.active,
+a.no.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 250ms 250ms;
 }
 
 .input {
   position: absolute;
-  right: 37px;
-  bottom: -16px;
+  right: 0;
+  bottom: -5px;
 }
 
 input[type=text] {
@@ -164,9 +234,11 @@ input[type=submit] {
   color: #fff;
   background: #63adee;
   border: 1px solid #5CA4E3;
-  border-radius: 0;
+  border-radius: 0 2px 2px 0;
   margin-left: -4px;
   text-transform: uppercase;
+  position: relative;
+  z-index: 2;
 }
 
 input[type=submit]:hover {
@@ -177,15 +249,20 @@ input[type=submit]:hover {
   text-align: center;
   cursor: pointer;
   padding: 18px 19px 19px;
-  border-radius: 0 2px 2px 0;
-  margin-left: -4px;
+  border-radius: 2px;
+  margin-left: 5px;
   outline: none;
   border: 1px solid #DFE6F0;
-  background: url(https://dl.dropboxusercontent.com/u/44421066/dev_images/trash-can.png) no-repeat 11px 11px;
+  background: url(https://dl.dropboxusercontent.com/u/44421066/dev_images/trash-can.png) no-repeat 12px 11px;
   position: relative;
   top: -5px;
 }
 
-.byebye:hover {
-  background: url(https://dl.dropboxusercontent.com/u/44421066/dev_images/trash-can.png) no-repeat 11px -18px;
+.byebye:hover,
+.byebye.active {
+  background: url(https://dl.dropboxusercontent.com/u/44421066/dev_images/trash-can.png) no-repeat 12px -16px;
+}
+
+.byebye.active {
+  border-radius: 0 2px 2px 0;
 }

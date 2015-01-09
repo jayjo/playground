@@ -1,16 +1,20 @@
 jQuery(document).ready(function($) {
 
-	$('.delete').on('click', function(e){
+	$('.byebye').on('click', function(e){
 		$(this).addClass('active');
-		$('.sure').addClass('active');
-		$('.cancel').addClass('active');
+		$('.hidden').addClass('active');
+		$('.hidden').children().addClass('active');
 		e.preventDefault();
 	});
 
-	$('.cancel').on('click', function(e){
-		$(this).removeClass('active');
-		$('.sure').removeClass('active');
-		$('.delete').removeClass('active');
+	$('.yes').on('click', function(e){
+		$('#pagewrap').fadeOut();
+	});
+
+	$('.no').on('click', function(e){
+		$('.byebye').removeClass('active');
+		$('.hidden').removeClass('active');
+		$('.hidden').children().removeClass('active');
 		e.preventDefault();
 	});
 
