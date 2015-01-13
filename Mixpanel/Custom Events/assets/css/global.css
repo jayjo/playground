@@ -1,0 +1,268 @@
+/************* ANIMATIONS ************/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: helvetica;
+}
+
+#pagewrap {
+  width: 788px;
+  margin: 30px auto 0;
+  position: relative;
+  opacity: 1;
+}
+
+.widget {
+  width: 788px;
+  height: 377px;
+  background: url(https://dl.dropboxusercontent.com/u/44421066/dev_images/widget.png) no-repeat;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.links {
+  position: absolute;
+  bottom: 44px;
+  left: 0;
+  width: 788px;
+  display: block;
+}
+
+.links a {
+  font-size: 12px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.delete {
+  background: #fff;
+  position: relative;
+  padding: 7px 10px 6px;
+  color: #D2D9E3;
+  border: 2px solid #D2D9E3;
+  border-radius: 3px;
+  margin-left: 30px;
+  z-index: 1;
+  transition: margin-left 200ms;
+}
+
+.delete:hover {
+  color: #E4788C;
+  border: 2px solid #E4788C;
+}
+
+.delete.active {
+  background: #E4788C;
+  margin-left: 130px;
+  color: #FFF;
+  border: 2px solid #E4788C;
+  transition: margin-left 200ms;
+}
+
+.hide {
+  position: absolute;
+  font-size: 13px;
+  font-weight: bold;
+  color: #737C93;
+  z-index: 0;
+  left: 30px;
+  bottom: 0;
+}
+
+.sure {
+  opacity: 0;
+  visibility: 0;
+  transition: opacity 200ms 35ms;
+}
+
+.sure.active {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 250ms 150ms;
+}
+
+.cancel {
+  color: #D2D9E3;
+  border-bottom: 1px solid #D2D9E3;
+  margin-left: 94px;
+  opacity: 0;
+  visibility: hidden;
+  transition: margin-left 150ms 150ms, opacity 200ms 250ms;
+}
+
+.cancel.active {
+  opacity: 1;
+  visibility: visible;
+  margin-left: 94px;
+  transition: margin-left 150ms 150ms, opacity 250ms 400ms;
+}
+
+.set {
+  background: #60ACEB;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+/*# sourceMappingURL=global.css.map */
+
+/**** SET TWO STUFF******/
+
+.x.cover {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  position: absolute;
+  text-align: center;
+  padding: 8px;
+}
+
+.x.cover.one {
+  top: 130px;
+  right: 43px;
+}
+
+.x.cover.two {
+  top: 184px;
+  right: 43px;
+}
+
+.links.two {
+  height: 39px;
+  width: 712px;
+  left: 39px;
+  bottom: 33px;
+  overflow: hidden;
+}
+
+.cover {
+  width: 300px;
+  height: 60px;
+  background: #FCFCFC;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 0;
+}
+
+.hidden {
+  width: 0;
+  height: 39px;
+  background: #CE5D73;
+  position: absolute;
+  font-size: 13px;
+  font-weight: bold;
+  color: #B9495E;
+  z-index: 3;
+  right: 40px;
+  bottom: 0;
+  opacity: 0;
+
+  padding: 0 16px;
+  border-radius: 2px 0 0 2px;
+  text-align: center;
+  transition: opacity 150ms 125ms, width 200ms 75ms, padding 100ms 75ms;
+}
+
+.hidden.active {
+  opacity: 1;
+  visibility: visible;
+  width: 255px;
+  padding: 12px 16px;
+  transition: opacity 150ms, width 200ms, padding 100ms 75ms;
+}
+
+.sure-two {
+  color: #fff;
+  margin-right: 10px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+a.yes, a.no {
+  color: #FFBAC8;
+  text-decoration: none;
+  text-transform: none;
+  margin: 0 3px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 75ms;
+}
+
+a.yes:hover, a.no:hover {
+  color: #fff;
+}
+
+.sure-two.active,
+a.yes.active,
+a.no.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 250ms 250ms;
+}
+
+.input {
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+}
+
+input[type=text] {
+  font: 13px Helvetica Neue, Helvetica;
+  color: #868EA2;
+  border-radius: 2px 0 0 2px;
+  border: 1px solid #DFE6F0;
+  padding: 11px;
+}
+
+input[type=submit] {
+  outline: none;
+  padding: 12px 11px 11px;
+  cursor: pointer;
+  font: 12px Helvetica Neue, Helvetica;
+  color: #fff;
+  background: #63adee;
+  border: 1px solid #5CA4E3;
+  border-radius: 0 2px 2px 0;
+  margin-left: -4px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+input[type=submit]:hover {
+  background: #72b7f3;
+}
+
+.byebye {
+  text-align: center;
+  cursor: pointer;
+  padding: 18px 19px 19px;
+  border-radius: 2px;
+  margin-left: 5px;
+  outline: none;
+  border: 1px solid #DFE6F0;
+  background: url(https://dl.dropboxusercontent.com/u/44421066/dev_images/trash-can.png) no-repeat 12px 11px;
+  position: relative;
+  top: -5px;
+}
+
+.byebye:hover,
+.byebye.active {
+  background: url(https://dl.dropboxusercontent.com/u/44421066/dev_images/trash-can.png) no-repeat 12px -16px;
+}
+
+.byebye.active {
+  border-radius: 0 2px 2px 0;
+}
