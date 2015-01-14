@@ -1,0 +1,79 @@
+/************** Mixins Fonts ***************/
+
+@mixin twosecs {
+    transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+
+@mixin purple_grad {
+    background-color: rgb(42,12,73);
+    @include filter-gradient(#2a0c49, #94326f, horizontal);
+    $experimental-support-for-svg: true;
+    @include background-image(linear-gradient(left top,  rgba(42,12,73,1) 0%,rgba(148,50,111,1) 100%));
+}
+
+@mixin deep_blue_grad {
+    background-color: rgb(54,0,51);
+    @include filter-gradient(#360033, #0d659c, horizontal);
+    $experimental-support-for-svg: true;
+    @include background-image(linear-gradient(left top,  rgba(54,0,51,1) 0%,rgba(13,101,156,1) 100%));
+}
+
+@mixin green_grad {
+    background-color: rgb(16,49,68);
+    @include filter-gradient(#103144, #dfdb64, horizontal);
+    $experimental-support-for-svg: true;
+    @include background-image(linear-gradient(left top,  rgba(16,49,68,1) 0%,rgba(63,111,102,1) 50%,rgba(223,219,100,1) 99%));
+}
+
+@mixin mars_grad {
+    background-color: rgb(60,28,81);
+    @include filter-gradient(#3c1c51, #d14253, horizontal);
+    $experimental-support-for-svg: true;
+    @include background-image(linear-gradient(left top,  rgba(60,28,81,1) 0%,rgba(209,66,83,1) 100%));
+}
+
+@mixin orange_grad {
+    background-color: rgb(103,36,15);
+    @include filter-gradient(#67240f, #e7af48, horizontal);
+    $experimental-support-for-svg: true;
+    @include background-image(linear-gradient(left top,  rgba(103,36,15,1) 0%,rgba(197,77,2,1) 56%,rgba(231,175,72,1) 100%,rgba(231,175,72,1) 100%));
+}
+
+@mixin cold_blue_grad {
+    background-color: rgb(1,30,67);
+    @include filter-gradient(#011e43, #1596c9, horizontal);
+    $experimental-support-for-svg: true;
+    @include background-image(linear-gradient(left top,  rgba(1,30,67,1) 0%,rgba(21,150,201,1) 99%));
+}
+
+/************** Brand Colors ***************/
+
+/***** Primary Colors *****/
+
+$slate: rgb(69,78,90);
+$blue: rgb(69,160,248);
+$gray: rgb(141,152,158);
+$light_gray: rgb(247,250,252);
+
+/***** Secondary Colors *****/
+
+$purple: rgb(142,83,157);
+$medium_blue: rgb(127,107,244);
+$sage_green: rgb(51,175,134);
+$red: rgb(229,87,103);
+$orange: rgb(244,135,58);
+$yellow: rgb(244,192,64);
+
+/************** Fonts Fonts ***************/
+
+$brandon: "brandon";
+$source: "source";
+$ropa: "ropa";
+
+/************** General Style Mixins ***************/
+
+
+
+/************** IcoMoon Fonts ***************/
