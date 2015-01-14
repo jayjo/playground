@@ -27,14 +27,14 @@
 
       <header>
 
+        <img src="assets/img/white_logo_dots.svg" alt="" class="mainlogo">
         <menu class="menu">
-          <img src="" alt="" class="mainlogo">
           <!-- <ul class="device">
             <li><a href="#">Desktop</a></li>
             <li><a href="#">Mobile</a></li>
           </ul> -->
           <ul class="nav">
-            <li><a href="#brand">Logos</a></li>
+            <li><a href="#brand" class="active">Logos</a></li>
             <li><a href="#color-palette">Color</a></li>
             <li><a href="#typography">Type</a></li>
             <li><a href="#">Fonts</a></li>
@@ -47,6 +47,11 @@
       <!-- HERO START -->
 
       <div class="hero">
-          <img src="" alt="" class="herologo" />
-          <h1>2015 <span>Marketing Brand & Style Guide</span></h1>
+          <div class="left">
+            <img src="assets/img/white_logo.svg" alt="" class="herologo" />
+          </div>
+          <div class="right">
+            <h1>2015 <span>Marketing Brand & Style Guide</span></h1>
+          </div>
+          <div class="clearfloat"></div>
       </div>

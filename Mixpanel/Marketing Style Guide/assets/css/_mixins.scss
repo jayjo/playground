@@ -10,21 +10,21 @@
     background-color: rgb(42,12,73);
     @include filter-gradient(#2a0c49, #94326f, horizontal);
     $experimental-support-for-svg: true;
-    @include background-image(linear-gradient(left top,  rgba(42,12,73,1) 0%,rgba(148,50,111,1) 100%));
+    @include background-image(linear-gradient(left top,  rgba(42,12,73,1) 12%,rgba(148,50,111,1) 100%));
 }
 
 @mixin deep_blue_grad {
-    background-color: rgb(54,0,51);
-    @include filter-gradient(#360033, #0d659c, horizontal);
+    background-color: rgb(74,0,70);
+    @include filter-gradient(#4a0046, #0d649b, horizontal);
     $experimental-support-for-svg: true;
-    @include background-image(linear-gradient(left top,  rgba(54,0,51,1) 0%,rgba(13,101,156,1) 100%));
+    @include background-image(linear-gradient(left top,  rgba(74,0,70,1) 0%,rgba(37,31,92,1) 62%,rgba(13,100,155,1) 100%));
 }
 
 @mixin green_grad {
     background-color: rgb(16,49,68);
     @include filter-gradient(#103144, #dfdb64, horizontal);
     $experimental-support-for-svg: true;
-    @include background-image(linear-gradient(left top,  rgba(16,49,68,1) 0%,rgba(63,111,102,1) 50%,rgba(223,219,100,1) 99%));
+    @include background-image(linear-gradient(left top,  rgba(16,49,68,1) 0%,rgba(63,111,102,1) 55%,rgba(223,219,100,1) 99%));
 }
 
 @mixin mars_grad {

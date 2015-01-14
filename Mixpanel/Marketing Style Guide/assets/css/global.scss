@@ -212,79 +212,7 @@ textarea {
    Custom styles
    ========================================================================== */
 
-/* @group Global */
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-header {
-    width: 100%;
-    margin-bottom: 35px;
-}
-
-footer {
-    width: 100%;
-}
-
-/* @end */
-
-/* @group Hero */
-
-.wrapper {
-	width: 100%;
-    max-width: 1440px;
-	position: relative;
-	margin: 0 auto;
-}
-
-@-moz-document url-prefix() {
-    .wrapper {
-        max-width: 1441px;
-    }
-}
-
-.clearfloat {
-	clear: both;
-}
-
-.logo {
-    margin: 0 auto 50px;
-    display: block;
-}
-
-.icon {
-    margin: 0 auto 18px;
-    display: block;
-}
-
-.centered {
-	text-align: center;
-}
-
-.hero {
-    width: 100%;
-    min-height: 100%;
-    position: absolute;
-    background-size: cover;
-    @include deep_blue_grad;
-}
-
-.hero h1 {
-    color: #fff;
-    text-align: left;
-    font-size: 90px;
-    line-height: 64px;
-    font-weight: 700;
-}
-
-.hero h1 span {
-    display: block;
-    font-size: 30px;
-    font-weight: 900;
-}
+/* FONT & TEXT STYLES */
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $brandon;
@@ -328,10 +256,9 @@ h6 {
 p {
     width: 80%;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 21px;
     margin: 0 auto 35px;
-    color: #888;
     text-align: center;
 }
 
@@ -339,6 +266,197 @@ a {
     text-decoration: none;
     font-weight: 500;
     border-bottom: 1px solid #B1B1AD;
+}
+
+/* @group Global */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background: rgba(0,0,0,0.25);
+}
+
+.mainlogo {
+    width: 63px;
+    display: inline-block;
+    margin: 30px;
+    opacity: .25;
+    transition: opacity 200ms;
+}
+
+.mainlogo:hover {
+    opacity: 1;
+    transition: opacity 200ms;
+}
+
+menu {
+    width: 90%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 75px;
+    float: right;
+
+    &.scroll-to-fixed-fixed {
+        background: rgba(255,255,255,.9);
+        position: fixed;
+        top: 0;
+        -webkit-box-shadow: 0 0 3px rgba(0,0,0,.25);
+    }
+
+}
+
+menu ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+menu ul li {
+    display: inline-block;
+
+    &:first-child a {
+        border-left: none;
+    }
+}
+
+menu ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 27px 0 26px;
+    margin: 0 25px;
+    font-size: 13px;
+    font-weight: 900;
+    border-bottom: none;
+    font-family: $brandon;
+    color: rgba(255,255,255,.2);
+    text-transform: uppercase;
+    transition: color 150ms;
+
+    &:hover {
+        color: rgba(255,255,255,1);
+        transition: color 150ms;
+    }
+
+    &:active,
+    &.active {
+        color: rgba(255,255,255,1);
+        border-bottom: 3px solid $blue;
+    }
+}
+
+.nav {
+    text-align: right;
+    // text-align: center;
+}
+
+.device {
+    float: left;
+    text-align: left;
+    display: none;
+}
+
+footer {
+    width: 100%;
+    text-align: left;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+footer p {
+    color: rgba(255,255,255,.25);
+    font-weight: 900;
+    font: 12px $brandon;
+}
+
+/* @end */
+
+/* @group Hero */
+
+.wrapper {
+	width: 100%;
+    max-width: 1440px;
+	position: relative;
+	margin: 0 auto;
+}
+
+@-moz-document url-prefix() {
+    .wrapper {
+        max-width: 1441px;
+    }
+}
+
+.clearfloat {
+	clear: both;
+}
+
+.logo {
+    margin: 0 auto 50px;
+    display: block;
+}
+
+.icon {
+    margin: 0 auto 18px;
+    display: block;
+}
+
+.centered {
+	text-align: center;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    background-size: cover;
+    @include deep_blue_grad;
+}
+
+.hero h1 {
+    color: #fff;
+    text-align: left;
+    font-size: 90px;
+    line-height: 64px;
+    font-weight: 700;
+}
+
+.hero h1 span {
+    display: block;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.hero .left,
+.hero .right {
+    float: left;
+}
+
+.hero .left {
+    width: 42.5%;
+    border-right: 2px solid #fff;
+    text-align: right;
+    padding: 400px 70px 0 0;
+}
+
+.hero .right {
+    width: 57.5%;
+    padding: 335px 0 0 67px;
+}
+
+.herologo {
+    width: 300px;
 }
 
 .download {
@@ -354,70 +472,6 @@ a {
 
 footer {
     padding: 10px 0;
-
-    p {
-        margin: 0 auto;
-        text-align: center;
-        font-size: 14px;
-        font-weight: 500;
-    }
-}
-
-menu {
-    width: 100%;
-    display: block;
-    height: 49px;
-    background: rgba(255,255,255,1);
-    margin: 0;
-    padding: 7px 0 0 0;
-
-    &.scroll-to-fixed-fixed {
-        background: rgba(255,255,255,.9);
-        position: fixed;
-        top: 0;
-        -webkit-box-shadow: 0 0 3px rgba(0,0,0,.25);
-    }
-
-    ul {
-        padding: 0;
-        list-style: none;
-        margin: 3px auto 0;
-
-        li {
-            display: inline-block;
-
-            &:first-child a {
-                border-left: none;
-            }
-
-            a {
-                text-decoration: none;
-                display: block;
-                padding: 10px 15px 8px;
-                border-bottom: none;
-                text-transform: uppercase;
-
-                &:hover {
-                }
-
-                &:active,
-                &.active {
-                }
-            }
-        }
-
-        &.nav {
-            // float: right;
-            // text-align: right;
-            text-align: center;
-        }
-
-        &.device {
-            float: left;
-            text-align: left;
-            display: none;
-        }
-    }
 }
 
 /* @group Colors */
@@ -448,40 +502,6 @@ menu {
 }
 
 .charcoal {
-}
-
-/********* Tertiary **********/
-
-.ivory {
-}
-
-.bone {
-}
-
-.eggshell {
-}
-
-.stone {
-}
-
-.taupe {
-}
-
-/********* Specialized **********/
-
-.total-green {
-}
-
-.cautionary {
-}
-
-.success {
-}
-
-.seafoam {
-}
-
-.error {
 }
 
 /********* Elements **********/
