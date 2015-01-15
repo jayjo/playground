@@ -1,9 +1,3 @@
-		<footer>
-            <div class="wrapper">
-                <p><span class="page">01</span> Mixpanel Marketing & Brand Styleguide</p>
-            </div>
-        </footer>
-
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
         <script src="assets/js/global.js"></script>
 

@@ -217,49 +217,41 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
     font-family: $brandon;
     text-transform: uppercase;
+    font-weight: 900;
 }
 
 h1 {
     font-size: 46px;
-    text-align: center;
-    font-weight: 900;
 }
 
 h2 {
-    font-size: 26px;
-    text-align: center;
-    font-weight: 500;
-    text-transform: uppercase;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #cecece;
-    margin-bottom: 14px;
+    font-size: 30px;
 }
 
 h3 {
-    font-size: 22px;
-    text-transform: uppercase;
-    font-weight: 500;
+    font-size: 24px;
 }
 
 h4 {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 h5 {
-    font-size: 18px;
-}
-
-h6 {
     font-size: 16px;
 }
 
+h6 {
+    font-size: 14px;
+}
+
 p {
-    width: 80%;
+    font-family: $source;
     font-weight: 300;
     font-size: 18px;
-    line-height: 21px;
+    line-height: 29px;
     margin: 0 auto 35px;
-    text-align: center;
+    text-align: left;
+    color: #fff;
 }
 
 a {
@@ -283,6 +275,12 @@ header {
     top: 0;
     z-index: 1;
     background: rgba(0,0,0,0.25);
+    transition: top 150ms;
+}
+
+header.hide {
+    top: -80px;
+    transition: top 150ms;
 }
 
 .mainlogo {
@@ -365,21 +363,6 @@ menu ul li a {
     display: none;
 }
 
-footer {
-    width: 100%;
-    text-align: left;
-    position: fixed;
-    bottom: 0;
-    z-index: 1;
-    text-transform: uppercase;
-}
-
-footer p {
-    color: rgba(255,255,255,.25);
-    font-weight: 900;
-    font: 12px $brandon;
-}
-
 /* @end */
 
 /* @group Hero */
@@ -406,11 +389,6 @@ footer p {
     display: block;
 }
 
-.icon {
-    margin: 0 auto 18px;
-    display: block;
-}
-
 .centered {
 	text-align: center;
 }
@@ -420,6 +398,9 @@ footer p {
     min-height: 100%;
     position: absolute;
     top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-size: cover;
     @include deep_blue_grad;
 }
@@ -445,278 +426,176 @@ footer p {
 
 .hero .left {
     width: 42.5%;
-    border-right: 2px solid #fff;
     text-align: right;
-    padding: 400px 70px 0 0;
+    padding: 0 70px 0 0;
 }
 
 .hero .right {
     width: 57.5%;
-    padding: 335px 0 0 67px;
+    padding: 25px 0 0 67px;
+}
+
+.bar {
+    align-self: flex-start;
+    width: 2px;
+    background: #fff;
+    top: 0;
+    left: 42%;
+    margin: 0;
+    padding: 0;
 }
 
 .herologo {
     width: 300px;
 }
 
-.download {
-    display: inline-block;
-    padding: 0.45em 2em 0.7em;
-    color: #7C7D78;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 700;
-    border-radius: 4px;
+/* @group Left Area */
+
+.left_area {
+    width: 36%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    transition: background 250ms;
+}
+
+.content {
+    margin: 0 13%;
+}
+
+.left_area h1 {
+    color: rgba(255,255,255,1);
+    margin-bottom: 15px;
+}
+
+.left_area span {
+    color: rgba(255,255,255,.25);
+    margin-right: 10px;
+}
+
+.left_area.colors {
+    @include mars_grad;
+    transition: background 250ms;
 }
 
 footer {
-    padding: 10px 0;
+    width: 87%;
+    padding: 15px 0 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    text-align: left;
+    position: absolute;
+    bottom: 60px;
+    text-transform: uppercase;
+    right: 0;
 }
+
+footer p {
+    color: rgba(255,255,255,1);
+    font-weight: 900;
+    font: 14px $brandon;
+    margin: 0;
+}
+
+footer p span.page {
+    color: rgba(255,255,255,1);
+}
+
+/* @end Left Area
 
 /* @group Colors */
 
 /********* PRIMARY **********/
 
-.baygreen {
+.slate {
+    color: $slate;
 }
 
-.cozyorange {
+.blue {
+    color: $blue;
+}
+
+.gray {
+    color: $gray;
+}
+
+.light_gray {
+    color: $light_gray;
+}
+
+.slate_bg {
+    background: $slate;
+}
+
+.blue_bg {
+    background: $blue;
+}
+
+.gray_bg {
+    background: $gray;
+}
+
+.light_gray_bg {
+    background: $light_gray;
 }
 
 /********* SECONDARY **********/
 
-.fireside {
+.purple {
+    color: $purple;
 }
 
-.trumpet {
+.medium_blue {
+    color: $medium_blue;
 }
 
-.pacific {
+.sage_green {
+    color: $sage_green;
 }
 
-.clay {
+.red {
+    color: $red;
 }
 
-.mahogany {
+.orange {
+    color: $orange;
 }
 
-.charcoal {
+.yellow {
+    color: $yellow;
 }
 
-/********* Elements **********/
-
-#color-palette {
-    padding: 80px 0 40px;
+.purple_bg {
+    background: $purple;
 }
 
-.color-segment {
-    width: 100%;
-    padding: 35px 0;
-    text-align: center;
-
-    ul {
-        margin: 0 auto;
-        width: 100%;
-        padding: 0;
-        list-style: none;
-        display: block;
-
-        p {
-            width: 100%;
-            text-align: center;
-            font-size: 11px;
-            font-weight: 500;
-            color: #999;
-            margin: 0;
-            line-height: 17px;
-
-            label {
-                text-align: right;
-                width: 30px;
-                display: inline-block;
-                margin-right: 8px;
-                cursor: pointer;
-            }
-
-            input[type=text] {
-                width: 68px;
-                border: none;
-                border-radius: 3px;
-                outline: none;
-                background: none;
-                font-size: 12px;
-                padding: 0;
-                color: #888;
-                margin: 0;
-                cursor: text;
-                text-transform: uppercase;
-            }
-        }
-    }
-
-    li {
-        margin: 7px 5px;
-        display: inline-block;
-        background: #fff;
-        box-shadow: 0 0 6px rgba(0,0,0,.25);
-        -moz-box-shadow: 0 0 6px rgba(0,0,0,.25);
-        @include twosecs;
-
-        &:hover {
-            @include twosecs;
-            box-shadow: none;
-            -moz-box-shadow: none;
-        }
-    }
-
-    .primary {
-        width: 200px;
-        padding: 0 0 15px 0;
-    }
-
-    .secondary {
-        width: 150px;
-        padding: 0 0 15px 0;
-    }
-
-    .tertiary {
-        width: 140px;
-        padding: 0 0 15px 0;
-    }
-
-    .specialized {
-        width: 140px;
-        padding: 0 0 15px 0;
-    }
-
-    figure {
-        padding: 0;
-        margin: 0;
-    }
-
-    .color {
-        width: 100%;
-        height: 45px;
-        margin-bottom: 17px;
-    }
-
-    .name {
-        margin: 0 auto 8px;
-        font-size: 13px;
-        text-transform: uppercase;
-        font-weight: 700;
-    }
+.medium_blue_bg {
+    background: $medium_blue;
 }
 
-#typography {
-    padding: 80px 0 40px;
+.sage_green_bg {
+    background: $sage_green;
 }
 
-.type-segment {
-    width: 100%;
-    padding: 35px 0;
-    text-align: center;
-
-    .typeface {
-        margin: 0 auto;
-    }
-
-    p {
-        margin-bottom: 25px;
-    }
-
-    ul {
-        margin: 0 auto 22px;
-        width: 100%;
-        padding: 0;
-        list-style: none;
-        display: block;
-
-        p {
-            width: 100%;
-            text-align: center;
-            font-size: 18px;
-            font-weight: 500;
-            margin: 0;
-            line-height: 23px;
-
-            &.caps {
-                text-transform: uppercase;
-            }
-        }
-    }
-
-    li {
-        width: 70%;
-        margin: 0 auto;
-        padding: 20px;
-        border-radius: 5px;
-
-        &.proxima {
-        }
-
-        &.frutiger {
-        }
-
-        &.source {
-        }
-
-        &.droid {
-        }
-    }
+.red_bg {
+    background: $red;
 }
 
-#brand {
-    padding: 80px 0 0;
+.orange_bg {
+    background: $orange;
 }
 
-.logo-segment {
-    width: 100%;
-    padding: 35px 0;
-    text-align: center;
-
-    .logo {
-        margin: 0 auto;
-    }
-
-    p {
-        margin-bottom: 25px;
-    }
-
-    ul {
-        margin: 0 auto 40px;
-        width: 100%;
-        padding: 0;
-        list-style: none;
-        display: block;
-        text-align: center;
-
-        p {
-            width: 100%;
-            text-align: center;
-            font-size: 18px;
-            font-weight: 500;
-            margin: 0;
-            line-height: 23px;
-
-            &.caps {
-                text-transform: uppercase;
-            }
-        }
-    }
-
-    li {
-        width: 300px;
-        margin: 10px;
-        display: inline-block;
-
-        img {
-            display: block;
-            margin: 0 auto 28px;
-        }
-    }
+.yellow_bg {
+    background: $yellow;
 }
+
+/********* Pages **********/
+
+
 
 /* @end */
 

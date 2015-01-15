@@ -12,41 +12,52 @@ jQuery(document).ready(function($) {
 
 	///// STICKY MENU
 
-	$('.menu').scrollToFixed();
+	///// SET THE BAR SEPARATOR HEIGHT
+
+	function barHeight(){
+		$('.bar').css('height', '' + Math.round(.57* $(window).height()));
+	}
+
+	$(document).ready(function(){
+		barHeight();
+		$(window).on('resize', barHeight);
+	});
 
 	///// SCROLL TO FOR LINKS
 
-	$(function(){
 
-		$('.nav li a').click(function() {
-			var value = $(this).attr('href'),
-				destination = $(value).offset().top;
 
-			$("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination}, 250 );
+	// $(function(){
 
-			});
+	// 	$('.nav li a').click(function() {
+	// 		var value = $(this).attr('href'),
+	// 			destination = $(value).offset().top;
 
-			// 	navs = $('#main-nav li a, #main-nav-two li a');
+	// 		$("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination}, 250 );
 
-			var sections = $('.group');
+	// 		});
 
-			var topsArray = sections.map(function(){
-				return $(this).position().top + 190;
-			}).get();
+	// 		// 	navs = $('#main-nav li a, #main-nav-two li a');
 
-			var len = topsArray.length;
-			var currentIndex = 0;
+	// 		var sections = $('.group');
 
-			window.topsArray = topsArray;
+	// 		var topsArray = sections.map(function(){
+	// 			return $(this).position().top + 190;
+	// 		}).get();
 
-			var getCurrent = function( top ) {
-				for(var i = 0; i < len; i++) {
-					if  (top > topsArray[i] && (!topsArray[i+1] || top < topsArray[i+1])) {
-						return i;
-					}
-			}
-		};
+	// 		var len = topsArray.length;
+	// 		var currentIndex = 0;
 
-	});
+	// 		window.topsArray = topsArray;
+
+	// 		var getCurrent = function( top ) {
+	// 			for(var i = 0; i < len; i++) {
+	// 				if  (top > topsArray[i] && (!topsArray[i+1] || top < topsArray[i+1])) {
+	// 					return i;
+	// 				}
+	// 		}
+	// 	};
+
+	// });
 
 });
