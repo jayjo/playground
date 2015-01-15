@@ -217,49 +217,41 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
     font-family: $brandon;
     text-transform: uppercase;
+    font-weight: 900;
 }
 
 h1 {
     font-size: 46px;
-    text-align: center;
-    font-weight: 900;
 }
 
 h2 {
-    font-size: 26px;
-    text-align: center;
-    font-weight: 500;
-    text-transform: uppercase;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #cecece;
-    margin-bottom: 14px;
+    font-size: 30px;
 }
 
 h3 {
-    font-size: 22px;
-    text-transform: uppercase;
-    font-weight: 500;
+    font-size: 24px;
 }
 
 h4 {
-    font-size: 20px;
-}
-
-h5 {
     font-size: 18px;
 }
 
-h6 {
+h5 {
     font-size: 16px;
+}
+
+h6 {
+    font-size: 14px;
 }
 
 p {
     font-family: $source;
     font-weight: 300;
     font-size: 18px;
-    line-height: 21px;
+    line-height: 29px;
     margin: 0 auto 35px;
-    text-align: center;
+    text-align: left;
+    color: #fff;
 }
 
 a {
@@ -371,21 +363,6 @@ menu ul li a {
     display: none;
 }
 
-footer {
-    width: 100%;
-    text-align: left;
-    position: fixed;
-    bottom: 0;
-    z-index: 1;
-    text-transform: uppercase;
-}
-
-footer p {
-    color: rgba(255,255,255,.25);
-    font-weight: 900;
-    font: 12px $brandon;
-}
-
 /* @end */
 
 /* @group Hero */
@@ -472,10 +449,63 @@ footer p {
     width: 300px;
 }
 
-footer {
-    padding: 10px 0;
-    display: none;
+/* @group Left Area */
+
+.left_area {
+    width: 36%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    transition: background 250ms;
 }
+
+.content {
+    margin: 0 13%;
+}
+
+.left_area h1 {
+    color: rgba(255,255,255,1);
+    margin-bottom: 15px;
+}
+
+.left_area span {
+    color: rgba(255,255,255,.25);
+    margin-right: 10px;
+}
+
+.left_area.colors {
+    @include mars_grad;
+    transition: background 250ms;
+}
+
+footer {
+    width: 87%;
+    padding: 15px 0 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    text-align: left;
+    position: absolute;
+    bottom: 60px;
+    text-transform: uppercase;
+    right: 0;
+}
+
+footer p {
+    color: rgba(255,255,255,1);
+    font-weight: 900;
+    font: 14px $brandon;
+    margin: 0;
+}
+
+footer p span.page {
+    color: rgba(255,255,255,1);
+}
+
+/* @end Left Area
 
 /* @group Colors */
 
