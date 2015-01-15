@@ -209,4 +209,565 @@ jQuery.extend( jQuery.easing,
  *
  */
 
-(function(a){a.isScrollToFixed=function(b){return !!a(b).data("ScrollToFixed")};a.ScrollToFixed=function(d,h){var k=this;k.$el=a(d);k.el=d;k.$el.data("ScrollToFixed",k);var c=false;var F=k.$el;var G;var D;var p;var C=0;var q=0;var i=-1;var e=-1;var t=null;var y;var f;function u(){F.trigger("preUnfixed.ScrollToFixed");j();F.trigger("unfixed.ScrollToFixed");e=-1;C=F.offset().top;q=F.offset().left;if(k.options.offsets){q+=(F.offset().left-F.position().left)}if(i==-1){i=q}G=F.css("position");c=true;if(k.options.bottom!=-1){F.trigger("preFixed.ScrollToFixed");w();F.trigger("fixed.ScrollToFixed")}}function m(){var H=k.options.limit;if(!H){return 0}if(typeof(H)==="function"){return H.apply(F)}return H}function o(){return G==="fixed"}function x(){return G==="absolute"}function g(){return !(o()||x())}function w(){if(!o()){t.css({display:F.css("display"),width:F.outerWidth(true),height:F.outerHeight(true),"float":F.css("float")});cssOptions={position:"fixed",top:k.options.bottom==-1?s():"",bottom:k.options.bottom==-1?"":k.options.bottom,"margin-left":"0px"};if(!k.options.dontSetWidth){cssOptions.width=F.width()}F.css(cssOptions);F.addClass("scroll-to-fixed-fixed");if(k.options.className){F.addClass(k.options.className)}G="fixed"}}function b(){var I=m();var H=q;if(k.options.removeOffsets){H=0;I=I-C}cssOptions={position:"absolute",top:I,left:H,"margin-left":"0px",bottom:""};if(!k.options.dontSetWidth){cssOptions.width=F.width()}F.css(cssOptions);G="absolute"}function j(){if(!g()){e=-1;t.css("display","none");F.css({width:"",position:D,left:"",top:p.top,"margin-left":""});F.removeClass("scroll-to-fixed-fixed");if(k.options.className){F.removeClass(k.options.className)}G=null}}function v(H){if(H!=e){F.css("left",q-H);e=H}}function s(){var H=k.options.marginTop;if(!H){return 0}if(typeof(H)==="function"){return H.apply(F)}return H}function z(){if(!a.isScrollToFixed(F)){return}var J=c;if(!c){u()}var H=a(window).scrollLeft();var K=a(window).scrollTop();var I=m();if(k.options.minWidth&&a(window).width()<k.options.minWidth){if(!g()||!J){n();F.trigger("preUnfixed.ScrollToFixed");j();F.trigger("unfixed.ScrollToFixed")}}else{if(k.options.bottom==-1){if(I>0&&K>=I-s()){if(!x()||!J){n();F.trigger("preAbsolute.ScrollToFixed");b();F.trigger("unfixed.ScrollToFixed")}}else{if(K>=C-s()){if(!o()||!J){n();F.trigger("preFixed.ScrollToFixed");w();e=-1;F.trigger("fixed.ScrollToFixed")}v(H)}else{if(!g()||!J){n();F.trigger("preUnfixed.ScrollToFixed");j();F.trigger("unfixed.ScrollToFixed")}}}}else{if(I>0){if(K+a(window).height()-F.outerHeight(true)>=I-(s()||-l())){if(o()){n();F.trigger("preUnfixed.ScrollToFixed");if(D==="absolute"){b()}else{j()}F.trigger("unfixed.ScrollToFixed")}}else{if(!o()){n();F.trigger("preFixed.ScrollToFixed");w()}v(H);F.trigger("fixed.ScrollToFixed")}}else{v(H)}}}}function l(){if(!k.options.bottom){return 0}return k.options.bottom}function n(){var H=F.css("position");if(H=="absolute"){F.trigger("postAbsolute.ScrollToFixed")}else{if(H=="fixed"){F.trigger("postFixed.ScrollToFixed")}else{F.trigger("postUnfixed.ScrollToFixed")}}}var B=function(H){if(F.is(":visible")){c=false;z()}};var E=function(H){z()};var A=function(){var I=document.body;if(document.createElement&&I&&I.appendChild&&I.removeChild){var K=document.createElement("div");if(!K.getBoundingClientRect){return null}K.innerHTML="x";K.style.cssText="position:fixed;top:100px;";I.appendChild(K);var L=I.style.height,M=I.scrollTop;I.style.height="3000px";I.scrollTop=500;var H=K.getBoundingClientRect().top;I.style.height=L;var J=(H===100);I.removeChild(K);I.scrollTop=M;return J}return null};var r=function(H){H=H||window.event;if(H.preventDefault){H.preventDefault()}H.returnValue=false};k.init=function(){k.options=a.extend({},a.ScrollToFixed.defaultOptions,h);k.$el.css("z-index",k.options.zIndex);t=a("<div />");G=F.css("position");D=F.css("position");p=a.extend({},F.offset());if(g()){k.$el.after(t)}a(window).bind("resize.ScrollToFixed",B);a(window).bind("scroll.ScrollToFixed",E);if(k.options.preFixed){F.bind("preFixed.ScrollToFixed",k.options.preFixed)}if(k.options.postFixed){F.bind("postFixed.ScrollToFixed",k.options.postFixed)}if(k.options.preUnfixed){F.bind("preUnfixed.ScrollToFixed",k.options.preUnfixed)}if(k.options.postUnfixed){F.bind("postUnfixed.ScrollToFixed",k.options.postUnfixed)}if(k.options.preAbsolute){F.bind("preAbsolute.ScrollToFixed",k.options.preAbsolute)}if(k.options.postAbsolute){F.bind("postAbsolute.ScrollToFixed",k.options.postAbsolute)}if(k.options.fixed){F.bind("fixed.ScrollToFixed",k.options.fixed)}if(k.options.unfixed){F.bind("unfixed.ScrollToFixed",k.options.unfixed)}if(k.options.spacerClass){t.addClass(k.options.spacerClass)}F.bind("resize.ScrollToFixed",function(){t.height(F.height())});F.bind("scroll.ScrollToFixed",function(){F.trigger("preUnfixed.ScrollToFixed");j();F.trigger("unfixed.ScrollToFixed");z()});F.bind("detach.ScrollToFixed",function(H){r(H);F.trigger("preUnfixed.ScrollToFixed");j();F.trigger("unfixed.ScrollToFixed");a(window).unbind("resize.ScrollToFixed",B);a(window).unbind("scroll.ScrollToFixed",E);F.unbind(".ScrollToFixed");k.$el.removeData("ScrollToFixed")});B()};k.init()};a.ScrollToFixed.defaultOptions={marginTop:0,limit:0,bottom:-1,zIndex:1000};a.fn.scrollToFixed=function(b){return this.each(function(){(new a.ScrollToFixed(this,b))})}})(jQuery);
+/****** FSVS **********/
+
+
+/*!
+* 	FSVS - Full Screen Vertical Scroller
+* 	https://github.com/lukesnowden/FSVS
+* 	Copyright 2014 Luke Snowden
+* 	Released under the MIT license:
+* 	http://www.opensource.org/licenses/mit-license.php
+*/
+
+;( function($){
+
+	$.fn.fsvs = function( options ) {
+
+		options = options || {};
+
+		/**
+		 * [defaults description]
+		 * @type {Object}
+		 */
+
+		var defaults = {
+			speed : 5000,
+			bodyID : 'fsvs-body',
+			selector : '> .slide',
+			mouseSwipeDisance : 40,
+			afterSlide : function(){},
+			beforeSlide : function(){},
+			endSlide : function(){},
+			mouseWheelEvents : true,
+			mouseWheelDelay : false,
+			mouseDragEvents : true,
+			touchEvents : true,
+			arrowKeyEvents : true,
+			pagination : true,
+			nthClasses : false,
+			detectHash : true
+		};
+
+		for( var i in options ) {
+			defaults[i] = options[i];
+		}
+		options = defaults;
+
+		/**
+		 * [currentSlideIndex description]
+		 * @type {Number}
+		 */
+
+		var currentSlideIndex = 0;
+
+		/**
+		 * [ignoreHashChange description]
+		 * @type {Boolean}
+		 */
+
+		var ignoreHashChange = false;
+
+		/**
+		 * [bodyTimeout description]
+		 * @type {[type]}
+		 */
+
+		var bodyTimeout = null;
+
+		/**
+		 * [body description]
+		 * @type {[type]}
+		 */
+
+		var body = null;
+
+		/**
+		 * [scrolling description]
+		 * @type {Boolean}
+		 */
+
+		var scrolling = false;
+
+		/**
+		 * [mouseWheelTimer description]
+		 * @type {Boolean}
+		 */
+
+		var mouseWheelTimer = false;
+
+		/**
+		 * [mouseWheelScrollStart description]
+		 * Indicates when the mouseWheel last invoked a slide event.
+		 * @type {Integer}
+		 */
+
+		var mouseWheelScrollStart = 0;
+
+		/**
+		 * [pagination description]
+		 * @type {Boolean}
+		 */
+
+		var pagination = false;
+
+		/**
+		 * [isChrome description]
+		 * @reference http://stackoverflow.com/questions/4565112/javascript-how-to-find-out-if-the-user-browser-is-chrome
+		 * @return {Boolean} [description]
+		 */
+
+		var isChrome = function() {
+			var isChromium = window.chrome,
+			    vendorName = window.navigator.vendor;
+			if( isChromium !== null && vendorName === "Google Inc." ) {
+			   return true;
+			}
+			return false;
+		};
+
+		/**
+		 * [changeViaHash description]
+		 * @return {[type]} [description]
+		 */
+
+		var changeViaHash = function() {
+			if( ! ignoreHashChange ) {
+				if( window.location.hash !== '' ) {
+					var slideID = window.location.hash;
+					var slideTo = $( '> ' + slideID, body );
+					app.slideToIndex( slideTo.index() );
+				}
+			}
+			ignoreHashChange = false;
+		};
+
+		/**
+		 * [detectHash description]
+		 * @return {[type]} [description]
+		 */
+
+		var detectHash = function(){
+			$( options.selector, body ).each( function( i ) {
+				var slide = $(this);
+				if( ! slide.attr( 'id' ) ) {
+					slide.attr( 'id', 'slide-' + (i+1) );
+				}
+			});
+			changeViaHash();
+		};
+
+		/**
+		 * [hasTransition description]
+		 * @return {Boolean} [description]
+		 */
+
+		var hasTransition = function(){
+		    prefixes = ['Webkit','Moz','ms','O'];
+		   	for( var i in prefixes ) {
+		   		if( typeof document.getElementsByTagName( 'body' )[0].style[prefixes[i] + 'Transition' ] !== 'undefined' ) {
+		   			return true;
+		   		}
+		   	}
+		    return false;
+		}
+
+		/**
+		 * [bindMouseDrag description]
+		 * @return {[type]} [description]
+		 */
+
+		var bindMouseDrag = function() {
+			var x, y;
+			window.onmousedown = function(e) {
+				y = e.y;
+			}
+			window.onmouseup = function(e) {
+				if( e.y > ( y+options.mouseSwipeDisance ) ) {
+					app.slideUp();
+				} else if( e.y < ( y-options.mouseSwipeDisance ) ) {
+					app.slideDown();
+				}
+			}
+		};
+
+		/**
+		 * [bindTouchSwipe description]
+		 * @return {[type]} [description]
+		 */
+
+		var bindTouchSwipe = function() {
+			var startY = null;
+			$(window).on( "touchstart", function(ev) {
+    			var e = ev.originalEvent;
+				if( e.target.nodeName.toLowerCase() !== 'a' ) {
+					var touches = e.touches;
+					if( touches && touches.length ) {
+						startY = touches[0].pageY;
+					}
+					e.preventDefault();
+				}
+			});
+			$(window).on( "touchmove", function(ev) {
+    			var e = ev.originalEvent;
+				if( startY !== null ) {
+					var touches = e.touches;
+					if( touches && touches.length ) {
+						var deltaY = startY - touches[0].pageY;
+						if ( deltaY >= options.mouseSwipeDisance ) {
+							app.slideDown();
+							startY = null;
+						}
+						if ( deltaY <= ( options.mouseSwipeDisance * -1 ) ) {
+							app.slideUp();
+							startY = null;
+						}
+					}
+					e.preventDefault();
+				}
+			});
+		};
+
+		/**
+		 * [mouseWheelHandler description]
+		 * @param  {[type]} e [description]
+		 * @return {[type]}   [description]
+		 */
+
+		var mouseWheelHandler = function( ev ) {
+			var e = window.event || ev;
+			var wheely = ( e.wheelDelta || -e.detail || e.originalEvent.detail );
+			var delta = Math.max( -1, Math.min( 1, wheely ) );
+			if( isChrome() ) {
+				// chrome seems to extends its "wheely" motion
+				wheely = Math.floor( wheely / 5 );
+			}
+			if( ( ! scrolling || ( options.mouseWheelDelay && Date.now() > mouseWheelScrollStart + options.mouseWheelDelay ) ) && Math.abs( wheely ) > 5 ) {
+				mouseWheelScrollStart = Date.now();
+				scrolling = true;
+				// Firefox goes backwards... obviously
+				if( e.originalEvent && e.originalEvent.detail ) {
+					if( delta > 0 ) {
+						app.slideDown();
+					} else {
+						app.slideUp();
+					}
+				} else {
+					if( delta > 0 ) {
+						app.slideUp();
+					} else {
+						app.slideDown();
+					}
+				}
+			}
+		};
+
+		/**
+		 * [bindMouseWheelEvent description]
+		 * @return {[type]} [description]
+		 */
+
+		var bindMouseWheelEvent = function() {
+			$(window).bind('wheel mousewheel DOMMouseScroll MozMousePixelScroll', mouseWheelHandler );
+		};
+
+		/**
+		 * [bindKeyArrows description]
+		 * @return {[type]} [description]
+		 */
+
+		var bindKeyArrows = function() {
+			allow = true;
+			$('input,textarea,select,option', body)
+			.bind( 'focus.fsvs', function(){ allow = false; })
+			.bind( 'blur.fsvs', function(){ allow = true; });
+			window.onkeydown = function(e) {
+				e = e || window.event;
+			    if ( e.keyCode == '38' && allow ) app.slideUp();
+			    else if ( e.keyCode == '40' && allow ) app.slideDown();
+			}
+		};
+
+		/**
+		 * [slideCallback description]
+		 * @param  {[type]} index [description]
+		 * @return {[type]}       [description]
+		 */
+
+		var slideCallback = function( index ) {
+			currentSlideIndex = index;
+			options.afterSlide( index );
+			if( options.detectHash ) {
+				var slide = $( options.selector, body ).eq( index );
+				window.location.hash = slide[0].id;
+			}
+			if( ! app.canSlideDown() ) {
+				options.endSlide( index );
+			}
+			scrolling = false;
+		};
+
+		/**
+		 * [nthClasses description]
+		 * @param  {[type]} nthClassLimit [description]
+		 * @return {[type]}               [description]
+		 */
+
+		var nthClasses = function( nthClassLimit ) {
+			$( options.selector, body ).each( function( i ) {
+				var nthClass = 'nth-class-' + ((i%nthClassLimit)+1);
+				if( ! $(this).hasClass( nthClass ) ) {
+					$(this).addClass( nthClass );
+				}
+			});
+		};
+
+		/**
+		 * [jQuerySlide description]
+		 * @param  {[type]} index [description]
+		 * @return {[type]}       [description]
+		 */
+
+		var jQuerySlide = function( index ) {
+			options.beforeSlide( index );
+			if( body.is( ':animated' ) ) {
+				currentSlideIndex = index;
+				body.stop();
+			}
+			body.animate({
+				top : '-' + (index*$(window).height()) + 'px'
+			}, options.speed, function() {
+				slideCallback( index );
+			});
+		};
+
+		/**
+		 * [cssSlide description]
+		 * @param  {[type]} index [description]
+		 * @return {[type]}       [description]
+		 */
+
+		var cssSlide = function( index ) {
+			options.beforeSlide( index );
+			body.css({
+				'-webkit-transform' : 'translate3d(0, -' + (index*100) + '%, 0)',
+				'-moz-transform' : 'translate3d(0, -' + (index*100) + '%, 0)',
+				'-ms-transform' : 'translate3d(0, -' + (index*100) + '%, 0)',
+				'transform' : 'translate3d(0, -' + (index*100) + '%, 0)'
+			});
+			if( bodyTimeout !== null ) {
+				currentSlideIndex = index;
+				clearTimeout( bodyTimeout );
+			}
+			bodyTimeout = setTimeout( function(){
+				slideCallback( index );
+				bodyTimeout = null;
+			}, options.speed );
+		}
+
+		/**
+		 * [app description]
+		 * @type {Object}
+		 */
+
+		var app = {
+
+			nthClasses : nthClasses,
+
+			/**
+			 * [addPagination description]
+			 */
+
+			addPagination : function() {
+				pagination = $('<ul id="fsvs-pagination"></ul>');
+				$( options.selector, body ).each( function(i) {
+					var linkClass = currentSlideIndex === i ? 'pagination-link active' : 'pagination-link';
+					$('<li class="' + linkClass + '"><span><span></span></span></li>').appendTo( pagination );
+				});
+				if( $('#fsvs-pagination').length !== 0 ) {
+					$('#fsvs-pagination').remove();
+				}
+				pagination.appendTo( $('body') );
+				var paginationHeight = pagination.height();
+				var speed = options.speed/1000;
+				$('span', pagination).css({
+					'-webkit-transition': 'all ' + speed + 's',
+					'-moz-transition'	: 'all ' + speed + 's',
+					'-o-transition'		: 'all ' + speed + 's',
+					'transition'		: 'all ' + speed + 's'
+				});
+				pagination.css({
+					marginTop : '-' + (paginationHeight/2) + 'px',
+					right : '25px'
+				});
+				$('li', pagination).click( function(e){
+					ignoreHashChange = true;
+					$('.active', pagination).removeClass( 'active' );
+					$(this).addClass( 'active' );
+					app.slideToIndex( $(this).index(), e );
+				});
+			},
+
+			/**
+			 * [setSpeed description]
+			 * @param {[type]} _speed [description]
+			 */
+
+			setSpeed : function( _speed ) {
+				speed = _speed/1000;
+				body.css({
+					'-webkit-transition': 'all ' + speed + 's',
+					'-moz-transition'	: 'all ' + speed + 's',
+					'-o-transition'		: 'all ' + speed + 's',
+					'transition'		: 'all ' + speed + 's'
+				});
+			},
+
+			/**
+			 * [shouldRun description]
+			 * @return {[type]} [description]
+			 */
+
+			shouldRun : function() {
+				return $('html').hasClass( 'fsvs' );
+			},
+
+			/**
+			 * [canSlideUp description]
+			 * @return {[type]} [description]
+			 */
+
+			canSlideUp : function() {
+				if( currentSlideIndex === 0 ) return false;
+				return true;
+			},
+
+			/**
+			 * [canSlideDown description]
+			 * @return {[type]} [description]
+			 */
+
+			canSlideDown : function() {
+				if( $( options.selector, body ).eq( (currentSlideIndex+1) ).length === 0 ) return false;
+				return true;
+			},
+
+			/**
+			 * [addClasses description]
+			 * @param {[type]} before [description]
+			 * @param {[type]} after  [description]
+			 */
+
+			addClasses : function( before, after ) {
+				var _body = $('body');
+				_body.removeClass( removeClass = 'active-slide-' + (before+1) );
+				_body.addClass( 'active-slide-' + (after+1) );
+
+				$( options.selector, body ).eq( before ).removeClass( 'active-slide' );
+				$( options.selector, body ).eq( after ).addClass( 'active-slide' );
+
+				if( options.nthClasses ) {
+					_body.removeClass( 'active-nth-slide-' + (( before % options.nthClasses )+1) );
+					_body.addClass( 'active-nth-slide-' + (( after % options.nthClasses )+1) );
+				}
+			},
+
+			/**
+			 * [slideToIndex description]
+			 * @param  {[type]} index [description]
+			 * @return {[type]}       [description]
+			 */
+
+			slideToIndex : function( index, e ) {
+				var e = e || false;
+				if( ! e && pagination ) {
+					$('.active', pagination).removeClass( 'active' );
+					$('> *', pagination).eq(index).addClass( 'active' );
+				}
+				app.addClasses( currentSlideIndex, index );
+				if( hasTransition() ) {
+					cssSlide( index );
+				} else {
+					jQuerySlide( index );
+				}
+			},
+
+			/**
+			 * [slideDown description]
+			 * @return {[type]} [description]
+			 */
+
+			slideDown : function(e) {
+				if( app.canSlideDown() ) {
+					ignoreHashChange = true;
+					app.slideToIndex( (currentSlideIndex+1), e );
+				} else {
+					scrolling = false;
+				}
+			},
+
+			/**
+			 * [slideUp description]
+			 * @return {[type]} [description]
+			 */
+
+			slideUp : function(e) {
+				if( app.canSlideUp() ) {
+					ignoreHashChange = true;
+					app.slideToIndex( (currentSlideIndex-1), e );
+				} else {
+					scrolling = false;
+				}
+			},
+
+			/**
+			 * [init description]
+			 * @return {[type]} [description]
+			 */
+
+			init : function() {
+				body = $( '#' + options.bodyID );
+				if( hasTransition() ) {
+					app.setSpeed( options.speed );
+				}
+				if( options.pagination ) {
+					app.addPagination();
+				}
+				if( options.nthClasses ) {
+					nthClasses( options.nthClasses );
+				}
+				if( options.mouseWheelEvents ) {
+					bindMouseWheelEvent();
+				}
+				if( options.arrowKeyEvents ) {
+					bindKeyArrows();
+				}
+				if( options.mouseDragEvents ) {
+					bindMouseDrag();
+				}
+				if( options.touchEvents ) {
+					bindTouchSwipe();
+				}
+				if( options.detectHash ) {
+					detectHash();
+					if( window.addEventListener ) {
+					    window.addEventListener( "hashchange", changeViaHash, false );
+					}
+					else if (window.attachEvent) {
+					    window.attachEvent( "onhashchange", changeViaHash );
+					}
+				}
+				app.addClasses( 0, 0 );
+			}
+
+		};
+
+		if( app.shouldRun() ) {
+			app.init();
+		}
+		return app;
+
+	};
+
+})( jQuery );
+

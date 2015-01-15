@@ -25,7 +25,7 @@
 
       <!-- MENU START -->
 
-      <header>
+      <header class="hide hidden">
 
         <img src="assets/img/white_logo_dots.svg" alt="" class="mainlogo">
         <menu class="menu">
@@ -50,6 +50,7 @@
           <div class="left">
             <img src="assets/img/white_logo.svg" alt="" class="herologo" />
           </div>
+          <figure class="bar"></figure>
           <div class="right">
             <h1>2015 <span>Marketing Brand & Style Guide</span></h1>
           </div>
