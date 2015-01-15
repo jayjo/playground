@@ -27,7 +27,6 @@ textarea {
 body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
-    padding-top: 75px;
 }
 
 /*
@@ -251,7 +250,6 @@ p {
     line-height: 29px;
     margin: 0 auto 35px;
     text-align: left;
-    color: #fff;
 }
 
 a {
@@ -402,7 +400,14 @@ menu ul li a {
     align-items: center;
     justify-content: center;
     background-size: cover;
+    z-index: 2;
     @include deep_blue_grad;
+    transition: top 350ms;
+}
+
+.hero_scrolled {
+    top: -1600px;
+    transition: top 350ms;
 }
 
 .hero h1 {
@@ -452,7 +457,7 @@ menu ul li a {
 /* @group Left Area */
 
 .left_area {
-    width: 36%;
+    width: 32%;
     min-height: 100%;
     position: fixed;
     top: 0;
@@ -507,7 +512,166 @@ footer p span.page {
 
 /* @end Left Area
 
+/* @group Left Area */
+
+.right_area {
+    width: 68%;
+    margin-left: 32%;
+    background: #fff;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.right_area section {
+    width: 100%;
+    padding: 5% 3%;
+}
+
+.right_area h3 {
+    width: 100%;
+    margin: 0 0 5px 0;
+    padding: 0 3%;
+}
+
+.right_area p {
+    width: 80%;
+    margin: 0;
+    padding: 0 3%;
+}
+
+.right_area h6 {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.section {
+    display: flex;
+}
+
+.section p {
+    text-align: center;
+    width: 100%;
+}
+
+p.desc {
+    line-height: 0;
+}
+
+#colors input[type=text] {
+    width: 100%;
+    font-size: 14px;
+    font-family: $brandon;
+    outline: none;
+    text-align: center;
+    border: none;
+    color: $slate;
+    cursor: pointer;
+}
+
+.color figure {
+    text-align: center;
+}
+
+/* PRIMARY COLOR STYLES */
+
+.primary {
+    margin-bottom: 75px;
+}
+
+.primary figure {
+    flex: 1;
+    width: 19%;
+    float: left;
+    margin: 0 3%;
+}
+
+.primary figure.primary_color {
+    display: block;
+    margin-top: 40px;
+}
+
+.primary_color .color {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 50em;
+    padding-top: 100%;
+}
+
+.primary_color.slate .color {
+    background: $slate;
+}
+
+.primary_color.blue .color {
+    background: $blue;
+}
+
+.primary_color.gray .color {
+    background: $gray;
+}
+
+.primary_color.light_gray .color {
+    background: $light_gray;
+}
+
+/* SECONDARY COLOR STYLES */
+
+.secondary {
+
+}
+
+.secondary figure {
+    flex: 1;
+    width: 19%;
+    float: left;
+    margin: 0 3%;
+}
+
+.secondary figure.secondary_color {
+    display: block;
+    margin-top: 40px;
+}
+
+.secondary_color .color {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 50em;
+    padding-top: 100%;
+}
+
+.secondary_color.purple .color {
+    background: $purple;
+}
+
+.secondary_color.medium_blue .color {
+    background: $medium_blue;
+}
+
+.secondary_color.sage_green .color {
+    background: $sage_green;
+}
+
+.secondary_color.red .color {
+    background: $red;
+}
+
+.secondary_color.orange .color {
+    background: $orange;
+}
+
+.secondary_color.yellow .color {
+    background: $yellow;
+}
+
+/* @end Left Area
+
 /* @group Colors */
+
+.white {
+    color: #fff;
+}
 
 /********* PRIMARY **********/
 

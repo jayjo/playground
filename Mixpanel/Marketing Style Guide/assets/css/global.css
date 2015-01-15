@@ -16,6 +16,7 @@
   font-weight: 900;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'brandon';
   src: url("../fonts/brandon_bld-webfont.eot");
@@ -23,6 +24,7 @@
   font-weight: 700;
   font-style: normal;
 }
+
 /************* SOURCE FONTS ****************/
 @font-face {
   font-family: 'source';
@@ -31,6 +33,7 @@
   font-weight: 500;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'source';
   src: url("../fonts/sourcesanspro-bold-webfont.eot");
@@ -38,6 +41,7 @@
   font-weight: 700;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'source';
   src: url("../fonts/sourcesanspro-regular-webfont.eot");
@@ -45,6 +49,7 @@
   font-weight: 300;
   font-style: normal;
 }
+
 /************* ROPA FONTS ****************/
 @font-face {
   font-family: 'ropa';
@@ -53,6 +58,7 @@
   font-weight: normal;
   font-style: italic;
 }
+
 /************** Mixins Fonts ***************/
 /************** Brand Colors ***************/
 /***** Primary Colors *****/
@@ -64,7 +70,6 @@
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
-  padding-top: 75px;
 }
 
 /*
@@ -272,7 +277,6 @@ p {
   line-height: 29px;
   margin: 0 auto 35px;
   text-align: left;
-  color: #fff;
 }
 
 a {
@@ -390,6 +394,7 @@ menu ul li a:active, menu ul li a.active {
     max-width: 1441px;
   }
 }
+
 .clearfloat {
   clear: both;
 }
@@ -412,15 +417,23 @@ menu ul li a:active, menu ul li a.active {
   align-items: center;
   justify-content: center;
   background-size: cover;
+  z-index: 2;
   background-color: #4a0046;
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FF4A0046', endColorstr='#FF0D649B');
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuMCIgeDI9IjEuMCIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRhMDA0NiIvPjxzdG9wIG9mZnNldD0iNjIlIiBzdG9wLWNvbG9yPSIjMjUxZjVjIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMGQ2NDliIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRhMDA0NiIvPjxzdG9wIG9mZnNldD0iNjIlIiBzdG9wLWNvbG9yPSIjMjUxZjVjIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMGQ2NDliIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
   background-size: 100%;
   background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #4a0046), color-stop(62%, #251f5c), color-stop(100%, #0d649b));
-  background-image: -moz-linear-gradient(left top, #4a0046 0%, #251f5c 62%, #0d649b 100%);
   background-image: -webkit-linear-gradient(left top, #4a0046 0%, #251f5c 62%, #0d649b 100%);
-  background-image: linear-gradient(to right bottom, #4a0046 0%, #251f5c 62%, #0d649b 100%);
+  background-image: -moz-linear-gradient(left top, #4a0046 0%, #251f5c 62%, #0d649b 100%);
+  background-image: -o-linear-gradient(left top, #4a0046 0%, #251f5c 62%, #0d649b 100%);
+  background-image: linear-gradient(left top, #4a0046 0%, #251f5c 62%, #0d649b 100%);
+  transition: top 350ms;
+}
+
+.hero_scrolled {
+  top: -1600px;
+  transition: top 350ms;
 }
 
 .hero h1 {
@@ -469,7 +482,7 @@ menu ul li a:active, menu ul li a.active {
 
 /* @group Left Area */
 .left_area {
-  width: 36%;
+  width: 32%;
   min-height: 100%;
   position: fixed;
   top: 0;
@@ -499,12 +512,13 @@ menu ul li a:active, menu ul li a.active {
   background-color: #3c1c51;
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FF3C1C51', endColorstr='#FFD14253');
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuMCIgeDI9IjEuMCIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNjMWM1MSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2QxNDI1MyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNjMWM1MSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2QxNDI1MyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
   background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #3c1c51), color-stop(100%, #d14253));
-  background-image: -moz-linear-gradient(left top, #3c1c51 0%, #d14253 100%);
   background-image: -webkit-linear-gradient(left top, #3c1c51 0%, #d14253 100%);
-  background-image: linear-gradient(to right bottom, #3c1c51 0%, #d14253 100%);
+  background-image: -moz-linear-gradient(left top, #3c1c51 0%, #d14253 100%);
+  background-image: -o-linear-gradient(left top, #3c1c51 0%, #d14253 100%);
+  background-image: linear-gradient(left top, #3c1c51 0%, #d14253 100%);
   transition: background 250ms;
 }
 
@@ -532,7 +546,159 @@ footer p span.page {
 
 /* @end Left Area
 
+/* @group Left Area */
+.right_area {
+  width: 68%;
+  margin-left: 32%;
+  background: #fff;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.right_area section {
+  width: 100%;
+  padding: 5% 3%;
+}
+
+.right_area h3 {
+  width: 100%;
+  margin: 0 0 5px 0;
+  padding: 0 3%;
+}
+
+.right_area p {
+  width: 80%;
+  margin: 0;
+  padding: 0 3%;
+}
+
+.right_area h6 {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.section {
+  display: flex;
+}
+
+.section p {
+  text-align: center;
+  width: 100%;
+}
+
+p.desc {
+  line-height: 0;
+}
+
+#colors input[type=text] {
+  width: 100%;
+  font-size: 14px;
+  font-family: "brandon";
+  outline: none;
+  text-align: center;
+  border: none;
+  color: #454e5a;
+  cursor: pointer;
+}
+
+.color figure {
+  text-align: center;
+}
+
+/* PRIMARY COLOR STYLES */
+.primary {
+  margin-bottom: 75px;
+}
+
+.primary figure {
+  flex: 1;
+  width: 19%;
+  float: left;
+  margin: 0 3%;
+}
+
+.primary figure.primary_color {
+  display: block;
+  margin-top: 40px;
+}
+
+.primary_color .color {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 50em;
+  padding-top: 100%;
+}
+
+.primary_color.slate .color {
+  background: #454e5a;
+}
+
+.primary_color.blue .color {
+  background: #45a0f8;
+}
+
+.primary_color.gray .color {
+  background: #8d989e;
+}
+
+.primary_color.light_gray .color {
+  background: #f7fafc;
+}
+
+/* SECONDARY COLOR STYLES */
+.secondary figure {
+  flex: 1;
+  width: 19%;
+  float: left;
+  margin: 0 3%;
+}
+
+.secondary figure.secondary_color {
+  display: block;
+  margin-top: 40px;
+}
+
+.secondary_color .color {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 50em;
+  padding-top: 100%;
+}
+
+.secondary_color.purple .color {
+  background: #8e539d;
+}
+
+.secondary_color.medium_blue .color {
+  background: #7f6bf4;
+}
+
+.secondary_color.sage_green .color {
+  background: #33af86;
+}
+
+.secondary_color.red .color {
+  background: #e55767;
+}
+
+.secondary_color.orange .color {
+  background: #f4873a;
+}
+
+.secondary_color.yellow .color {
+  background: #f4c040;
+}
+
+/* @end Left Area
+
 /* @group Colors */
+.white {
+  color: #fff;
+}
+
 /********* PRIMARY **********/
 .slate {
   color: #454e5a;
@@ -681,7 +847,8 @@ footer p span.page {
 
   @page {
     margin: 0.5cm;
-  }
+}
+
   p,
   h2,
   h3 {
@@ -694,5 +861,3 @@ footer p span.page {
     page-break-after: avoid;
   }
 }
-
-/*# sourceMappingURL=global.css.map */

@@ -4,12 +4,8 @@
   <?php include('inc/left_area.php'); ?>
 <!-- END SECTION LEFT AREA -->
 
-<!-- SECTION LOGO -->
-
-<!-- END SECTION LOGO -->
-
-<!-- SECTION COLORS -->
-  <?php include('inc/colors.php'); ?>
-<!-- END SECTION COLORS -->
+<!-- SECTION RIGHT AREA -->
+	<?php include('inc/right_area.php'); ?>
+<!-- END SECTION RIGHT AREA -->
 
 <?php include('inc/footer.php'); ?>
