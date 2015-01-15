@@ -23,6 +23,18 @@ jQuery(document).ready(function($) {
 		$(window).on('resize', barHeight);
 	});
 
+	///// SCROLLING FOR INTRO PAGE
+
+	$(window).scroll(function(event){
+		var y = $(this).scrollTop();
+
+		if (y >= '30'){
+			$('.hero').addClass('slide');
+		} else {
+			$('.hero').removeClass('slide');
+		}
+	});
+
 	///// SCROLL TO FOR LINKS
 
 

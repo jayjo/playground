@@ -431,7 +431,7 @@ menu ul li a:active, menu ul li a.active {
   transition: top 350ms;
 }
 
-.hero_scrolled {
+.hero.slide {
   top: -1600px;
   transition: top 350ms;
 }
