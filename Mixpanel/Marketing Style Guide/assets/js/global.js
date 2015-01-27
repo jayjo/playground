@@ -10,6 +10,8 @@ jQuery(document).ready(function($) {
 		$(this).next('input').select();
 	});
 
+	$('.page').html('03');
+
 	///// STICKY MENU
 
 	///// SET THE BAR SEPARATOR HEIGHT
@@ -23,17 +25,37 @@ jQuery(document).ready(function($) {
 		$(window).on('resize', barHeight);
 	});
 
-	///// SCROLLING FOR INTRO PAGE
+	/// SCROLLING FOR INTRO PAGE
 
 	$(window).scroll(function(event){
 		var y = $(this).scrollTop();
 
-		if (y >= '30'){
+		if (y >= '1'){
 			$('.hero').addClass('slide');
 		} else {
 			$('.hero').removeClass('slide');
 		}
 	});
+
+///// SCROLLMAGIC
+
+	// var controller;
+	// $(document).ready(function($) {
+	// 	// init controller
+	// 	controller = new ScrollMagic();
+	// });
+
+	// $(document).ready(function(){
+	// 	// Build Tween
+	// 	var introWipe = TweenMax.to(".hero", 1, {top: "-100%", delay: 0.5});
+	// 	// Build Scroll
+	// 	var introTrigger = new ScrollScene({triggerElement: ".hero", duration: 1000})
+	// 			.setTween(introWipe)
+	// 			.addTo(controller);
+	// 	// show indicators (requires debug extension)
+	// 	scene.addIndicators();
+
+	// });
 
 	///// SCROLL TO FOR LINKS
 

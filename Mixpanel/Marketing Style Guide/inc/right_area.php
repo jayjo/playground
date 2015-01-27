@@ -8,7 +8,7 @@
 			<!-- START PRIMARY -->
 			<h3 class="slate">Primary Colors</h3>
 			<p class="gray">These are first colors to be considered for a design. These primary colors reflect what should be used for text, links and lighter backgrounds.</p>
-		  <div class="section primary">
+		  <div class="section primary flex">
 		    <figure class="primary_color slate">
 		      <div class="color"></div>
 		      <h6 class="slate name">Slate</h6>
@@ -54,7 +54,7 @@
 		  <!-- START SECONDARY -->
 			<h3 class="slate">Secondary Colors</h3>
 			<p class="gray">We have defined a core set of secondary colors for you to start with. These are to be used in the supporting illustrations throughout the site and in combination with the primary neutral colors.</p>
-		  <div class="section secondary">
+		  <div class="section secondary flex">
 		    <figure class="secondary_color purple">
 		      <div class="color"></div>
 		      <h6 class="slate name">Purple</h6>
@@ -120,7 +120,7 @@
 		  <!-- START GRADIENTS -->
 			<h3 class="slate">Gradients</h3>
 			<p class="gray">Each feature on the marketing site will have it’s own unique gradient used in the hero background. These will otherwise be used minimally.</p>
-		  <div class="section gradient">
+		  <div class="section gradient flex">
 		    <figure class="gradient_color purple_grad">
 		      <div class="color"></div>
 		      <h6 class="slate name">Purple</h6>
@@ -149,7 +149,7 @@
 		      </p>
 		    </figure>
 		  </div>
-		  <div class="section gradient">
+		  <div class="section gradient flex">
 		    <figure class="gradient_color mars_grad">
 		      <div class="color"></div>
 		      <h6 class="slate name">Mars</h6>
@@ -179,6 +179,55 @@
 		    </figure>
 		  </div>
 		  <!-- END GRADIENTS -->
+		</section>
+		<!-- END COLORS -->
+
+		<!-- START TYPOGRAPHY -->
+		<section id="typography">
+			<!-- START HEADINGs -->
+			<h3 class="heading slate">Headings</h3>
+			<p class="gray">Use Brandon Grotesque for all heading and sub-headings. These headings should be uppercase in all instances.</p>
+		  <div class="section headings">
+		    <figure class="h1 slate">
+		    	<h5 class="desc gray">h1 header / Brandon grotesque black, 46 PX, UPPERCASE</h5>
+		      <h1 class="slate">Lorem ipsum dolor sit, consectetur adipiscing</h1>
+		    </figure>
+		    <figure class="h2 slate">
+		    	<h5 class="desc gray">h2 header / Brandon grotesque black, 30 PX, UPPERCASE</h5>
+		      <h2 class="slate">Lorem ipsum dolor sit amet, consectetur adipiscing elit DOLAR UNIMA SET</h2>
+		    </figure>
+		    <figure class="h3 slate">
+		    	<h5 class="desc gray">h3 header / Brandon grotesque black, 24 PX, UPPERCASE</h5>
+		      <h3 class="slate">Lorem ipsum dolor sit amet, consectetur adipiscing elit DOLAR UNIMA SET</h3>
+		    </figure>
+		    <figure class="h4 slate">
+		    	<h5 class="desc gray">h4 header / Brandon grotesque black, 18 PX, UPPERCASE</h5>
+		      <h4 class="slate">Lorem ipsum dolor sit amet, consectetur adipiscing elit DOLAR UNIMA SET</h4>
+		    </figure>
+		  </div>
+		  <!-- END headings -->
+		  <!-- START Paragraphs -->
+			<h3 class="paragraph slate">Paragraphs</h3>
+			<p class="gray">Use Source Sans Pro for all paragraph text and Ropa Sans for captions.</p>
+		  <div class="section paragraphs">
+		    <figure class="h1 slate">
+		    	<h5 class="desc gray">h1 header / Brandon grotesque black, 46 PX, UPPERCASE</h5>
+		      <h1 class="slate">Lorem ipsum dolor sit, consectetur adipiscing</h1>
+		    </figure>
+		    <figure class="h2 slate">
+		    	<h5 class="desc gray">h2 header / Brandon grotesque black, 30 PX, UPPERCASE</h5>
+		      <h2 class="slate">Lorem ipsum dolor sit, consectetur adipiscing</h2>
+		    </figure>
+		    <figure class="h3 slate">
+		    	<h5 class="desc gray">h3 header / Brandon grotesque black, 24 PX, UPPERCASE</h5>
+		      <h3 class="slate">Lorem ipsum dolor sit, consectetur adipiscing</h3>
+		    </figure>
+		    <figure class="h4 slate">
+		    	<h5 class="desc gray">h4 header / Brandon grotesque black, 18 PX, UPPERCASE</h5>
+		      <h4 class="slate">Lorem ipsum dolor sit, consectetur adipiscing</h4>
+		    </figure>
+		  </div>
+		  <!-- END Paragraphs -->
 		</section>
 		<!-- END COLORS -->
 		<!-- <?php include('inc/right.php'); ?> -->

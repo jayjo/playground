@@ -15,6 +15,12 @@
   <link rel="apple-touch-icon" sizes="144x144" href="" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+  <script type="text/javascript" src="assets/js/dependent/greensock/TweenMax.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.scrollmagic.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.scrollmagic.debug.js"></script>
+  <!-- <script type="text/javascript" src="assets/js/jquery.scrollmagic.min.js"></script> -->
+
   <META NAME="ROBOTS" CONTENT="NOINDEX, FOLLOW">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -56,3 +62,4 @@
           </div>
           <div class="clearfloat"></div>
       </div>
+      <div class="heroWipe"></div>
