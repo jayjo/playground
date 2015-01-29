@@ -10,8 +10,6 @@ jQuery(document).ready(function($) {
 		$(this).next('input').select();
 	});
 
-	$('.page').html('03');
-
 	///// STICKY MENU
 
 	///// SET THE BAR SEPARATOR HEIGHT
@@ -30,12 +28,42 @@ jQuery(document).ready(function($) {
 	$(window).scroll(function(event){
 		var y = $(this).scrollTop();
 
-		if (y >= '1'){
+		if (y >= '5'){
 			$('.hero').addClass('slide');
+			$('header').removeClass('hide');
 		} else {
-			$('.hero').removeClass('slide');
 		}
 	});
+
+///// SCROLLING BUSINESS
+
+$(function(){
+	$.scrollIt({
+		upKey: 38,
+		downKey: 40,
+		easing: 'linear',
+		scrollTime: 500,
+		activeClass: 'active'
+	});
+});
+
+$(window).scroll(function(event){
+	if ($('.color-palette').hasClass('active')) {
+		$('.left_area')
+			.addClass('colors')
+			.removeClass('typography');
+		$('.content h1').html('<span>02</span>Color');
+		$('.content p.white').html('The Mixpanel color palette has expanded to include dynamic colors that complement each other and can be used in any combination as long as the integrity of the brand remains intact.')
+		$('.page').html('02');
+	} else if ($('.typography').hasClass('active')) {
+		$('.left_area')
+			.addClass('typography')
+			.removeClass('colors');
+		$('.content h1').html('<span>03</span>Typography');
+		$('.content p.white').html('Consistent use of our typefaces reinforces the Mixpanel brand identity. We use a combination of <strong>Brandon Grotesque</strong>, <strong>Source Sans Pro</strong> and <strong>Ropa Sans</strong>.')
+		$('.page').html('03');
+	} else {}
+});
 
 ///// SCROLLMAGIC
 

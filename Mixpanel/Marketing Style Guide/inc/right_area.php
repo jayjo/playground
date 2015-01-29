@@ -4,7 +4,7 @@
 	<!-- START CONTENT -->
 	<div class="right_area">
 		<!-- START COLORS -->
-		<section id="colors">
+		<section id="colors" data-scroll-index="1">
 			<!-- START PRIMARY -->
 			<h3 class="slate">Primary Colors</h3>
 			<p class="gray">These are first colors to be considered for a design. These primary colors reflect what should be used for text, links and lighter backgrounds.</p>
@@ -183,7 +183,7 @@
 		<!-- END COLORS -->
 
 		<!-- START TYPOGRAPHY -->
-		<section id="typography">
+		<section id="typography" data-scroll-index="2">
 			<!-- START HEADINGs -->
 			<h3 class="heading slate">Headings</h3>
 			<p class="gray">Use Brandon Grotesque for all heading and sub-headings. These headings should be uppercase in all instances.</p>
