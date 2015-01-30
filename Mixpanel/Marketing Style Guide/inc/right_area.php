@@ -211,20 +211,9 @@
 			<p class="gray">Use Source Sans Pro for all paragraph text and Ropa Sans for captions.</p>
 		  <div class="section paragraphs">
 		    <figure class="h1 slate">
-		    	<h5 class="desc gray">h1 header / Brandon grotesque black, 46 PX, UPPERCASE</h5>
-		      <h1 class="slate">Lorem ipsum dolor sit, consectetur adipiscing</h1>
-		    </figure>
-		    <figure class="h2 slate">
-		    	<h5 class="desc gray">h2 header / Brandon grotesque black, 30 PX, UPPERCASE</h5>
-		      <h2 class="slate">Lorem ipsum dolor sit, consectetur adipiscing</h2>
-		    </figure>
-		    <figure class="h3 slate">
-		    	<h5 class="desc gray">h3 header / Brandon grotesque black, 24 PX, UPPERCASE</h5>
-		      <h3 class="slate">Lorem ipsum dolor sit, consectetur adipiscing</h3>
-		    </figure>
-		    <figure class="h4 slate">
-		    	<h5 class="desc gray">h4 header / Brandon grotesque black, 18 PX, UPPERCASE</h5>
-		      <h4 class="slate">Lorem ipsum dolor sit, consectetur adipiscing</h4>
+		    	<h5 class="desc slate">PARAGRAPH TEXT / SOURCE SANS PRO, 18 PX</h5>
+		      <p class="gray">Funnels are a way to visually measure how customers move through any series of events. Creating a funnel in Mixpanel is as simple as choosing an event.</p>
+					<p class="gray">Other analytics tools ask you to set variables or rules, use fancy syntax, or fill in complicated forms. Just tell Mixpanel each event you want to track and you're done.</p>
 		    </figure>
 		  </div>
 		  <!-- END Paragraphs -->

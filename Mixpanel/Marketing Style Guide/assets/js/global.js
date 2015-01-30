@@ -48,7 +48,7 @@ $(function(){
 });
 
 $(window).scroll(function(event){
-	if ($('.color-palette').hasClass('active')) {
+	if ($('.color').hasClass('active')) {
 		$('.left_area')
 			.addClass('colors')
 			.removeClass('typography');
@@ -64,6 +64,16 @@ $(window).scroll(function(event){
 		$('.page').html('03');
 	} else {}
 });
+
+// $('a.color').on('click', function(){
+// 	$(this).addClass('active').siblings().removeClass('active');
+// 	$('.left_area').removeClass('typography').addClass('colors');
+// });
+
+// $('a.typography').on('click', function(){
+// 	$(this).addClass('active').siblings().removeClass('active');
+// 	$('.left_area').removeClass('colors').addClass('typography');
+// });
 
 ///// SCROLLMAGIC
 
