@@ -1,0 +1,170 @@
+/************* GLOBAL STUFF ************/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-size: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: #f0f4f7;
+}
+
+#pagewrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  max-width: 1840px;
+  display: flex;
+  margin: 0 auto;
+  border-left: 1px solid #e3e5ea;
+  border-right: 1px solid #e3e5ea;
+  background: #f7fafc;
+}
+
+header {
+  width: 100%;
+  height: 71px;
+  border-bottom: 1px solid #e3e5ea;
+  align-self: flex-start;
+}
+
+.avatar {
+  width: 71px;
+  height: 70px;
+  color: #fff;
+  font: 700 20px/20px "Montserrat", sans-serif;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #e3e5ea;
+  cursor: pointer;
+}
+.avatar:after {
+  border-radius: 50em;
+  width: 40px;
+  height: 40px;
+  background: #ccd5d8;
+  content: "JJ";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar:hover {
+  background: white;
+}
+.avatar:hover:after {
+  background: #8c989e;
+}
+
+.project {
+  width: 200px;
+  height: 70px;
+  font: 15px/23px "Muli", sans-serif;
+  color: #ccd5d8;
+  font-weight: bolder;
+  border-right: 1px solid #e3e5ea;
+  text-align: left;
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  padding: 0 0 0 15px;
+  align-items: center;
+  margin-left: 71px;
+}
+.project:hover {
+  background: white;
+  color: #8c989e;
+}
+.project:hover .burger {
+  background: #8c989e;
+}
+.project:hover .burger:before {
+  top: 7px;
+  background: #8c989e;
+  transition: top 150ms;
+}
+.project:hover .burger:after {
+  bottom: 7px;
+  background: #8c989e;
+  transition: bottom 150ms;
+}
+
+.burger {
+  width: 15px;
+  height: 2px;
+  border-radius: 5px;
+  background: #ccd5d8;
+  position: absolute;
+  right: 15px;
+  top: 34px;
+}
+.burger:before, .burger:after {
+  width: 15px;
+  height: 2px;
+  border-radius: 5px;
+  position: absolute;
+  content: "";
+  background: #ccd5d8;
+}
+.burger:before {
+  top: 5px;
+  transition: top 150ms;
+}
+.burger:after {
+  bottom: 5px;
+  transition: bottom 150ms;
+}
+
+.logo {
+  width: 8px;
+  height: 8px;
+  background: #8c989e;
+  border-radius: 50em;
+  position: absolute;
+  top: 31px;
+  left: 50%;
+  transition: translateX(-50%);
+}
+.logo:before, .logo:after {
+  border-radius: 50em;
+  background: #8c989e;
+  position: absolute;
+  content: "";
+}
+.logo:before {
+  width: 12px;
+  height: 12px;
+  right: 20px;
+  top: -2px;
+}
+.logo:after {
+  top: 2px;
+  width: 4px;
+  height: 4px;
+  left: 20px;
+}
+
+nav {
+  width: 71px;
+  height: 100%;
+  border-right: 1px solid #e3e5ea;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/*# sourceMappingURL=global.css.map */
