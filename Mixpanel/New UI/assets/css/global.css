@@ -22,7 +22,6 @@ h4 {
   font-size: 12px;
   line-height: 20px;
   text-transform: uppercase;
-  color: #ccd5d8;
 }
 
 #pagewrap {
@@ -50,7 +49,7 @@ header {
   border-bottom: 1px solid #e3e5ea;
   align-self: flex-start;
   position: relative;
-  z-index: 1;
+  z-index: 3;
 }
 
 .avatar {
@@ -85,6 +84,96 @@ header {
   background: #8c989e;
 }
 
+.project_menu {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  top: 71px;
+  left: 71px;
+}
+
+.project_menu menu {
+  padding: 0;
+  margin: 0;
+}
+
+.project_menu menu a {
+  font: 13px/28px "Muli", sans-serif;
+  font-weight: bolder;
+  color: #ccd5d8;
+  border-bottom: 1px solid #e3e5ea;
+  border-right: 1px solid #e3e5ea;
+  padding: 6px 0 7px 15px;
+  display: block;
+  position: relative;
+  text-decoration: none;
+  background: white;
+}
+
+.project_menu menu a:hover {
+  color: #8c989e;
+}
+
+.project_menu menu a:nth-child(1) {
+  transform: translateY(-45px);
+  z-index: 5;
+  transition: transform 100ms cubic-bezier(0, 0.49, 0.52, 0.905) 100ms;
+}
+
+.project_menu menu a:nth-child(2) {
+  transform: translateY(-87px);
+  z-index: 4;
+  transition: transform 100ms cubic-bezier(0, 0.49, 0.52, 0.905) 75ms;
+}
+
+.project_menu menu a:nth-child(3) {
+  transform: translateY(-128px);
+  z-index: 3;
+  transition: transform 100ms cubic-bezier(0, 0.49, 0.52, 0.905) 50ms;
+}
+
+.project_menu menu a:nth-child(4) {
+  transform: translateY(-169px);
+  z-index: 2;
+  transition: transform 100ms cubic-bezier(0, 0.49, 0.52, 0.905) 25ms;
+}
+
+.project_menu menu a:nth-child(5) {
+  transform: translateY(-210px);
+  z-index: 1;
+  transition: transform 100ms cubic-bezier(0, 0.49, 0.52, 0.905) 0;
+}
+
+.project_menu.active menu a:nth-child(1) {
+  transform: translateY(0);
+  transition: transform 100ms cubic-bezier(0, 0.49, 0.52, 0.905) 0;
+}
+
+.project_menu.active menu a:nth-child(2) {
+  transform: translateY(0);
+  transition: transform 100ms cubic-bezier(0, 0.49, 0.52, 0.905) 25ms;
+}
+
+.project_menu.active menu a:nth-child(3) {
+  transform: translateY(0);
+  transition: transform 100ms cubic-bezier(0, 0.49, 0.52, 0.905) 50ms;
+}
+
+.project_menu.active menu a:nth-child(4) {
+  transform: translateY(0);
+  transition: transform 100ms cubic-bezier(0, 0.49, 0.52, 0.905) 75ms;
+}
+
+.project_menu.active menu a:nth-child(5) {
+  transform: translateY(0);
+  transition: transform 100ms cubic-bezier(0, 0.49, 0.52, 0.905) 100ms;
+}
+
+.project.active {
+  background: white;
+}
+
 .project {
   width: 200px;
   height: 70px;
@@ -101,26 +190,26 @@ header {
   margin-left: 71px;
   background: #f7fafc;
 }
-.project:hover {
+.project:hover, .project.active {
   background: white;
   color: #8c989e;
 }
-.project:hover .burger {
+.project:hover .burger, .project.active .burger {
   background: #8c989e;
 }
-.project:hover .burger:before {
-  top: 7px;
+.project:hover .burger:before, .project.active .burger:before {
+  top: 6px;
   background: #8c989e;
   transition: top 150ms;
 }
-.project:hover .burger:after {
-  bottom: 7px;
+.project:hover .burger:after, .project.active .burger:after {
+  bottom: 6px;
   background: #8c989e;
   transition: bottom 150ms;
 }
 
 .burger {
-  width: 15px;
+  width: 11px;
   height: 2px;
   border-radius: 5px;
   background: #ccd5d8;
@@ -129,7 +218,7 @@ header {
   top: 34px;
 }
 .burger:before, .burger:after {
-  width: 15px;
+  width: 11px;
   height: 2px;
   border-radius: 5px;
   position: absolute;
@@ -137,18 +226,18 @@ header {
   background: #ccd5d8;
 }
 .burger:before {
-  top: 5px;
+  top: 4px;
   transition: top 150ms;
 }
 .burger:after {
-  bottom: 5px;
+  bottom: 4px;
   transition: bottom 150ms;
 }
 
 .logo {
   width: 8px;
   height: 8px;
-  background: #8c989e;
+  background: #ccd5d8;
   border-radius: 50em;
   position: absolute;
   top: 31px;
@@ -157,7 +246,7 @@ header {
 }
 .logo:before, .logo:after {
   border-radius: 50em;
-  background: #8c989e;
+  background: #ccd5d8;
   position: absolute;
   content: "";
 }
@@ -182,6 +271,7 @@ header {
   border-right: 1px solid #e3e5ea;
   display: flex;
   position: fixed;
+  z-index: 2;
   background: #f7fafc;
   transition: margin 500ms cubic-bezier(0, 0.49, 0.52, 0.905), background 250ms cubic-bezier(0, 0.49, 0.52, 0.905);
 }
@@ -190,6 +280,52 @@ header {
   margin: 0 0 0 0;
   background: white;
   transition: margin 500ms, cubic-bezier(0, 0.49, 0.52, 0.905), background 250ms cubic-bezier(0, 0.49, 0.52, 0.905);
+}
+
+.drawer:hover .project_menu {
+  background: #f7fafc;
+}
+
+.drawer figure.arrow {
+  width: 23px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 94px;
+  left: 24px;
+  margin: 0;
+  transform: rotateZ(-90deg);
+  transition: transform 300ms cubic-bezier(0, 0.49, 0.52, 0.905);
+}
+.drawer figure.arrow:before, .drawer figure.arrow:after {
+  width: 11px;
+  height: 2px;
+  border-radius: 5px;
+  background: #ccd5d8;
+  display: block;
+  position: relative;
+  content: "";
+  transition: background 300ms;
+}
+.drawer figure.arrow:before {
+  transform: rotateZ(45deg);
+  left: 2px;
+}
+.drawer figure.arrow:after {
+  transform: rotateZ(-45deg);
+  right: 2px;
+}
+
+.drawer:hover figure.arrow {
+  transform: rotateZ(450deg);
+  transition: transform 300ms cubic-bezier(0, 0.49, 0.52, 0.905);
+}
+
+.drawer:hover figure.arrow:before,
+.drawer:hover figure.arrow:after {
+  background: #8c989e;
+  transition: background 300ms;
 }
 
 .drawer:hover nav {
@@ -207,6 +343,7 @@ header {
 .drawer nav h4 {
   margin: 25px 0 15px;
   font-weight: 400;
+  color: #8c989e;
 }
 
 .drawer nav span {
@@ -220,13 +357,14 @@ header {
 .drawer nav a {
   font: 14px/30px "Muli", sans-serif;
   text-decoration: none;
-  color: #8c989e;
+  color: #ccd5d8;
   display: block;
   padding-left: 30px;
+  font-weight: bolder;
 }
 
 .drawer nav a:hover {
-  color: #15a4fa;
+  color: #8c989e;
   border-right: 3px solid #15a4fa;
 }
 
@@ -262,3 +400,5 @@ header {
   color: #8c989e;
   transition: color 500ms;
 }
+
+/*# sourceMappingURL=global.css.map */
