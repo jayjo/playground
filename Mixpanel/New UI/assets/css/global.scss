@@ -18,6 +18,19 @@ $copy: 'Muli', sans-serif;
 
 body, html { font-size: 100%; height: 100%; padding: 0; margin: 0; background: rgb(240,244,247);}
 
+/************ Typography STUFF ***********/
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $heads;
+}
+
+h4 {
+	font-size: 12px;
+	line-height: 20px;
+	text-transform: uppercase;
+	color: $light_grey;
+}
+
 #pagewrap {
 	width: 100%;
 	height: 100%;
@@ -39,15 +52,18 @@ body, html { font-size: 100%; height: 100%; padding: 0; margin: 0; background: r
 header {
 	width: 100%;
 	height: 71px;
+	background: $body_grey;
 	border-bottom: 1px solid $border_grey;
 	align-self: flex-start;
+	position: relative;
+	z-index: 1;
 }
 
 .avatar {
 	width: 71px;
 	height: 70px;
 	color: #fff;
-	font: 700 20px/20px $heads;
+	font: 400 20px/20px $heads;
 	text-align: center;
 	position: absolute;
 	top: 0;
@@ -78,7 +94,7 @@ header {
 .project {
 	width: 200px;
 	height: 70px;
-	font: 15px/23px $copy;
+	font: 14px/23px $copy;
 	color: $light_grey;
 	font-weight: bolder;
 	border-right: 1px solid $border_grey;
@@ -89,6 +105,7 @@ header {
 	padding: 0 0 0 15px;
 	align-items: center;
 	margin-left: 71px;
+	background: $body_grey;
 
 	&:hover {
 		background: $white;
@@ -134,7 +151,6 @@ header {
 	height: 8px;
 	background: $dark_grey;
 	border-radius: 50em;
-
 	position: absolute;
 	top: 31px;
 	left: 50%;
@@ -163,11 +179,98 @@ header {
 	}
 }
 
-nav {
+aside {
 	width: 71px;
 	height: 100%;
-	border-right: 1px solid $border_grey;
-	position: absolute;
+	position: fixed;
 	left: 0;
+	top: 71px;
+	cursor: pointer;
+	z-index: 1;
+	background: $body_grey;
+}
+
+aside:hover {
+	background: $white;
+}
+
+.drawer {
+	width: 201px;
+	margin: 0 0 0 -129px;
+	height: 100%;
+	padding: 10px 0 35px 15px;
+	border-right: 1px solid $border_grey;
+	display: flex;
+	transition: margin 500ms cubic-bezier(0.000, 0.490, 0.520, 0.905);
+}
+
+aside:hover .drawer {
+	margin: 0 0 0 71px;
+	background: $white;
+	transition: margin 500ms cubic-bezier(0.000, 0.490, 0.520, 0.905);
+}
+
+aside:hover nav {
+	opacity: 1;
+	transition: opacity 400ms 250ms;
+}
+
+aside nav {
+	width: 100%;
+	display: block;
+	opacity: 0;
+	transition: opacity 400ms 100ms;
+}
+
+aside nav h4 {
+	margin: 25px 0 15px;
+	font-weight: 400;
+}
+
+aside nav span {
+	display: block;
+	height: 1px;
+	background: $light_grey;
+	width: 100%;
+	margin: 25px 0 0;
+}
+
+.drawer nav a {
+	font: 14px/30px $copy;
+	text-decoration: none;
+	color: $dark_grey;
+	display: block;
+	padding-left: 30px;
+}
+
+.drawer nav a:hover {
+	color: $mp_blue;
+	border-right: 3px solid $mp_blue;
+}
+
+.reports {
+	position: absolute;
 	top: 0;
+	left: 0;
+	display: flex;
+	padding: 130px 150px;
+	width: 100%;
+	height: 100%;
+	transition: background 500ms 3000ms;
+}
+
+.reports:hover {
+	background: $white;
+	transition: background 500ms;
+}
+
+.reports p {
+	font: 15px/23px $copy;
+	color: $light_grey;
+	transition: color 300ms 3000ms;
+}
+
+.reports:hover p {
+	color: $dark_grey;
+	transition: color 500ms;
 }
