@@ -15,6 +15,12 @@
   <link rel="apple-touch-icon" sizes="144x144" href="" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/scrollIt.min.js"></script>
+  <!-- <script type="text/javascript" src="assets/js/jquery.scrollmagic.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.scrollmagic.debug.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.scrollmagic.min.js"></script> -->
+
   <META NAME="ROBOTS" CONTENT="NOINDEX, FOLLOW">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -25,7 +31,7 @@
 
       <!-- MENU START -->
 
-      <header class="hide hidden">
+      <header class="hide">
 
         <img src="assets/img/white_logo_dots.svg" alt="" class="mainlogo">
         <menu class="menu">
@@ -34,10 +40,11 @@
             <li><a href="#">Mobile</a></li>
           </ul> -->
           <ul class="nav">
-            <li><a href="#brand" class="active">Logos</a></li>
-            <li><a href="#color-palette">Color</a></li>
-            <li><a href="#typography">Type</a></li>
-            <li><a href="#">Fonts</a></li>
+            <li><a href="#logos" class="logos" data-scroll-nav="0">Logos</a></li>
+            <li><a href="#color" class="color" data-scroll-nav="1">Color</a></li>
+            <li><a href="#typography" class="typography" data-scroll-nav="2">Typography</a></li>
+            <li><a href="#things" class="things" data-scroll-nav="3">Things</a></li>
+            <li><a href="#assets" class="assets" data-scroll-nav="4">Assets</a></li>
           </ul>
         </menu>
 
@@ -56,3 +63,4 @@
           </div>
           <div class="clearfloat"></div>
       </div>
+      <div class="heroWipe"></div>
