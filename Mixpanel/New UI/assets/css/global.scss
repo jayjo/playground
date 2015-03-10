@@ -18,6 +18,18 @@ $copy: 'Muli', sans-serif;
 
 body, html { font-size: 100%; height: 100%; padding: 0; margin: 0; background: rgb(240,244,247);}
 
+/************ Typography STUFF ***********/
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $heads;
+}
+
+h4 {
+	font-size: 12px;
+	line-height: 20px;
+	text-transform: uppercase;
+}
+
 #pagewrap {
 	width: 100%;
 	height: 100%;
@@ -39,15 +51,18 @@ body, html { font-size: 100%; height: 100%; padding: 0; margin: 0; background: r
 header {
 	width: 100%;
 	height: 71px;
+	background: $body_grey;
 	border-bottom: 1px solid $border_grey;
 	align-self: flex-start;
+	position: relative;
+	z-index: 3;
 }
 
 .avatar {
 	width: 71px;
 	height: 70px;
 	color: #fff;
-	font: 700 20px/20px $heads;
+	font: 400 20px/20px $heads;
 	text-align: center;
 	position: absolute;
 	top: 0;
@@ -75,10 +90,102 @@ header {
 	}
 }
 
+.project_menu {
+	width: 200px;
+	height: auto;
+	position: absolute;
+	z-index: 1;
+	top: 71px;
+	left: 71px;
+	// opacity: 0;
+	// visibility: hidden;
+}
+
+.project_menu menu {
+	padding: 0;
+	margin: 0;
+}
+
+.project_menu menu a {
+	font: 13px/28px $copy;
+	font-weight: bolder;
+	color: $light_grey;
+	border-bottom: 1px solid $border_grey;
+	border-right: 1px solid $border_grey;
+	padding: 6px 0 7px 15px;
+	display: block;
+	position: relative;
+	text-decoration: none;
+	background: $white;
+}
+
+.project_menu menu a:hover {
+	color: $dark_grey;
+}
+
+.project_menu menu a:nth-child(1) {
+	transform: translateY(-45px);
+	z-index: 5;
+	transition: transform 100ms cubic-bezier(0.000, 0.490, 0.520, 0.905) 100ms;
+}
+
+.project_menu menu a:nth-child(2) {
+	transform: translateY(-87px);
+	z-index: 4;
+	transition: transform 100ms cubic-bezier(0.000, 0.490, 0.520, 0.905) 75ms;
+}
+
+.project_menu menu a:nth-child(3) {
+	transform: translateY(-128px);
+	z-index: 3;
+	transition: transform 100ms cubic-bezier(0.000, 0.490, 0.520, 0.905) 50ms;
+}
+
+.project_menu menu a:nth-child(4) {
+	transform: translateY(-169px);
+	z-index: 2;
+	transition: transform 100ms cubic-bezier(0.000, 0.490, 0.520, 0.905) 25ms;
+}
+
+.project_menu menu a:nth-child(5) {
+	transform: translateY(-210px);
+	z-index: 1;
+	transition: transform 100ms cubic-bezier(0.000, 0.490, 0.520, 0.905) 0;
+}
+
+.project_menu.active menu a:nth-child(1) {
+	transform: translateY(0);
+	transition: transform 100ms cubic-bezier(0.000, 0.490, 0.520, 0.905) 0;
+}
+
+.project_menu.active menu a:nth-child(2) {
+	transform: translateY(0);
+	transition: transform 100ms cubic-bezier(0.000, 0.490, 0.520, 0.905) 25ms;
+}
+
+.project_menu.active menu a:nth-child(3) {
+	transform: translateY(0);
+	transition: transform 100ms cubic-bezier(0.000, 0.490, 0.520, 0.905) 50ms;
+}
+
+.project_menu.active menu a:nth-child(4) {
+	transform: translateY(0);
+	transition: transform 100ms cubic-bezier(0.000, 0.490, 0.520, 0.905) 75ms;
+}
+
+.project_menu.active menu a:nth-child(5) {
+	transform: translateY(0);
+	transition: transform 100ms cubic-bezier(0.000, 0.490, 0.520, 0.905) 100ms;
+}
+
+.project.active {
+	background: $white;
+}
+
 .project {
 	width: 200px;
 	height: 70px;
-	font: 15px/23px $copy;
+	font: 14px/23px $copy;
 	color: $light_grey;
 	font-weight: bolder;
 	border-right: 1px solid $border_grey;
@@ -89,26 +196,29 @@ header {
 	padding: 0 0 0 15px;
 	align-items: center;
 	margin-left: 71px;
+	background: $body_grey;
 
-	&:hover {
+	&:hover,
+	&.active {
 		background: $white;
 		color: $dark_grey;
 	}
-	&:hover .burger {
+	&:hover .burger,
+	&.active .burger {
 		background: $dark_grey;
 		&:before {
-			top: 7px;
+			top: 6px;
 			background: $dark_grey;
 			transition: top 150ms }
 		&:after {
-			bottom: 7px;
+			bottom: 6px;
 			background: $dark_grey;
 			transition: bottom 150ms }
 	}
 }
 
 .burger {
-	width: 15px;
+	width: 11px;
 	height: 2px;
 	border-radius: 5px;
 	background: $light_grey;
@@ -118,23 +228,22 @@ header {
 
 	&:before,
 	&:after {
-		width: 15px;
+		width: 11px;
 		height: 2px;
 		border-radius: 5px;
 		position: absolute;
 		content: "";
 		background: $light_grey;
 	}
-	&:before { top: 5px; transition: top 150ms }
-	&:after { bottom: 5px; transition: bottom 150ms }
+	&:before { top: 4px; transition: top 150ms }
+	&:after { bottom: 4px; transition: bottom 150ms }
 }
 
 .logo {
 	width: 8px;
 	height: 8px;
-	background: $dark_grey;
+	background: $light_grey;
 	border-radius: 50em;
-
 	position: absolute;
 	top: 31px;
 	left: 50%;
@@ -143,7 +252,7 @@ header {
 	&:before,
 	&:after {
 		border-radius: 50em;
-		background: $dark_grey;
+		background: $light_grey;
 		position: absolute;
 		content: "";
 	}
@@ -163,11 +272,143 @@ header {
 	}
 }
 
-nav {
-	width: 71px;
+.drawer {
+	width: 271px;
+	margin: 0 0 0 -200px;
 	height: 100%;
+	padding: 71px 0 35px 86px;
 	border-right: 1px solid $border_grey;
+	display: flex;
+	position: fixed;
+	z-index: 2;
+	background: $body_grey;
+	transition: margin 500ms cubic-bezier(0.000, 0.490, 0.520, 0.905), background 250ms cubic-bezier(0.000, 0.490, 0.520, 0.905);
+}
+
+.drawer:hover  {
+	margin: 0 0 0 0;
+	background: $white;
+	transition: margin 500ms, cubic-bezier(0.000, 0.490, 0.520, 0.905), background 250ms cubic-bezier(0.000, 0.490, 0.520, 0.905);
+}
+
+.drawer:hover .project_menu {
+	background: $body_grey;
+}
+
+.drawer figure.arrow {
+	width: 23px;
+	height: 23px;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	top: 94px;
+	left: 24px;
+	margin: 0;
+	transform: rotateZ(-90deg);
+	transition: transform 300ms cubic-bezier(0.000, 0.490, 0.520, 0.905);
+
+	&:before,
+	&:after {
+		width: 11px;
+		height: 2px;
+		border-radius: 5px;
+		background: $light_grey;
+		display: block;
+		position: relative;
+		content: "";
+		transition: background 300ms;
+	}
+
+	&:before {
+		transform: rotateZ(45deg);
+		left: 2px;
+	}
+	&:after {
+		transform: rotateZ(-45deg);
+		right: 2px;
+	}
+}
+
+.drawer:hover figure.arrow {
+	transform: rotateZ(450deg);
+	transition: transform 300ms cubic-bezier(0.000, 0.490, 0.520, 0.905);
+}
+
+.drawer:hover figure.arrow:before,
+.drawer:hover figure.arrow:after {
+	background: $dark_grey;
+	transition: background 300ms;
+}
+
+.drawer:hover nav {
+	opacity: 1;
+	transition: opacity 400ms 250ms;
+}
+
+.drawer nav {
+	width: 100%;
+	display: block;
+	opacity: 0;
+	transition: opacity 400ms 100ms;
+}
+
+.drawer nav h4 {
+	margin: 25px 0 15px;
+	font-weight: 400;
+	color: $dark_grey;
+}
+
+.drawer nav span {
+	display: block;
+	height: 1px;
+	background: $light_grey;
+	width: 100%;
+	margin: 25px 0 0;
+}
+
+.drawer nav a {
+	font: 14px/30px $copy;
+	text-decoration: none;
+	color: $light_grey;
+	display: block;
+	padding-left: 30px;
+	font-weight: bolder;
+}
+
+.drawer nav a:hover {
+	color: $dark_grey;
+	border-right: 3px solid $mp_blue;
+}
+
+.reports {
 	position: absolute;
-	left: 0;
 	top: 0;
+	left: 0;
+	display: flex;
+	padding: 121px 71px 71px 141px;
+	width: 100%;
+	height: 100%;
+	transition: background 500ms 2200ms;
+}
+
+.reports:hover {
+	background: $white;
+	transition: background 500ms;
+}
+
+.content {
+	display: block;
+	position: relative;
+}
+
+.reports p {
+	font: 15px/23px $copy;
+	color: $light_grey;
+	transition: color 300ms 2200ms;
+	margin-bottom: 25px;
+}
+
+.reports:hover p {
+	color: $dark_grey;
+	transition: color 500ms;
 }
