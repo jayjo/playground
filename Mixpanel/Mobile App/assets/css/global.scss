@@ -1,4 +1,6 @@
-/************* GLOBAL STUFF ************/
+ /************* GLOBAL STUFF ************/
+
+@import "fonts.css";
 
 * {
   -webkit-box-sizing: border-box;
@@ -13,13 +15,12 @@ $border_grey: rgb(227,229,234);
 $body_grey: rgb(247,250,252);
 $white: rgb(255,255,255);
 
-$heads: 'Lato', sans-serif;
-$copy: 'Lato', sans-serif;
+$din: 'din', sans-serif;
 
 @mixin bggradient {
-  background-image: -moz-linear-gradient( -63deg, rgb(53,12,82) 12%, rgb(38,104,138) 60%, rgb(23,196,194) 100%);
-  background-image: -webkit-linear-gradient( -63deg, rgb(53,12,82) 12%, rgb(38,104,138) 60%, rgb(23,196,194) 100%);
-  background-image: -ms-linear-gradient( -63deg, rgb(53,12,82) 12%, rgb(38,104,138) 60%, rgb(23,196,194) 100%);
+	background-image: -moz-linear-gradient( -38deg, rgb(1,29,65) 8%, rgb(1,77,123) 62%, rgb(0,124,180) 100%);
+  background-image: -webkit-linear-gradient( -38deg, rgb(1,29,65) 8%, rgb(1,77,123) 62%, rgb(0,124,180) 100%);
+  background-image: -ms-linear-gradient( -38deg, rgb(1,29,65) 8%, rgb(1,77,123) 62%, rgb(0,124,180) 100%);
 }
 
 body, html { -webkit-font-smoothing: antialiased; font-size: 100%; height: 100%; padding: 0; margin: 0;}
@@ -29,59 +30,236 @@ body, html { -webkit-font-smoothing: antialiased; font-size: 100%; height: 100%;
 	top: -100px;
 }
 
+::-webkit-input-placeholder {
+   color: rgba(255,255,255,.4);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: rgba(255,255,255,.4);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: rgba(255,255,255,.4);
+}
+
+:-ms-input-placeholder {
+   color: rgba(255,255,255,.4);
+}
+
 /************ Typography STUFF ***********/
 
 h1, h2, h3, h4, h5, h6, p {
-	font-family: $heads;
-	font-weight: normal;
+	font-family: $din;
 }
 
 .phone-wrap {
 	width: 320px;
-	height: 640px;
-	@include bggradient;
-	position: absolute;
-	margin: -320px 0 0 -160px;
-	left: 50%;
+	height: 568px;
+	position: fixed;
 	top: 50%;
-}
-
-.statusbar {
-	background: url(../img/status-bar.png) no-repeat;
-	width: 320px;
-	height: 14px;
-	position: fixed;
-	transform: translate3D(0,0,0);
-	&.white {
-		background-position: 0 0;
-	}
-	&.black {
-		background-position: 0 -13px;
-	}
-}
-
-.header {
-	width: 320px;
-	height: 105px;
-	background: rgba(255,255,255,1);
-	position: fixed;
-	transform: translate3D(0,0,0);
-	box-shadow: 0 3px 2px rgba(0,0,0,.25);
+	left: 50%;
+	margin: -280px 0 0 -164px;
+	right: 0;
+	bottom: 0;
+	background-size: cover;
+	@include bggradient;
 }
 
 .home {
-	padding: 0 25px;
+	padding: 0 42px;
 }
 
-input[type=text] {
-	font: 14px $copy;
-	font-weight: bold;
-	color: #5F6B8A;
+input[type=text],
+input[type=email],
+input[type=password] {
+	font: 14px $din;
+	font-weight: normal;
+	color: rgba(255,255,255,.4);
 	background: none;
 	outline: none;
 	border: none;
-	padding: 10px 20px;
+	padding: 0 30px;
+	height: 45px;
+	width: 100%;
 	&:focus {
-		color: #fff;
+		color: rgba(255,255,255,1);
+	}
+	&.parsley-error {
+		color: rgba(227,83,95,1);
+	}
+	&.parsley-success {
+		color: rgba(255,255,255,1);
 	}
 }
+
+input[type=email]:focus ~ svg,
+input[type=password]:focus ~ svg {
+	fill: rgba(255,255,255,1);
+	transition: fill 200ms, color 200ms;
+}
+
+input[type=email].parsley-error ~ svg,
+input[type=password].parsley-error ~ svg {
+	fill: rgba(227,83,95,1);
+	transition: fill 200ms, color 200ms;
+}
+
+input[type=email].parsley-success ~ svg,
+input[type=password].parsley-success ~ svg {
+	fill: rgba(255,255,255,1);
+	transition: fill 200ms, color 200ms;
+}
+
+.email,
+.pass {
+	position: relative;
+	margin: 5px 0;
+}
+
+.email svg,
+.pass svg {
+	position: absolute;
+	fill: rgba(255,255,255,.4);
+	width: 18px;
+	left: 0;
+}
+
+.email svg {
+	top: 7px;
+}
+
+.pass svg {
+	top: 0;
+}
+
+.sep {
+	width: 100%;
+	height: 1px;
+	background: rgba(255,255,255,.3);
+}
+
+.logo {
+	margin: 95px auto 85px;
+	display: block;
+	transition: transform 150ms, opacity 150ms;
+}
+
+.button-container {
+
+}
+
+.button {
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.17);
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  padding: 11px 0 9px;
+  font: bold 13px $din;
+  outline: none;
+  margin-top: 28px;
+  transition: background-color 200ms;
+  cursor: pointer;
+  &.success {
+  	background-color: rgba(255, 255, 255, 0.18);
+  	transition: background-color 200ms;
+  }
+  &.parsley-error {
+  	background-color: rgba(227,83,95,1);
+  	box-shadow: none;
+  	transition: background-color 200ms;
+  }
+}
+
+.parsley-errors-list {
+	position: fixed;
+	display: none !important;
+}
+
+.login_form {
+ // display: none;
+}
+
+.sign-in {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.sign-in.active {
+	opacity: 1;
+	visibility: visible;
+	transition: visibility 5ms, opacity 250ms;
+}
+
+.bye_bye {
+	visibility: hidden;
+	transition: visibility 0ms 450ms;
+}
+
+.login_form.bye_bye .logo {
+	transform: translateY(-8px);
+	opacity: 0;
+	transition: transform 200ms, opacity 250ms;
+}
+
+.login_form.bye_bye form {
+	transform: translateY(-8px);
+	opacity: 0;
+	transition: transform 200ms 150ms, opacity 250ms 150ms;
+}
+
+.login_form.bye_bye .sign-in {
+	transform: translateY(-8px);
+	opacity: 0;
+	transition: transform 200ms 250ms, opacity 250ms 250ms;
+}
+
+.two_factor_form {
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(15px);
+}
+
+.two_factor_form {
+	position: absolute;
+	top: 10px;
+	left: 0;
+	padding: 0 40px;
+}
+
+.two_factor_form.hi_there {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+	transition: visibility 0ms 500ms, opacity 250ms 500ms, transform 250ms 500ms;
+}
+
+.two_factor_form.bye_bye {
+	visibility: hidden;
+	opacity: 0;
+	transform: translateY(-8px);
+	transition: visibility 0ms 450ms, opacity 250ms, transform 200ms;
+}
+
+.icon {
+	width: 110px;
+	display: block;
+	margin: 95px auto 40px;
+}
+
+p {
+	font: 14px/21px $din;
+	color: rgba(255,255,255,1);
+	text-align: center;
+	span {
+
+	}
+}
+
+.verification_field {
+	text-align: center;
+}
+
