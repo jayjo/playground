@@ -41,7 +41,15 @@ jQuery(document).ready(function($) {
 			}, 3000);
 		} else {
 			$('.two_factor_form').addClass('bye_bye');
+			$('.bg-gradient.green').addClass('active');
+			$('.intro-time').addClass('active');
+			$('.indicator').addClass('third');
 		}
+	});
+
+	$('.sign-in-bug').on('click', function(){
+		$('.photo-bg').addClass('hide');
+		$('.phone-wrap').addClass('ready');
 	});
 
 });
