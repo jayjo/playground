@@ -1,5 +1,9 @@
 jQuery(document).ready(function($) {
 
+	setTimeout(function(){
+		$('.phone-wrap').show();
+	}, 150);
+
 	$('.project').on('click', function(){
 		$(this).toggleClass('active');
 		$('.project_menu').toggleClass('active');
@@ -41,15 +45,52 @@ jQuery(document).ready(function($) {
 			}, 3000);
 		} else {
 			$('.two_factor_form').addClass('bye_bye');
-			$('.bg-gradient.green').addClass('active');
-			$('.intro-time').addClass('active');
-			$('.indicator').addClass('third');
+			$('.bg-gradient.blue').addClass('active');
+			setTimeout(function(){
+				$('.event-wrap').addClass('active');
+			}, 500);
 		}
 	});
 
-	$('.sign-in-bug').on('click', function(){
+	$('.sign-in-bug.first').on('click', function(){
 		$('.photo-bg').addClass('hide');
 		$('.phone-wrap').addClass('ready');
+		$('.intro-time').addClass('active');
+		$('.indicator').addClass('half');
+	});
+
+	$('body').on('click', '.next', function(){
+		$(this).removeClass('next');
+		$(this).addClass('get-started').text('Sign In');
+		$('.intro-time.active').addClass('double');
+		$('.sign-in-top').fadeOut();
+		$('.bg-gradient.purple').addClass('active');
+		$('.step.one .content').addClass('go-away');
+		$('.indicator').addClass('full');
+		$('.step.one .icons').addClass('buh-bye');
+		$('.slides').addClass('active');
+		setTimeout(function(){
+			$('.sliders').addClass('active');
+		}, 650);
+	});
+
+	$('body').on('click', '.get-started', function(){
+		$('.bg-gradient.blue').addClass('active');
+		$('.intro-time').addClass('see-yas');
+		$('.home').addClass('good-to-go');
+		$('.indicator').fadeOut();
+	});
+
+	$('body').on('click', '.event-wrap li', function(){
+		$(this).find('.check').toggleClass('active');
+		setTimeout(function(){
+			$('.view-panels').addClass('active');
+		}, 500);
+	});
+
+	$('body').on('click', '.view-panels', function(){
+		$('.event-wrap').removeClass('active');
+		$('.dash').addClass('active');
 	});
 
 });
