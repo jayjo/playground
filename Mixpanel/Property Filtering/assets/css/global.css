@@ -1,0 +1,254 @@
+/************* ANIMATIONS ************/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  background: #E0E3ED;
+}
+
+#pagewrap {
+  width: 940px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 30px;
+}
+
+.leftmarg5 {margin-left: 5px;}
+.leftmarg10 {margin-left: 10px;}
+.leftmarg15 {margin-left: 15px;}
+.leftmarg20 {margin-left: 20px;}
+.rightmarg5 {margin-right: 5px;}
+.rightmarg10 {margin-right: 10px;}
+.rightmarg15 {margin-right: 15px;}
+.rightmarg20 {margin-right: 20px;}
+
+.widget {
+  width: 930px;
+  margin: 50px auto 0;
+  position: relative;
+  background: #EFF1F6;
+  border: 1px solid rgba(192,195,210, .5);
+  border-radius: 5px;
+}
+
+header,
+footer {
+  padding: 15px 0 15px 25px;
+}
+
+.content {
+  background: #FFFFFF;
+  padding: 20px 0 20px 25px;
+}
+
+p {
+  color: #747D94;
+  font-size: 12px;
+  display: inline-block;
+}
+
+p.uppercase {
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.cont {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown {
+  background-color: #f6f7f9;
+  background-image: linear-gradient(#f9fafb,#f2f3f6);
+  border: 1px solid #BDC7D2;
+  border-radius: 2px;
+  color: #747D94;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  font-size: 11px;
+  padding: 9px 13px 8px;
+  margin: 0 3px;
+}
+
+input[type="text"] {
+  font-weight: bold;
+  font-family: Helvetica;
+  padding: 8px 13px;
+  font-size: 11px;
+}
+
+.dropdown:hover {
+  background-color: #fff;
+  background-image: linear-gradient(#fff,#f2f3f6);
+  /*border-color: #3EB3E7;*/
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+
+.dropdown.fixed {
+  width: 210px;
+}
+
+.invert {
+  background: #FFF;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.07);
+}
+
+.invert:hover {
+  background: #fff;
+  box-shadow: none;
+  cursor: auto;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  left: 3px;
+  top: 15px;
+  z-index: 1;
+  background: #FCFCFC;
+  border: 1px solid #BDC7D2;
+  border-radius: 3px;
+  padding: 0;
+  height: 234px;
+  width: 425px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+.list {
+  width: 207px;
+  height: 232px;
+  overflow: scroll;
+  float: left;
+}
+
+.sepsep {
+  width: 5px;
+  height: 232px;
+  float: left;
+  background: #BDC7D2;
+  position: relative;
+  z-index: 1;
+}
+
+h3 {
+  text-transform: uppercase;
+  padding: 9px 0 8px 13px;
+  background: #EFF1F6;
+  font-size: 11px;
+  border-bottom: 1px solid #E2E6EA;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  position: fixed;
+  width: 210px;
+  color: #747D94;
+  margin: 0;
+}
+
+.events h3 {
+  padding-left: 40px;
+}
+
+.props h3 {
+  padding-left: 34px;
+}
+
+.menu a {
+  text-align: left;
+  text-decoration: none;
+  color: #747D94;
+  text-transform: none;
+  line-height: 30px;
+  border-bottom: 1px solid rgba(189,199,210, .4);
+  padding: 3px 6px 3px 15px;
+  width: 100%;
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.menu a:nth-child(2) {
+  margin-top: 30px;
+}
+
+.menu a:last-child {
+  border-bottom: none;
+}
+
+.menu a:hover {
+  background: #EFF2F9;
+}
+
+.menu.open {
+  display: block;
+}
+
+.time {
+  border-radius: 2px;
+  color: #747D94;
+  background: rgba(186,194,215,.5);
+  display: inline-block;
+  font-size: 12px;
+  padding: 9px 13px;
+  margin: 0 3px;
+  width: 80px;
+  text-align: center;
+}
+
+.arrow,
+.arrow:after,
+.arrow:before {
+  display: inline-block;
+  position: relative;
+  width: 10px;
+  top: -3px;
+  float: right;
+  margin: 5px 2px 0 9px;
+}
+
+.arrow:after,
+.arrow:before {
+  width: 7px;
+  height: 3px;
+  border-radius: 20px;
+  background-color: #AEC0CE;
+  content: "";
+  position: absolute;
+}
+
+.arrow:after {
+  transform: rotateZ(-45deg);
+  left: -2px;
+}
+
+.arrow:before {
+  transform: rotateZ(45deg);
+  right: -2px;
+}
+
+.left {
+  top: 7px;
+  right: 36px;
+}
+
+.string {
+  float: right;
+  margin-top: 5px;
+}
+.icon {
+  position: absolute;
+  left: 10px;
+}
+
+.perp {
+  top: 7px;
+}
