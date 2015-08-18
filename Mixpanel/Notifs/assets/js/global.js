@@ -100,5 +100,22 @@ jQuery(document).ready(function($) {
 		$('.folderList').removeClass('open');
 	});
 
+	$('.folder').on('click', function(){
+		$(this).parent().removeClass('open');
+		setTimeout(function(){
+			$('.tempNotif').addClass('show')
+		}, 100);
+		setTimeout(function(){
+			$('.tempNotif').removeClass('show')
+		}, 5000);
+		$('.icon.type').removeClass('check');
+		$('.select').removeClass('selected');
+		$('header.two').removeClass('active');
+	});
+
+	$('span.x').on('click', function(){
+		$(this).parent().removeClass('show');
+	});
+
 });
 

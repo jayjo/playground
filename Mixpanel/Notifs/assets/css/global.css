@@ -499,3 +499,59 @@ p.uppercase {
 .newGroup:hover {
   background: #ACB2C1;
   color: #fff;
+}
+
+.tempNotif {
+  position: fixed;
+  top: 0;
+  left: 50vw;
+  width: 30vw;
+  margin-left: -15vw;
+  background: #434b5f;
+  border-radius: 0 0 5px 5px;
+  z-index: 50;
+  transform: translateY(-5vw);
+  transition: transform 150ms ease-out;
+}
+
+.tempNotif.show {
+  transform: translateY(0);
+  transition: transform 150ms ease-in;
+}
+
+.tempNotif p {
+  color: rgba(255,255,255,.5);
+  font-size: 13px;
+  padding: 15px 20px;
+  font-weight: normal;
+}
+
+.tempNotif p b {
+  color: rgba(255,255,255,1);
+}
+
+.tempNotif .x {
+  position: absolute;
+  right: 8px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.tempNotif .x:before,
+.tempNotif .x:after {
+  width: 15px;
+  height: 3px;
+  border-radius: 5px;
+  background: #fff;
+  position: absolute;
+  content: "";
+}
+
+.tempNotif .x:before {
+  transform: rotateZ(45deg);
+}
+.tempNotif .x:after {
+  transform: rotateZ(-45deg);
+}
