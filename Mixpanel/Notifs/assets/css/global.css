@@ -95,7 +95,6 @@ header.two a {
 
 .actions .move-to {
   position: relative;
-  top: -10px;
 }
 
 header a {
@@ -435,7 +434,7 @@ p.uppercase {
   opacity: 0;
   visibility: hidden;
   top: 55px;
-  right: 110px;
+  right: 70px;
   background: #fff;
   box-shadow: 0 0 4px rgba(0,0,0,.4);
   border-radius: 3px;
@@ -451,7 +450,7 @@ p.uppercase {
 
 .folderList.sticky {
   position: fixed;
-  right: 360px;
+  right: 320px;
 }
 
 .folder {
@@ -485,3 +484,18 @@ p.uppercase {
   margin-right: 10px;
   display: inline-block;
 }
+
+.newGroup {
+  text-align: center;
+  text-decoration: none;
+  background: #F1F4FA;
+  color: #747D94;
+  font-size: 11px;
+  text-transform: uppercase;
+  display: block;
+  padding: 15px 0;
+}
+
+.newGroup:hover {
+  background: #ACB2C1;
+  color: #fff;

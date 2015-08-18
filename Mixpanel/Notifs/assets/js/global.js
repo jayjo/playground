@@ -51,6 +51,7 @@ jQuery(document).ready(function($) {
 		$('header.two').removeClass('active');
 		$('.icon.type').removeClass('check');
 		$('.select').removeClass('selected');
+		$('.folderList').removeClass('open').removeClass('sticky');
 		return false;
 	});
 
