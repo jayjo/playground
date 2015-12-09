@@ -84,10 +84,13 @@ jQuery(document).ready(function($) {
 
 	$(document).on('click', '.fixie', function(e){
 		e.stopPropagation();
-		var currentItemValue = $(this).parent().parent().siblings('menu').find('a.active').children('.value').html(),
-				currentItem      = $(this).parent().parent().siblings('menu').find('a.active'),
-				fixie 					 = $(this);
-		console.log(currentItemValue);
+		// if($('.fixie').parent().parent().hasClass('active')){
+		// var currentItemValue = $(this).parent().parent().siblings('menu').find('a.active').children('.value').html(),
+		// 		currentItem      = $(this).parent().parent().siblings('menu').find('a.active'),
+		// 		fixie 					 = $(this),
+		// 		fixieParent      = $(this).parent().parent();
+		// }
+		// console.log(currentItemValue);
 		$(this).parent().parent().siblings('.dubs').removeClass('inactive');
 		$(this).parent().parent().removeClass('active');
 		$(this).parent().parent().parent().siblings('.frequency').removeClass('show');
@@ -104,19 +107,19 @@ jQuery(document).ready(function($) {
 			$(this).parent().parent().siblings('.dubs').find('.wrap.events').css('opacity', '1');
 			$(this).parent().parent().siblings('.dubs').find('.wrap.events input').focus();
 		}
-		if(!$(this).hasClass('active')){
-			$(document).click(function(){
-				fixie.parent().parent().addClass('active');
-				fixie.parent().parent().siblings('.dubs').addClass('inactive');
-				if($('.cont').hasClass('peepify')) {
-					fixie.html(peepIcon+'<span class="chosen">'+currentItemValue+'</span>');
-					fixie.parent().parent().parent().siblings('.properties').addClass('show');
-				} else if($('.cont').hasClass('eventify')) {
-					fixie.html(eventIcon+'<span class="chosen">'+currentItemValue+'</span>');
-					fixie.parent().parent().parent().siblings('.frequency').addClass('show');
-				}
-			});
-		}
+		// if(!$(this).hasClass('active')){
+		// 	$(document).click(function(){
+		// 		fixie.parent().parent().addClass('active');
+		// 		fixie.parent().parent().siblings('.dubs').addClass('inactive');
+		// 		if($('.cont').hasClass('peepify')) {
+		// 			fixie.html(peepIcon+'<span class="chosen">'+currentItemValue+'</span>');
+		// 			fixie.parent().parent().parent().siblings('.properties').addClass('show');
+		// 		} else if($('.cont').hasClass('eventify')) {
+		// 			fixie.html(eventIcon+'<span class="chosen">'+currentItemValue+'</span>');
+		// 			fixie.parent().parent().parent().siblings('.frequency').addClass('show');
+		// 		}
+		// 	});
+		// }
 	});
 
 	$(document).on('click', '.delete', function(e){

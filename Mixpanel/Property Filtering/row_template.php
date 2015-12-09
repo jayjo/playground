@@ -2,7 +2,7 @@
 	<div class="cont">
 		<div class="container dubs">
 			<div class="wrap events"><input type="text" class="dropdown dual one" value="Event"/><span class="arrow left"></span></div>
-			<div class="wrap people"><input type="text" class="dropdown dual two" value="Property"/><span class="arrow left"></span></div>
+			<div class="wrap people"><input type="text" class="dropdown dual two" value="Profile"/><span class="arrow left"></span></div>
 		</div>
 		<div class="container sing">
 			<div class="wrap bigger chosen">
