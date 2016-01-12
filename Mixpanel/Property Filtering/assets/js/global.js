@@ -1,32 +1,27 @@
 jQuery(document).ready(function($) {
 
-	var freq = $('.frequency'),
-	    props = $('.properties'),
-	    dub = $('.dubs'),
-	    sing = $('.sing'),
-	    eventIcon = '<img src="http://f.cl.ly/items/3G2S0P451L3s190O0T3A/trend-icon.png" alt="" class="icon"/>',
-	    peepIcon = '<img src="http://f.cl.ly/items/0e3B3j0o3x0N2y3X0y2O/person.png" alt="" class="icon perp"/>',
-	    del = $('.delete'),
-	    plus = $('.add_row'),
-	    addRow = $('.row.add');
-
-	// $('.dropdown.invert').click(function(e){
-	// 	e.stopPropagation();
-	// 	$('.menu').toggleClass('open');
-	// });
+	var freq = $('.frequency');
+	var props = $('.properties');
+	var dub = $('.dubs');
+	var sing = $('.sing');
+	var eventIcon = '<img src="http://f.cl.ly/items/3G2S0P451L3s190O0T3A/trend-icon.png" alt="" class="icon"/>';
+	var peepIcon = '<img src="http://f.cl.ly/items/0e3B3j0o3x0N2y3X0y2O/person.png" alt="" class="icon perp"/>';
+	var del = $('.delete');
+	var plus = $('.add_row');
+	var addRow = $('.row.add');
 
 	$(document).on('click', '.wrap.events', function(e){
 		e.stopPropagation();
 		$(this).parent().siblings('.menu.events').toggleClass('open').siblings().removeClass('open');
 		$(this).siblings('.wrap.people').css('opacity', '.6');
-		$(this).siblings('.wrap.events').css('opacity', '1');
+		$(this).css('opacity', '1');
 	});
 
 	$(document).on('click', '.wrap.people', function(e){
 		e.stopPropagation();
 		$(this).parent().siblings('.menu.people').toggleClass('open').siblings().removeClass('open');
 		$(this).siblings('.wrap.events').css('opacity', '.6');
-		$(this).siblings('.wrap.people').css('opacity', '1');
+		$(this).css('opacity', '1');
 	});
 
 	$(document).click(function(){
@@ -35,7 +30,7 @@ jQuery(document).ready(function($) {
 		$('.wrap.events').css('opacity', '1');
 	});
 
-	$(document).on('focus blur', 'input[type="text"]', function(){
+	$(document).on('focus blur', 'numberTime', function(){
 		var default_value = this.value;
 			$(this).focus(function(){
 				if(this.value === default_value) {
@@ -49,13 +44,29 @@ jQuery(document).ready(function($) {
 			});
 	});
 
+	$(document).on('keyup keydown focus blur', '.bang', function(){
+		if ($(this).val() > 1 || $(this).val() == 0) {
+			$(this).next('.plur').html('times');
+		} else {
+			$(this).next('.plur').html('time');
+		}
+	});
+
+	$(document).on('keyup keydown focus blur', '.days', function(){
+		if ($(this).val() > 1 || $(this).val() == 0) {
+			$(this).next('.day').html('days');
+		} else {
+			$(this).next('.day').html('day');
+		}
+	});
+
 	$(document).on('click', '.menu.events .list a', function(){
 		var prop = $(this).children('.value').html();
 		$(this).parent().parent().siblings('.dubs').addClass('inactive');
 		$(this).parent().parent().siblings('.sing').addClass('active');
 		$(this).addClass('active').siblings().removeClass('active');
 		$(this).parent().parent().siblings('menu').find('a.active').removeClass('active');
-		$(this).parent().parent().siblings('.sing').find('.dropdown.fixie').html(eventIcon+'<span class="chosen">'+prop+'</span>');
+		$(this).parent().parent().siblings('.sing').find('.dropdown.fixie').html('<span class="chosen eventtype">'+prop+'</span>'+'<span class="arrow left what"></span>');
 		$(this).parent().parent().parent().addClass('eventify').removeClass('peepify');
 	});
 
@@ -68,7 +79,7 @@ jQuery(document).ready(function($) {
 		$(this).parent().parent().siblings('.sing').addClass('active');
 		$(this).addClass('active').siblings().removeClass('active');
 		$(this).parent().parent().siblings('menu').find('a.active').removeClass('active');
-		$(this).parent().parent().siblings('.sing').find('.dropdown.fixie').html(peepIcon+'<span class="chosen">'+prop+'</span>');
+		$(this).parent().parent().siblings('.sing').find('.dropdown.fixie').html(peepIcon+'<span class="chosen">'+prop+'</span>'+'<span class="arrow left what"></span>');
 		$(this).parent().parent().parent().addClass('peepify').removeClass('eventify');
 	});
 
@@ -84,13 +95,6 @@ jQuery(document).ready(function($) {
 
 	$(document).on('click', '.fixie', function(e){
 		e.stopPropagation();
-		// if($('.fixie').parent().parent().hasClass('active')){
-		// var currentItemValue = $(this).parent().parent().siblings('menu').find('a.active').children('.value').html(),
-		// 		currentItem      = $(this).parent().parent().siblings('menu').find('a.active'),
-		// 		fixie 					 = $(this),
-		// 		fixieParent      = $(this).parent().parent();
-		// }
-		// console.log(currentItemValue);
 		$(this).parent().parent().siblings('.dubs').removeClass('inactive');
 		$(this).parent().parent().removeClass('active');
 		$(this).parent().parent().parent().siblings('.frequency').removeClass('show');
@@ -107,19 +111,6 @@ jQuery(document).ready(function($) {
 			$(this).parent().parent().siblings('.dubs').find('.wrap.events').css('opacity', '1');
 			$(this).parent().parent().siblings('.dubs').find('.wrap.events input').focus();
 		}
-		// if(!$(this).hasClass('active')){
-		// 	$(document).click(function(){
-		// 		fixie.parent().parent().addClass('active');
-		// 		fixie.parent().parent().siblings('.dubs').addClass('inactive');
-		// 		if($('.cont').hasClass('peepify')) {
-		// 			fixie.html(peepIcon+'<span class="chosen">'+currentItemValue+'</span>');
-		// 			fixie.parent().parent().parent().siblings('.properties').addClass('show');
-		// 		} else if($('.cont').hasClass('eventify')) {
-		// 			fixie.html(eventIcon+'<span class="chosen">'+currentItemValue+'</span>');
-		// 			fixie.parent().parent().parent().siblings('.frequency').addClass('show');
-		// 		}
-		// 	});
-		// }
 	});
 
 	$(document).on('click', '.delete', function(e){

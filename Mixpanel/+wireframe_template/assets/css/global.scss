@@ -1,0 +1,82 @@
+@import 'components';
+
+.wrapper {
+
+}
+
+//// APPLICATION STYLES
+
+.account {
+	float: right;
+}
+
+.helpers {
+	float: right;
+	margin-right: 25px;
+	vertical-align: middle;
+	padding: 7px;
+	a {
+		color: rgba(255,255,255,.4);
+		font-size: 13px;
+		margin-left: 20px;
+		&:hover {
+			color: rgba(255,255,255,.75);
+			text-decoration: none;
+		}
+	}
+}
+
+.sidebar {
+	background: $blue1;
+	width: 17%;
+	display: inline-block;
+	padding: 20px 0 20px 20px;
+}
+
+.sidebar ul {
+	margin: 0 0 20px 0;
+	padding: 0 0 20px 0;
+	list-style: none;
+	border-bottom: 1px solid rgba($grey2, .2);
+	a {
+		font-size: 13px;
+		text-decoration: none;
+		display: block;
+		padding: 5px 0 5px 5px;
+		&:hover {
+			background: rgba(255,255,255,.3);
+		}
+	}
+}
+
+a.apps {
+	font-size: 13px;
+	display: block;
+	padding: 5px 0 5px 5px;
+	text-decoration: none;
+	&:hover, &.open {
+		background: rgba(255,255,255,.3);
+	}
+	&:after {
+		display: inline-block;
+		position: relative;
+		width: 0;
+		height: 0;
+		border-bottom: 4px solid transparent;
+		border-top: 4px solid transparent;
+		border-left: 4px solid $grey2;
+		content: "";
+		top: 4px;
+		margin-right: 20px;
+		float: right;
+	}
+}
+
+.reportarea {
+	background: $blue3;
+	width: 83%;
+	height: 100%;
+	display: inline-block;
+	margin-left: -5px;
+	vertical-align: top;
+}

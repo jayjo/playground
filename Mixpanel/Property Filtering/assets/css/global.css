@@ -302,8 +302,16 @@ h3 {
   top: -23px;
 }
 
+.dubs .wrap .left {
+  display: none;
+}
+
 .wrap input[type=text] {
-  padding: 8px 30px 8px 13px;
+  padding: 8px 30px 8px 29px;
+}
+
+.wrap input.dual.two {
+  padding: 8px 14px 8px 25px;
 }
 
 .menu.people,
@@ -425,13 +433,22 @@ input[type=text]:focus {
   display: inline-block;
 }
 
+.chosen.eventtype {
+  margin-left: -16px;
+}
+
 .x {
   cursor: pointer;
 }
 
-.delete {
+.row .delete {
   top: 14px;
   display: none;
+}
+
+.row.add .delete {
+  top: 14px;
+  display: inline-block;
 }
 
 .delete.show {
@@ -557,4 +574,27 @@ input[type=text]:focus {
 
 .menu.propers .list {
   width: 124px;
+}
+
+.or {
+  display: block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 50%;
+  top: 7px;
+  transform: translate3D(-50%,0,0);
+  background: #fff;
+  color: rgba(174,192,206,.75);
+  border-radius: 50em;
+  font-size: 8px;
+  border: 1px solid #aab2bc;
+  text-align: center;
+  line-height: 18px;
+}
+
+.wrap .left.what {
+  margin: 0;
+  right: 2px;
+  top: 3px;
 }
