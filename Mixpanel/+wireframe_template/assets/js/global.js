@@ -50,9 +50,10 @@ jQuery(document).ready(function($) {
 	function matchHeight(){
 		var sideBarHeight = $('.sidebar').outerHeight(),
 				reportAreaHeight = $('.reportarea').outerHeight();
-		console.log(sideBarHeight, reportAreaHeight);
 		if(reportAreaHeight <= sideBarHeight){
 			$('.reportarea').css('height', sideBarHeight+"px");
+		} else if(sideBarHeight <= reportAreaHeight){
+			$('.sidebar').css('height', reportAreaHeight+"px");
 		}
 	}
 
