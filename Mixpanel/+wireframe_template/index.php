@@ -76,5 +76,9 @@
 		</div>
 	</div>
 
+	<div class="templatefooter">
+		<a href="components.php" class="library">Component Library</a>
+	</div>
+
 </body>
 </html>

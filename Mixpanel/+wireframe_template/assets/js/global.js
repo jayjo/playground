@@ -1,5 +1,7 @@
 jQuery(document).ready(function($) {
 
+	/////// DO NOT EDIT THIS CODEZ
+
 	var $document = $(document),
 			$window = $(window);
 
@@ -53,5 +55,8 @@ jQuery(document).ready(function($) {
 			$('.reportarea').css('height', sideBarHeight+"px");
 		}
 	}
+
+	/////// DO NOT EDIT THIS CODEZ
+	/////// YOU CAN CODEZ BELOW THIS LINE
 
 });

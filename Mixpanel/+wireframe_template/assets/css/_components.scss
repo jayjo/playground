@@ -364,3 +364,17 @@ a.x {
 		transform: translate3D(-50%, -50%, 0);
 	}
 }
+
+.templatefooter {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+	background: rgba(255,255,255,.7);
+	text-align: center;
+	a {
+		vertical-align: middle;
+		font-size: 12px;
+		line-height: 40px;
+	}
+}
