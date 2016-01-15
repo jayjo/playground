@@ -1,4 +1,5 @@
-@import 'components';
+@import 'components',
+				'custom_query';
 
 .wrapper {
 
@@ -31,6 +32,7 @@
 	width: 17%;
 	display: inline-block;
 	padding: 20px 0 20px 20px;
+	border-radius: 0 0 0 3px;
 }
 
 .sidebar ul {
@@ -75,8 +77,9 @@ a.apps {
 .reportarea {
 	background: $blue3;
 	width: 83%;
-	height: 100%;
+	min-height: 85vh;
 	display: inline-block;
 	margin-left: -5px;
 	vertical-align: top;
+	border-radius: 0 0 3px 0;
 }

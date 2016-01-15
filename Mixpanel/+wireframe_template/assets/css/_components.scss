@@ -10,7 +10,7 @@ li, button, a {
 	outline: none;
 }
 
-body, html { font-size: 100%; padding: 15px 0; margin: 0; height: 100%; background: rgb(133,135,138); font-family: Helvetica, sans-serif; font-weight: normal;}
+body, html { font-size: 100%; padding: 15px 0; margin: 0; height: 100%; background: rgb(133,135,138); font-family: Helvetica, sans-serif; font-weight: normal; -webkit-font-smoothing: antialiased;}
 
 //// MIXINS
 
@@ -23,6 +23,26 @@ $blue1: rgb(237,239,245);
 $blue2: rgb(245,247,252);
 $blue3: rgb(230,233,239);
 
+//// ANIMATION
+
+@-webkit-keyframes pulse {
+	0% {
+		transform: scale(1.25)
+	}
+	25% {
+		transform: scale(.85)
+	}
+	50% {
+		transform: scale(1.25)
+	}
+	75% {
+		transform: scale(.85)
+	}
+	100% {
+		transform: scale(1.25)
+	}
+}
+
 //// LAYOUT
 
 .wrapper {
@@ -31,6 +51,8 @@ $blue3: rgb(230,233,239);
 	position: relative;
 	border-radius: 3px;
 	box-shadow: 0 1px 10px rgba(0,0,0,.08);
+	border-radius: 3px;
+	background: rgb(237,239,245);
 }
 
 .pane {
@@ -46,12 +68,22 @@ section {
 }
 
 .component {
+	margin-bottom: 20px;
+	position: relative;
+	&:last-child {
+		margin-bottom: 0;
+	}
 	header, footer {
 		background: $blue1;
+		position: relative;
 	}
-	header { border-radius: 3px 3px 0 0; }
-	footer { border-radius: 0 0 3px 3px; }
+	footer {
+		height: 50px;
+	}
 }
+
+header { border-radius: 3px 3px 0 0; }
+footer { border-radius: 0 0 3px 3px; }
 
 header, footer {
 	width: 100%;
@@ -65,9 +97,12 @@ header {
 }
 
 .body {
-	padding: 20px;
+	padding: 0;
 	background: #fff;
 	vertical-align: middle;
+	&.padded {
+		padding: 20px;
+	}
 }
 
 //// TEXTS
@@ -77,6 +112,10 @@ p {
 	font-size: 12px;
 	line-height: 17px;
 	margin: 0 0 14px 0;
+	&.error {
+		text-align: center;
+		margin-bottom: 0;
+	}
 }
 
 b { font-weight: bold; }
@@ -129,12 +168,22 @@ p, h1, h2, h3, h4, h5, h6, a, code {
 
 code {
 	font-size: 11px;
+	line-height: 18px;
 	font-family: monaco;
 	color: rgb(94,96,100);
 	span {
 		display: block;
+		margin: 10px 0 7px;
+		text-transform: uppercase;
 	}
 }
+
+tab {
+	width: 15px;
+	display: inline-block;
+}
+
+//// INPUTS ///////////////////////////////////////////////////////
 
 //// DROPS
 
@@ -143,7 +192,6 @@ code {
 	font-weight: bold;
 	padding: 10px;
 	border-radius: 2px;
-	box-shadow: 0 1px 8px rgba(0,0,0,.15);
 	position: relative;
 	cursor: pointer;
 	display: inline-block;
@@ -164,6 +212,7 @@ code {
 	}
 	&.light {
 		color: $grey2;
+		background: #fff;
 		&:after {
 			border-top: 4px solid $grey2;
 		}
@@ -187,6 +236,9 @@ code {
 		&:hover, &.open {
 			box-shadow: 0 1px 8px rgba(0,0,0,.15);
 		}
+	}
+	&:hover {
+		box-shadow: 0 1px 8px rgba(0,0,0,.15);
 	}
 }
 
@@ -250,7 +302,7 @@ button {
 	&.primary {
 		background: #FFF;
 		color: $grey2;
-		padding: 10px;
+		padding: 10px 18px;
 		&:hover {
 			background: $blue2;
 		}
@@ -275,10 +327,34 @@ button {
 		border: 2px solid rgba(0,0,0,.35);
 		color: rgba(0,0,0,.35);
 		box-shadow: none;
-		padding: 8px;
+		padding: 8px 18px;
 		&:hover {
 		border: 2px solid rgba(0,0,0,.75);
 		color: rgba(0,0,0,.75);
+		}
+	}
+}
+
+//// PILLS
+
+nav.pills {
+	width: auto;
+  display: block;
+  height: 35px;
+	a {
+		font-size: 12px;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: $grey2;
+		border-radius: 50em;
+		padding: 8px 20px;
+		margin-top: 3px;
+		text-align: center;
+		display: inline-block;
+		&.current, &:hover {
+			color: $blue2;
+			background: rgba($grey1, .7);
+			text-decoration: none;
 		}
 	}
 }
@@ -293,14 +369,18 @@ button {
 	border-radius: 5px;
 	margin: 60px 0;
 	position: relative;
+	background: #fff;
+	-webkit-font-smoothing: subpixel-antialiased;
 	&.center {
 		text-align: center;
 	}
-	.fixed {
+	&.fixed {
 		position: fixed;
 		top: 50%;
 		left: 50%;
-		transform: translate3D(-50%, -50%, 0);
+		transform: translate3D(-50%, -80%, 0);
+		z-index: 2;
+		margin: 0;
 	}
 	&.twobutton button {
 		margin: 0 5px;
@@ -348,20 +428,27 @@ a.x {
 .tip {
 	width: auto;
 	height: auto;
-	max-width: 380px;
+	max-width: 400px;
 	padding: 20px;
 	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.20);
 	border-radius: 3px;
 	margin: 60px 0;
 	position: relative;
-	p {
-		margin-bottom: 0;
+	background: #fff;
+	-webkit-font-smoothing: subpixel-antialiased;
+	p, h1, h2, h3, h4, h5, h6 {
+		margin-bottom: 4px;
 	}
 	&.fixed {
-		position: fixed;
+		display: none;
+		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate3D(-50%, -50%, 0);
+		margin: 0;
+		z-index: 1;
+	}
+	&.open {
+		display: block;
 	}
 }
 
@@ -370,11 +457,57 @@ a.x {
 	bottom: 0;
 	width: 100%;
 	height: 40px;
-	background: rgba(255,255,255,.7);
+	background: rgba(0,0,0,.5);
 	text-align: center;
+	display: none;
 	a {
 		vertical-align: middle;
 		font-size: 12px;
 		line-height: 40px;
+		color: rgba(255,255,255,.5);
+	}
+}
+
+//// MISC
+
+.overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba($grey1, .65);
+	display: none;
+	&.open {
+		display: block;
+	}
+}
+
+.pulse {
+	width: 16px;
+	height: 16px;
+	border-radius: 40em;
+	background: $grey1;
+	position: absolute;
+	opacity: .5;
+	cursor: pointer;
+	display: none;
+	z-index: 1;
+}
+
+.pulse.active {
+	display: block;
+}
+
+.pulse.active.blink {
+	-webkit-animation: pulse 3000ms infinite;
+}
+
+highlight {
+	background: rgba(253,151,32, 0);
+	&.open {
+		background: rgba(253,151,32, .25);
 	}
 }

@@ -29,7 +29,7 @@
 				<header>
 					<p>Text</p>
 				</header>
-				<div class="body">
+				<div class="body padded">
 					<p>I'm a paragraph</p>
 					<p><b>I'm a bolded paragraph</b></p>
 					<p><i>I'm an italicized paragraph</i></p>
@@ -50,7 +50,7 @@
 				<header>
 					<p>Drops</p>
 				</header>
-				<div class="body">
+				<div class="body padded">
 					<div class="drop dark">
 						<div class="droptext">Dark drop down</div>
 						<div class="list">
@@ -99,13 +99,13 @@
 				<header>
 					<p>Buttons and Inputs</p>
 				</header>
-				<div class="body">
-					<button class="primary">Primary Button</button>
-					<button class="primary icon before">Primary Button Icon Before</button>
-					<button class="primary icon after">Primary Button Icon After</button>
-					<button class="secondary">Secondary Button</button>
-					<button class="secondary icon before">Secondary Button Before</button>
-					<button class="secondary icon after">Secondary Button After</button>
+				<div class="body padded">
+					<button class="primary">Primary Btn</button>
+					<button class="primary icon before">Primary Btn Icon Before</button>
+					<button class="primary icon after">Primary Btn Icon After</button>
+					<button class="secondary">Secondary Btn</button>
+					<button class="secondary icon before">Secondary Btn Icon Before</button>
+					<button class="secondary icon after">Secondary Btn Icon After</button>
 				</div>
 			</section>
 		</section>
@@ -115,7 +115,7 @@
 				<header>
 					<p>Tool Tips and Modals</p>
 				</header>
-				<div class="body">
+				<div class="body padded">
 					<div class="tip">
 						<h2>This is a tip headline</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum aspernatur possimus voluptate recusandae beatae maiores?</p>

@@ -1,0 +1,449 @@
+
+//// ANIMATIONS
+
+@-webkit-keyframes pulseSlow1 {
+	0% {
+		top: 72px;
+  	left: 47px;
+		opacity: 1;
+	}
+	5% {
+		opacity: 0;
+	}
+	95% {
+		opacity: 0;
+	}
+	100% {
+		top: 108px;
+    left: 59px;
+	}
+}
+
+@-webkit-keyframes pulseSlow2 {
+	0% {
+		top: 108px;
+    left: 59px;
+    opacity: 1;
+	}
+	15% {
+		opacity: 0;
+	}
+	80% {
+		opacity: 0;
+		top: 539px;
+    left: 265px;
+	}
+	100% {
+		opacity: 1;
+	  top: 579px;
+    left: 280px;
+	}
+}
+
+@-webkit-keyframes pulseQuick1 {
+	0% {
+		top: 72px;
+  	left: 47px;
+	}
+	100% {
+		top: 108px;
+    left: 59px;
+	}
+}
+
+@-webkit-keyframes pulseQuick2 {
+	0% {
+		top: 108px;
+    left: 59px;
+	}
+	100% {
+	  top: 579px;
+    left: 280px;
+	}
+}
+
+@-webkit-keyframes pulseQuick3 {
+	0% {
+		top: 108px;
+    left: 59px;
+	}
+	100% {
+    top: 262px;
+    left: 277px;
+	}
+}
+
+@-webkit-keyframes loadingline {
+	0%{
+		width: 0%
+	}
+	15% {
+		width: 25%;
+	}
+	50% { width: 75%; }
+	100% {
+		width: 100%;
+	}
+}
+
+.examples, .docs {
+	float: right;
+}
+
+.examples {
+	margin-left: 10px;
+}
+
+.component header h2 {
+	position: absolute;
+	width: 40%;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	margin: -1.2% 0 0 -21%;
+}
+
+.linenumbers {
+	border-right: 1px solid #EBECEC;
+	width: 55px;
+	display: inline-block;
+}
+
+.linenumbers ul {
+	margin: 0;
+	padding: 8px 10px 8px 0;
+	list-style: none;
+	font-family: monaco;
+	opacity: .5;
+	text-align: right;
+}
+
+.console {
+	width: 840px;
+	display: inline-block;
+	margin-left: -5px;
+	vertical-align: top;
+	padding: 7px 0 7px 10px;
+	border: 0px solid transparent;
+	outline: 0px solid transparent;
+	code {
+		line-height: 0;
+	}
+	&:focus {
+		outline: 0px solid transparent;
+		border: 0px solid transparent;
+	}
+}
+
+footer.flexy {
+	display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftbtn, .rightbtn {
+	font-size: 13px;
+	text-transform: uppercase;
+	color: $grey2;
+	font-weight: bold;
+	width: 50%;
+	height: 100%;
+	text-align: center;
+	line-height: 0;
+	padding: 25px 0;
+	&.inactive {
+		opacity: .5;
+		pointer-events: none;
+	}
+	&:hover {
+		cursor: pointer;
+		background: rgba(255,255,255,.1);
+	}
+	&.active {
+		pointer-events: auto;
+		opacity: 1;
+	}
+	&.highlighted {
+		background: rgba(253,140,32, .15);
+	}
+}
+
+.rightbtn {
+	border-left: 1px solid rgba(0,0,0,.1);
+}
+
+.pulse.one {
+	top: 72px;
+  left: 47px;
+}
+
+.pulse.two {
+	top: 108px;
+  left: 59px;
+	// -webkit-animation: pulseSlow1 4500ms 1;
+	-webkit-animation: pulseQuick1 300ms 1;
+}
+
+.pulse.three {
+	top: 579px;
+  left: 280px;
+	// -webkit-animation: pulseSlow2 9000ms 1;
+	-webkit-animation: pulseQuick2 800ms 1;
+	-webkit-animation-timing-function: cubic-bezier(0.000, 0.060, 0.165, 0.995);
+}
+
+.pulse.four {
+	top: 262px;
+  left: 277px;
+	-webkit-animation: pulseQuick3 400ms 1;
+}
+
+.pulse.five {
+  top: 179px;
+  left: 61px;
+}
+
+.pulse.six {
+  top: 194px;
+  left: 61px;
+}
+
+.pulse.seven {
+  top: 210px;
+  left: 61px;
+}
+
+.tip.one {
+	left: -76px;
+  top: -29px;
+}
+
+.tip.two {
+	top: -16px;
+  left: -40px;
+  b {
+  	color: #70737A;
+  }
+}
+
+.tip.three {
+  top: 454px;
+  left: 38px;
+  &.v2 {
+  	top: 114px;
+    left: 38px;
+  }
+}
+
+.tip.four {
+	top: 16px;
+  left: 130px;
+}
+
+.tip.five {
+	top: 50px;
+  left: -50px;
+}
+
+.tip.six {
+	top: 60px;
+  left: -50px;
+}
+
+.export {
+	float: right;
+}
+
+.loader.line {
+	height: 3px;
+	background: rgba($grey2, .65);
+	position: absolute;
+	top: -3px;
+	overflow: hidden;
+	display: none;
+	z-index: 100;
+
+	&.visible {
+		display: block;
+		-webkit-animation: loadingline 2400ms 1;
+	}
+	&:after {
+		position: absolute;
+		height: 100%;
+		display: block;
+		content: "";
+		top: 0;
+		left: 0;
+		opacity: 0;
+		z-index: -100;
+		background: rgba(0,0,0,.5);
+	}
+	&.visible:after {
+
+	}
+}
+
+.modal.success,
+.modal.introduction,
+.modal.final {
+	display: none;
+	&.open {
+		display: block;
+	}
+}
+
+.drop.transform {
+	font-weight: normal;
+	font-size: 11px;
+	color: rgb(94,96,100);
+	position: relative;
+	left: -10px;
+	display: none;
+	.explanation {
+		text-transform: none;
+		font-family: helvetica;
+		color: $text1;
+		opacity: .7;
+		margin: 10px 0 0 0;
+		white-space: normal;
+		line-height: 16px;
+	}
+	&.visible {
+		display: inline-block;
+	}
+	&:hover, &.open {
+		color: rgba(94,96,100,.75);
+		background: none;
+		box-shadow: none;
+	}
+	&:after {
+		display: none;
+	}
+	.list {
+		top: 21px;
+		width: 440px;
+		a {
+			padding: 14px 10px 8px;
+			font-weight: normal;
+			border-bottom: 1px solid rgba(0,0,0,.1);
+		}
+	}
+}
+
+.transformation {
+	display: none;
+	line-height: 18px;
+	&.visible {
+		display: inline-block;
+	}
+}
+
+.comment {
+	display: none;
+	text-transform: uppercase;
+	&.visible {
+		display: inline-block;
+	}
+}
+
+.tablearea header,
+.tablearea .body {
+	opacity: .25;
+}
+
+.tablearea.active header,
+.tablearea.active .body {
+	opacity: 1;
+}
+
+table {
+	width: 100%;
+  display: table;
+  border: 1px solid #F2F3F3;
+  border-radius: 2px;
+  display:none;
+  &.active {
+  	display: block;
+  }
+}
+
+table th {
+	font-size: 11px;
+	text-transform: uppercase;
+	color: $text2;
+	text-align: left;
+	background: rgb(243,245,249);
+	border-right: 1px solid #F2F3F3;
+	padding: 10px 15px;
+	width: 725px;
+	&:last-child {
+		width: 150px;
+	}
+}
+
+table td {
+	font-size: 13px;
+	color: $text2;
+	text-align: left;
+	border-right: 1px solid #F2F3F3;
+	padding: 15px;
+	width: 725px;
+	&:last-child {
+		border-right: none;
+		width: 150px;
+	}
+}
+
+table tr {
+	width: 100%;
+	border-bottom: 1px solid #F2F3F3;
+}
+
+table tr:nth-child(odd){
+	background: rgb(250,251,252);
+}
+
+.options {
+	position: absolute;
+	bottom: 80px;
+	left: 50%;
+	transform: translateX(-50%);
+	visibility: hidden;
+	opacity: 0;
+	&.visible {
+		opacity: 1;
+		visibility: visible;
+		transition: visibility 0ms, opacity 200ms;
+	}
+}
+
+.filterfunction {
+	display: none;
+	margin: 11px 0 4px;
+	&.visible {
+		display: block;
+	}
+}
+
+.groupbyfunction {
+	display: none;
+	margin: 11px 0 4px;
+	&.visible {
+		display: block;
+	}
+}
+
+.reducefunction {
+	display: none;
+	margin: 11px 0 4px;
+	&.visible {
+		display: block;
+	}
+}
+
+added {
+	display: none;
+	&.visible {
+		display: inline-block;
+	}
+}
