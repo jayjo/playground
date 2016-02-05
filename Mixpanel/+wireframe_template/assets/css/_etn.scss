@@ -1,0 +1,22 @@
+
+//// ANIMATIONS
+
+.headFloat {
+	display: inline-block;
+}
+
+.allany {
+	margin: 0 7px;
+}
+
+.item:hover > .plusButton.small {
+	display: inline-block;
+}
+
+.operator {
+	display: none;
+}
+
+.eventChooser.active ~ .operator {
+	display: inline-block;
+}
