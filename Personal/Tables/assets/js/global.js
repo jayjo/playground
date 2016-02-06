@@ -1,8 +1,13 @@
 jQuery(document).ready(function($) {
 
-	$('.table').fixedHeaderTable({
-	altClass: 'odd',
-	fixedColumns: 1,
-});
+	$('table').bootstrapTable({
+		striped: true,
+		height: 395,
+		fixedColumns: true,
+		fixedNumber: 1,
+		search: true,
+		// showColumns: true,
+		// sortable: true
+	});
 
 });

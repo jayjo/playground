@@ -12,312 +12,210 @@ include 'inc/header.php';
 ?>
 
 <section id="content">
-<div class="container_12 divider">
-        	<div class="grid_4 height400">
-<table class="table tablesorter unittable fancyTable" cellpadding="0" cellspacing="0">
-<thead>
-<tr>
-<th>All Non-Resident Archery Units</th>
-<th>Hunt Code</th>
-<th>Archery Season Dates</th>
-<th>Total Permits(2014)</th>
-<th>Min. Points to Draw(2014)</th>
-<th>Success Rate</th>
-</tr>
-</thead>
 
-<tbody>
-<tr>
-<td>1</td>
-<td>E-E-001-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>2</td>
-<td>N.A.</td>
-<td>17%</td>
-</tr>
-<tr>
-<td>2</td>
-<td>E-E-002-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>9</td>
-<td>100% w/22</td>
-<td>92%</td>
-</tr>
-<tr>
-<td>4, 5, 441</td>
-<td>E-E-004-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>450</td>
-<td>43% w/ 1</td>
-<td>18%</td>
-</tr>
-<tr>
-<td>7, 8, 9, 19, 191</td>
-<td>E-E-007-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>1000</td>
-<td>100% w/ 0</td>
-<td>8%</td>
-</tr>
-<tr>
-<td>10</td>
-<td>E-E-010-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>15</td>
-<td>67% w/ 21</td>
-<td>60%</td>
-</tr>
-<tr>
-<td>12, 23, 24</td>
-<td>E-E-012-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>630</td>
-<td>70% w/ 2</td>
-<td class="orange">35%<span class="tooltip">Hunts harvest rates can&#8217;t be accurately calculated to multiple overlapping seasons/hunt code in a unit.</span></td>
-</tr>
-<tr>
-<td>20</td>
-<td>E-M-020-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>5</td>
-<td>100% w/ 11</td>
-<td class="orange">80%<span class="tooltip">Hunts harvest rates can&#8217;t be accurately calculated to multiple overlapping seasons/hunt code in a unit.</span></td>
-</tr>
-<tr>
-<td>20*</td>
-<td>E-E-020-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>105</td>
-<td>100% w/ 2</td>
-<td class="orange">17%<span class="tooltip">Hunts harvest rates can&#8217;t be accurately calculated to multiple overlapping seasons/hunt code in a unit.</span></td>
-</tr>
-<tr>
-<td>29</td>
-<td>E-E-029-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>30</td>
-<td>25% w/ 1</td>
-<td>19%</td>
-</tr>
-<tr>
-<td>23, 24, 33</td>
-<td>E-E-033-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>1050</td>
-<td>48% w/ 0</td>
-<td class="orange">18%<span class="tooltip">Hunts harvest rates can&#8217;t be accurately calculated to multiple overlapping seasons/hunt code in a unit.</span></td>
-</tr>
-<tr>
-<td>39</td>
-<td>E-E-039-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>110</td>
-<td>33% w/ 1</td>
-<td>20%</td>
-</tr>
-<tr>
-<td>40</td>
-<td>E-E-040-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>85</td>
-<td>50% w/7</td>
-<td>46%</td>
-</tr>
-<tr>
-<td>46</td>
-<td>E-E-046-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>60</td>
-<td>100% w/ 0</td>
-<td>9%</td>
-</tr>
-<tr>
-<td>48</td>
-<td>E-E-048-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>100</td>
-<td>55% w/ 1</td>
-<td>9%</td>
-</tr>
-<tr>
-<td>49</td>
-<td>E-E-049-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>170</td>
-<td>87% w/ 3</td>
-<td>17%</td>
-</tr>
-<tr>
-<td>50</td>
-<td>E-E-050-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>125</td>
-<td>100% w/ 0</td>
-<td>8%</td>
-</tr>
-<tr>
-<td>51</td>
-<td>E-E-051-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>100</td>
-<td>100% w/ 1</td>
-<td>5%</td>
-</tr>
-<tr>
-<td>54</td>
-<td>E-E-054-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>450</td>
-<td>100% w/ 0</td>
-<td>11%</td>
-</tr>
-<tr>
-<td>55</td>
-<td>E-E-055-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>665</td>
-<td>100% w/ 0</td>
-<td>8%</td>
-</tr>
-<tr>
-<td>56</td>
-<td>E-E-056-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>100</td>
-<td>100% w/ 0</td>
-<td>2%</td>
-</tr>
-<tr>
-<td>57, 58</td>
-<td>E-E-057-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>180</td>
-<td>86% w/ 1</td>
-<td>17%</td>
-</tr>
-<tr>
-<td>61</td>
-<td>E-E-061-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>100</td>
-<td>67% w/ 18</td>
-<td>42%</td>
-</tr>
-<tr>
-<td>66</td>
-<td>E-E-066-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>170</td>
-<td>51% w/ 4</td>
-<td>15%</td>
-</tr>
-<tr>
-<td>67</td>
-<td>E-E-067-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>65</td>
-<td>92% w/ 3</td>
-<td>22%</td>
-</tr>
-<tr>
-<td>69, 84</td>
-<td>E-E-069-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>180</td>
-<td>42% w/ 1</td>
-<td>21%</td>
-</tr>
-<tr>
-<td>76</td>
-<td>E-E-076-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>160</td>
-<td>45% w/ 11</td>
-<td>32%</td>
-</tr>
-<tr>
-<td>104</td>
-<td>E-E-104-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>25</td>
-<td>100% w/ 0</td>
-<td>8%</td>
-</tr>
-<tr>
-<td>201</td>
-<td>E-E-201-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>9</td>
-<td>20% w 22</td>
-<td>79%</td>
-</tr>
-<tr>
-<td>391</td>
-<td>E-E-391-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>40</td>
-<td>100% w/ 0</td>
-<td>10%</td>
-</tr>
-<tr>
-<td>461</td>
-<td>E-E-461-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>55</td>
-<td>100% w/ 0</td>
-<td>12%</td>
-</tr>
-<tr>
-<td>481</td>
-<td>E-E-481-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>100</td>
-<td>50% w/ 0</td>
-<td>8%</td>
-</tr>
-<tr>
-<td>500</td>
-<td>E-E-500-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>135</td>
-<td>79% w/ 1</td>
-<td>7%</td>
-</tr>
-<tr>
-<td>501</td>
-<td>E-E-501-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>85</td>
-<td>83% w/ 2</td>
-<td>22%</td>
-</tr>
-<tr>
-<td>551</td>
-<td>E-E-551-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>230</td>
-<td>100% w/ 0</td>
-<td>7%</td>
-</tr>
-<tr>
-<td>561</td>
-<td>E-E-561-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>70</td>
-<td>100% w/ 0</td>
-<td>7%</td>
-</tr>
-<tr>
-<td>851</td>
-<td>E-E-851-01-A</td>
-<td>Aug. 29-Sept. 27</td>
-<td>8</td>
-<td>100% w/ 10</td>
-<td>21%</td>
-</tr>
-</tbody>
+<table class="table tablesorter unittable">
+	<thead>
+	<tr>
+		<th>All Non-Resident Units/Hunts</th>
+		<th>Hunt Dates</th>
+		<th>2014 Draw Odds</th>
+		<th data-align="right" data-sortable="true">Success Rate(All Weapons)</th>
+		<th>Success Rate(Archery)</th>
+		<th>Avg. Score(All Weapons, Estimated)</th>
+		<th>Avg. Horn Length(All Weapons)</th>
+		<th>Avg. Horn Base(All Weapons)</th>
+		<th>Best Goat(All Weapons, Estimated)</th>
+		<th>Best Archery Goat(Estimated)</th>
+		<th>Avg. Age</th>
+		<th>Days Hunted</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>G02- Mount Princeton- Hunt 1</td>
+		<td>Sept. 2-Oct. 5</td>
+		<td class="drawOdds">367</td>
+		<td>76%</td>
+		<td>2.7%</td>
+		<td>42 1/8</td>
+		<td>8 2/8</td>
+		<td>4 5/8</td>
+		<td>51 7/8</td>
+		<td>37 3/8</td>
+		<td>5.7</td>
+		<td>5.4</td>
+	</tr>
+	<tr>
+		<td>G04- Mount Evans- Hunt 1</td>
+		<td>Sept. 15-26, Weekdays Only</td>
+		<td class="drawOdds">641</td>
+		<td>81%</td>
+		<td>8.3%</td>
+		<td>39 7/8</td>
+		<td>7 4/8</td>
+		<td>4 4/8</td>
+		<td>49 1/8</td>
+		<td>44 5/8</td>
+		<td>5.0</td>
+		<td>3.1</td>
+	</tr>
+	<tr>
+		<td>G04- Mount Evans- Hunt 2</td>
+		<td>Sept. 29-Oct. 10, Weekdays Only</td>
+		<td class="drawOdds">406</td>
+		<td>81%</td>
+		<td>8.3%</td>
+		<td>39 7/8</td>
+		<td>7 4/8</td>
+		<td>4 4/8</td>
+		<td>49 1/8</td>
+		<td>44 5/8</td>
+		<td>5.0</td>
+		<td>3.1</td>
+	</tr>
+	<tr>
+		<td>G04- Mount Evans- Hunt 3</td>
+		<td>Oct. 13-Oct. 24, Weekdays Only</td>
+		<td class="drawOdds">224</td>
+		<td>81%</td>
+		<td>8.3%</td>
+		<td>39 7/8</td>
+		<td>7 4/8</td>
+		<td>4 4/8</td>
+		<td>49 1/8</td>
+		<td>44 5/8</td>
+		<td>5.0</td>
+		<td>3.1</td>
+	</tr>
+	<tr>
+		<td>G05- West Needles- Hunt 1- Archery</td>
+		<td>Sept. 2-Oct. 31</td>
+		<td class="drawOdds">318</td>
+		<td>80%</td>
+		<td>80.0%</td>
+		<td>41</td>
+		<td>8 2/8</td>
+		<td>4 3/8</td>
+		<td>50 7/8</td>
+		<td>50 7/8</td>
+		<td>5.6</td>
+		<td>5.4</td>
+	</tr>
+	<tr>
+		<td>G07- Grays Peak- Hunt 2</td>
+		<td>Sept. 15-26, Weekdays Only</td>
+		<td class="drawOdds">225</td>
+		<td>85%</td>
+		<td>3.7%</td>
+		<td>41 4/8</td>
+		<td>8</td>
+		<td>4 5/8</td>
+		<td>48 2/8</td>
+		<td>46 2/8</td>
+		<td>4.7</td>
+		<td>2.5</td>
+	</tr>
+	<tr>
+		<td>G07- Grays Peak- Hunt 3</td>
+		<td>Sept. 29-Oct. 10, Weekdays Only</td>
+		<td class="drawOdds">212</td>
+		<td>85%</td>
+		<td>3.7%</td>
+		<td>41 4/8</td>
+		<td>8</td>
+		<td>4 5/8</td>
+		<td>48 2/8</td>
+		<td>46 2/8</td>
+		<td>4.7</td>
+		<td>2.5</td>
+	</tr>
+	<tr>
+		<td>G12- Maroon Bells- Hunt 1</td>
+		<td>Sept. 2-Oct. 5</td>
+		<td class="drawOdds">242</td>
+		<td>93%</td>
+		<td>2.2%</td>
+		<td>41 3/8</td>
+		<td>7 7/8</td>
+		<td>4 5/8</td>
+		<td>49</td>
+		<td>42 5/8</td>
+		<td>6.1</td>
+		<td>2.2</td>
+	</tr>
+	<tr>
+		<td>G13- Quail Mountain- Hunt 1</td>
+		<td>Sept. 2-18</td>
+		<td class="drawOdds">103</td>
+		<td>73%</td>
+		<td>0.0%</td>
+		<td>40 6/8</td>
+		<td>7 5/8</td>
+		<td>4 5/8</td>
+		<td>47 4/8</td>
+		<td>0</td>
+		<td>5.2</td>
+		<td>3.5</td>
+	</tr>
+	<tr>
+		<td>G13- Quail Mountain-Hunt 2</td>
+		<td>Sept. 19-Oct. 5</td>
+		<td class="drawOdds">87</td>
+		<td>73%</td>
+		<td>0.0%</td>
+		<td>40 6/8</td>
+		<td>7 5/8</td>
+		<td>4 5/8</td>
+		<td>47 4/8</td>
+		<td>0</td>
+		<td>5.2</td>
+		<td>3.5</td>
+	</tr>
+	<tr>
+		<td>G15- Jones Pass- Hunt 2</td>
+		<td>Sept. 15-26, Weekdays Only</td>
+		<td class="drawOdds">124</td>
+		<td>68%</td>
+		<td>4.0%</td>
+		<td>40 6/8</td>
+		<td>8</td>
+		<td>4 4/8</td>
+		<td>51 3/8</td>
+		<td>48 4/8</td>
+		<td>4.9</td>
+		<td>3.4</td>
+	</tr>
+	<tr>
+		<td>G16- Mount Guyot- Hunt 1</td>
+		<td>Sept. 2-12, Weekdays Only</td>
+		<td class="drawOdds">306</td>
+		<td>87%</td>
+		<td>19.4%</td>
+		<td>39 2/8</td>
+		<td>7 6/8</td>
+		<td>4 2/8</td>
+		<td>50 5/8</td>
+		<td>43 3/8</td>
+		<td>4.3</td>
+		<td>2.7</td>
+	</tr>
+	<tr>
+		<td>G17- Independence Pass- Hunt 1</td>
+		<td>Sept. 2-Oct. 5, Weekdays Only</td>
+		<td class="drawOdds">21</td>
+		<td>81%</td>
+		<td>3.8%</td>
+		<td>41 5/8</td>
+		<td>7 7/8</td>
+		<td>4 6/8</td>
+		<td>49 2/8</td>
+		<td>43 6/8</td>
+		<td>5.3</td>
+		<td>4.9</td>
+	</tr>
+	</tbody>
 </table>
-</div></div>
+
 </section>
 
 <?php include 'inc/footer.php'; ?>
