@@ -349,6 +349,10 @@ td {
 .pull-right .dropdown-menu {
     right: 0;
     left: auto;
+    position: absolute;
+    z-index: 1;
+    background: #fff;
+    list-style: none;
 }
 
 /* calculate scrollbar width */
@@ -392,4 +396,8 @@ div.fixed-table-scroll-outer {
 
 .bootstrap-table .table-hover > tbody > tr.hover > td{
     background-color: #f5f5f5;
+}
+
+tr:nth-child(even) {
+    background: #ECEEF1;
 }

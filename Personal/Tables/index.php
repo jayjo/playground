@@ -13,10 +13,10 @@ include 'inc/header.php';
 
 <section id="content">
 
-<table class="table tablesorter unittable">
+<table class="table tablesorter unittable" data-striped="true">
 	<thead>
 	<tr>
-		<th>All Non-Resident Units/Hunts</th>
+		<th data-switchable="false">All Non-Resident Units/Hunts</th>
 		<th>Hunt Dates</th>
 		<th>2014 Draw Odds</th>
 		<th data-align="right" data-sortable="true">Success Rate(All Weapons)</th>
