@@ -49,7 +49,7 @@ include 'inc/header.php';
 		<td>G04- Mount Evans- Hunt 1</td>
 		<td>Sept. 15-26, Weekdays Only</td>
 		<td class="drawOdds">641</td>
-		<td>81%</td>
+		<td>81.4493%</td>
 		<td>8.3%</td>
 		<td>39 7/8</td>
 		<td>7 4/8</td>
@@ -64,7 +64,7 @@ include 'inc/header.php';
 		<td>Sept. 29-Oct. 10, Weekdays Only</td>
 		<td class="drawOdds">406</td>
 		<td>81%</td>
-		<td>8.3%</td>
+		<td>8.32392%</td>
 		<td>39 7/8</td>
 		<td>7 4/8</td>
 		<td>4 4/8</td>
@@ -78,7 +78,7 @@ include 'inc/header.php';
 		<td>Oct. 13-Oct. 24, Weekdays Only</td>
 		<td class="drawOdds">224</td>
 		<td>81%</td>
-		<td>8.3%</td>
+		<td>8.34094309%</td>
 		<td>39 7/8</td>
 		<td>7 4/8</td>
 		<td>4 4/8</td>
@@ -216,6 +216,7 @@ include 'inc/header.php';
 	</tbody>
 </table>
 
+<input type="text" value="" class="calc">
 </section>
 
 <?php include 'inc/footer.php'; ?>
