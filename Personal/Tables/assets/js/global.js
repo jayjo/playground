@@ -28,7 +28,7 @@ jQuery(document).ready(function($) {
 	function setDrawOddValues(){
 		var curVal = calc.val();
 		$(document).find('.drawOdds').each(function(index){
-      var oddsVal = (originalValues[index] / curVal).toFixed(2);
+      var oddsVal = (originalValues[index] / curVal).toFixed(0);
       var origVal = (originalValues[index] / 1);
       if(!calc.val() || calc.val() === "0" || calc.val() === "1") {
       	$(this).text(origVal);
