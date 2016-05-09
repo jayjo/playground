@@ -45,19 +45,19 @@ jQuery(document).ready(function($) {
 		e.preventDefault();
 	});
 
-	$document.ready(matchHeight);
-	$window.on('resize', matchHeight);
-	$document.on('change', matchHeight);
+	// $document.ready(matchHeight);
+	// $window.on('resize', matchHeight);
+	// $document.on('change', matchHeight);
 
-	function matchHeight(){
-		var sideBarHeight = $('.sidebar').outerHeight(),
-				reportAreaHeight = $('.reportarea').outerHeight();
-		if(reportAreaHeight <= sideBarHeight){
-			$('.reportarea').css('height', sideBarHeight+"px");
-		} else if(sideBarHeight <= reportAreaHeight){
-			$('.sidebar').css('height', reportAreaHeight+"px");
-		}
-	}
+	// function matchHeight(){
+	// 	var sideBarHeight = $('.sidebar').outerHeight(),
+	// 			reportAreaHeight = $('.reportarea').outerHeight();
+	// 	if(reportAreaHeight <= sideBarHeight){
+	// 		$('.reportarea').css('height', sideBarHeight+"px");
+	// 	} else if(sideBarHeight <= reportAreaHeight){
+	// 		$('.sidebar').css('height', reportAreaHeight+"px");
+	// 	}
+	// }
 
 	/////// DO NOT EDIT THIS CODEZ
 	/////// YOU CAN CODEZ BELOW THIS LINE
@@ -182,4 +182,17 @@ jQuery(document).ready(function($) {
 			$('.error').show();
 		}
 	});
+
+	function scrollyBiz(){
+		$('.wrapper').on('scroll', function(e){
+			var Y = $('.wrapper').scrollTop();
+			if( Y >= 120 ) {
+				console.log($(this).scrollTop());
+				$('.query_container, .visualization_nav').addClass('scrolling');
+			} else {
+				$('.query_container, .visualization_nav').removeClass('scrolling');
+			}
+		});
+	}
+	scrollyBiz();
 });

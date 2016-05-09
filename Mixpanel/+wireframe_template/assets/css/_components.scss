@@ -47,11 +47,10 @@ $blue3: rgb(230,233,239);
 
 .wrapper {
 	width: 1150px;
-	margin: 0 auto 50px;
+	margin: 0 auto;
 	position: relative;
 	border-radius: 3px;
 	box-shadow: 0 1px 10px rgba(0,0,0,.08);
-	border-radius: 3px;
 	background: rgb(237,239,245);
 }
 
@@ -72,6 +71,9 @@ section {
 	position: relative;
 	&:last-child {
 		margin-bottom: 0;
+	}
+	&.shadow {
+		box-shadow: 0 1px 3px rgba(0,0,0,.08);
 	}
 	header, footer {
 		background: $blue1;
@@ -102,6 +104,9 @@ header {
 	vertical-align: middle;
 	&.padded {
 		padding: 20px;
+	}
+	&.rounded {
+    border-radius: 3px;
 	}
 }
 
