@@ -1,0 +1,73 @@
+/************* GLOBAL ************/
+
+body {
+  background: #fff;
+  padding: @baseunit*9 @baseunit*11;
+}
+
+::-moz-selection {
+    color: #FFF;
+    background: @primary-blue;
+    text-shadow: none;
+}
+
+::selection {
+    color: #FFF;
+    background: @primary-blue;
+    text-shadow: none;
+}
+
+/************* TEXT COLOR ************/
+
+.text-blue { color: @primary-blue; }
+.text-grey1 { color: @grey1; }
+.text-grey2 { color: @grey2; }
+.text-grey3 { color: @grey3; }
+.text-grey4 { color: @grey4; }
+
+/************* TYPOGRAPHY ************/
+
+h1 { .h1; }
+h2 {}
+h3 { .h3; }
+p { .paragraph; }
+
+/************* LAYOUT ************/
+
+section {
+
+}
+
+.hero .content {
+	position: absolute;
+	.vertical-center;
+}
+
+.logo {
+	background: @primary-blue;
+	width: 22px;
+	height: 22px;
+	border-radius: 50em;
+	border: transparent;
+	position: relative;
+	&::before, &::after {
+		background: @primary-blue;
+		border-radius: 50em;
+		border: transparent;
+		display: inline-block;
+		position: absolute;
+		content: "";
+	}
+	&::before {
+		width: 16px;
+		height: 16px;
+		left: 40px;
+		top: 3px;
+	}
+	&::after {
+		width: 6px;
+		height: 6px;
+		left: 74px;
+		top: 8px;
+	}
+}
