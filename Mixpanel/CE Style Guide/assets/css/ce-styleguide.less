@@ -2,7 +2,6 @@
 
 body {
   background: #fff;
-  padding: @baseunit*9 @baseunit*11;
 }
 
 ::-moz-selection {
@@ -27,20 +26,75 @@ body {
 
 /************* TYPOGRAPHY ************/
 
-h1 { .h1; }
-h2 {}
-h3 { .h3; }
-p { .paragraph; }
+.fontSize-xxl { .fontSize-ExtraExtraLarge; }
+.fontSize-xl { .fontSize-ExtraLarge; }
+.fontSize-l { .fontSize-Large; }
+.fontSize-m { .fontSize-Medium; }
+.fontSize-s { .fontSize-Small; }
+.fontSize-xs { .fontSize-Micro; }
+
+.head {
+	font-family: @mpfont;
+	margin-bottom: @baseunit*4;
+	letter-spacing: -1px;
+}
+
+h1.head {
+	font-size: 81px;
+	margin-bottom: @baseunit*7;
+	.light;
+}
+
+h2.head {}
+
+h3.head {
+	font-size: 36px;
+	.light;
+}
+
+h4.head {
+	font-size: 23px;
+	margin-bottom: @baseunit;
+	.book;
+}
+
+.typography p span {
+	display: block;
+	letter-spacing: 0;
+	margin-top: @baseunit*1.5;
+}
 
 /************* LAYOUT ************/
 
-section {
+.wrapper { width: 100%; }
+.headerarea { width: 60%; }
 
+.col-left {
+	width: 60%;
+	float: left;
+}
+
+.col-right {
+	width: 40%;
+	float: left;
+	padding: 0 0 0 40px;
+}
+
+section {
+	padding: @baseunit*9 @baseunit*11;
+}
+
+.hero {
+	height: 100vh;
 }
 
 .hero .content {
 	position: absolute;
 	.vertical-center;
+}
+
+.hero h1 {
+	margin-bottom: @baseunit;
 }
 
 .logo {
@@ -70,4 +124,25 @@ section {
 		left: 74px;
 		top: 8px;
 	}
+}
+
+.desc::after {
+	width: 80px;
+	height: 5px;
+	background: fadeout(@grey1, 70);
+	display: block;
+	content: "";
+	margin: @baseunit*8 0;
+}
+
+.typography p {
+
+}
+
+section.one {
+	background: #F4F7F9;
+}
+
+pre span {
+	display: inline-block;
 }
