@@ -7,6 +7,7 @@
 	<title>CE Style Guide</title>
 
 	<link rel="stylesheet" href="assets/css/global.css" type="text/css" media="screen" charset="utf-8" />
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
 
 	<script type="text/javascript" src="assets/js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="assets/js/global.js"></script>
@@ -15,14 +16,34 @@
 <body>
 
 <section class="hero">
-	<div class="logo"></div>
 	<div class="content">
 		<h1 class="text-blue head">Chrome UI</h1>
 		<h3 class="text-grey2 head">Collect Everything</h3>
 	</div>
 </section>
 
-<section class="one typography">
+<section class="one grey color">
+	<div class="wrapper cf">
+
+		<div class="headerarea">
+			<h1 class="text-blue head">Color</h1>
+			<h4 class="text-grey4 head">Usage</h4>
+			<p class="fontSize-m text-grey3 desc">Mixpanel's color palette is fucking awesome.</p>
+		</div>
+		<div class="col-left">
+
+		</div>
+
+		<div class="col-right">
+			<pre>
+				<code></code>
+			</pre>
+		</div>
+
+	</div>
+</section>
+
+<section class="two grey typography">
 	<div class="wrapper cf">
 
 		<div class="headerarea">
@@ -58,12 +79,25 @@
 
 		<div class="col-right">
 			<pre>
-				<p class="text-grey4">...</p>
+				<code class="language-html">&lt;!--TYPOGRAPY--&gt;<br/><br/>&lt;p class="fontSize-xxl"&gt;...&lt;/p&gt;<br/>&lt;p class="fontSize-xl"&gt;...&lt;/p&gt;<br/>&lt;p class="fontSize-l"&gt;...&lt;/p&gt;<br/>&lt;p class="fontSize-m"&gt;...&lt;/p&gt;<br/>&lt;p class="fontSize-s"&gt;...&lt;/p&gt;<br/>&lt;p class="fontSize-xs"&gt;...&lt;/p&gt;</code>
 			</pre>
 		</div>
 
 	</div>
 </section>
+
+<header>
+	<nav>
+		<ul>
+			<li><a href="#" class="text-grey2 fontSize-s">Color</a></li>
+			<li class="active"><a href="#" class="text-grey2 fontSize-s">Typography</a></li>
+			<li><a href="#" class="text-grey2 fontSize-s">Layout</a></li>
+			<li><a href="#" class="text-grey2 fontSize-s">Components</a></li>
+			<li><a href="#" class="text-grey2 fontSize-s">Iconography</a></li>
+		</ul>
+	</nav>
+	<div class="logo"></div>
+</header>
 
 </body>
 </html>

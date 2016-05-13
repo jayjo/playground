@@ -1,21 +1,3 @@
-/************* GLOBAL ************/
-
-body {
-  background: #fff;
-}
-
-::-moz-selection {
-    color: #FFF;
-    background: @primary-blue;
-    text-shadow: none;
-}
-
-::selection {
-    color: #FFF;
-    background: @primary-blue;
-    text-shadow: none;
-}
-
 /************* TEXT COLOR ************/
 
 .text-blue { color: @primary-blue; }
@@ -40,7 +22,7 @@ body {
 }
 
 h1.head {
-	font-size: 81px;
+	font-size: 54px;
 	margin-bottom: @baseunit*7;
 	.light;
 }
@@ -94,36 +76,12 @@ section {
 }
 
 .hero h1 {
-	margin-bottom: @baseunit;
+	margin-bottom: 0;
+	font-size: 81px;
 }
 
-.logo {
-	background: @primary-blue;
-	width: 22px;
-	height: 22px;
-	border-radius: 50em;
-	border: transparent;
-	position: relative;
-	&::before, &::after {
-		background: @primary-blue;
-		border-radius: 50em;
-		border: transparent;
-		display: inline-block;
-		position: absolute;
-		content: "";
-	}
-	&::before {
-		width: 16px;
-		height: 16px;
-		left: 40px;
-		top: 3px;
-	}
-	&::after {
-		width: 6px;
-		height: 6px;
-		left: 74px;
-		top: 8px;
-	}
+.hero h3 {
+	margin-top: -6px;
 }
 
 .desc::after {
@@ -139,10 +97,19 @@ section {
 
 }
 
-section.one {
+section.grey {
 	background: #F4F7F9;
+	border-bottom: 1px solid fadeout(@grey1, 75);
+}
+
+pre {
+	margin-top: 6px;
+	padding: 15px 15px 0 15px;
+	box-shadow: 0 4px 34px fadeout(@grey4, 87);
+	background: #fff;
+	border-radius: 5px;
 }
 
 pre span {
-	display: inline-block;
+
 }
