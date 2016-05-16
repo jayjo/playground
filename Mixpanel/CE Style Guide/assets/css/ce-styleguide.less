@@ -1,12 +1,22 @@
-/************* TEXT COLOR ************/
+/*START
+************* COLOR ************/
 
 .text-blue { color: @primary-blue; }
+.text-white { color: #fff; }
 .text-grey1 { color: @grey1; }
 .text-grey2 { color: @grey2; }
 .text-grey3 { color: @grey3; }
 .text-grey4 { color: @grey4; }
 
-/************* TYPOGRAPHY ************/
+.bg-primary-blue { background: @primary-blue; }
+.bg-primary-green { background: @primary-green; }
+.bg-primary-yellow { background: @primary-yellow; }
+
+/*END
+*************** COLOR ***************/
+
+/*START
+************* TYPOGRAPHY ************/
 
 .fontSize-xxl { .fontSize-ExtraExtraLarge; }
 .fontSize-xl { .fontSize-ExtraLarge; }
@@ -14,6 +24,9 @@
 .fontSize-m { .fontSize-Medium; }
 .fontSize-s { .fontSize-Small; }
 .fontSize-xs { .fontSize-Micro; }
+
+/*END
+*************** TYPOGRAPHY ***************/
 
 .head {
 	font-family: @mpfont;
@@ -113,3 +126,31 @@ pre {
 pre span {
 
 }
+
+/*START
+*************** COLOR ***************/
+
+.flexBlocks {
+	display: flex;
+}
+
+.colorBlock {
+	height: 200px;
+	padding: @baseunit*5;
+	float: left;
+	margin: 0;
+	text-transform: uppercase;
+	.hex {
+		background: rgba(0,0,0,.18);
+		text-align: center;
+		border-radius: 50em;
+		padding: @baseunit;
+	}
+	.name {
+
+	}
+	&.primary {
+		width: 33.333333%;
+	}
+}
+
