@@ -2,7 +2,8 @@
 	<div class="cont">
 		<div class="container dubs">
 			<div class="wrap events"><input type="text" class="dropdown dual one" value="Event"/><span class="arrow left"></span></div>
-			<div class="wrap people"><input type="text" class="dropdown dual two" value="Profile"/><span class="arrow left"></span></div>
+			<div class="wrap people"><input type="text" class="dropdown dual two" value="People"/><span class="arrow left"></span></div>
+			<span class="or">OR</span>
 		</div>
 		<div class="container sing">
 			<div class="wrap bigger chosen">
@@ -11,46 +12,46 @@
 		</div>
 		<menu class="menu events">
 			<div class="list props clear">
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">$signup</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">[Admin internal] Revenue analytics viewed</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Acknowledge overage</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Activity Feed landing page</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">All Blog</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">badge added</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">badge email opened</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">badge email sent</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Badge First Payment</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Billing - Cancel Clicked</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Billing - Change Clicked</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Billing - Failed First Payment</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Billing - Failed Upgrade</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Billing - First Payment</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Billing - Form Closed</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Billing - Successful Upgrade</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Billing - Update Error</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Billing - Updated</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Blog - Homepage Viewed</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Blog - Post Read</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Blog - Post Read After 5 Seconds</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Blog - Post Viewed</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Blog - Subscribed</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">bookmark: add/change name</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">bookmark: change email frequency</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">bookmark: delete</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">bookmarks: collapse menu</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">bookmarks: expand menu</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">bookmarks: toggle menu</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">bookmarks: view bookmark</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">CC Expiring Email Opened</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">CC Expiring Email Sent</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Chrome iPhone Signup</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Chrome Signup by Andrew</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">clicked logout link</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Custom Events: add alternative</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Custom Events: add property filter</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Custom Events: cancel inner modal</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Custom Events: create custom event button</span></a>
-				<a href="#"><span class="string"><img src="http://f.cl.ly/items/1o2o392l1T3V0J1O2901/[-A-].png" /></span><span class="value">Custom Events: delete</span></a>
+				<a href="#"><span class="value">$signup</span></a>
+				<a href="#"><span class="value">[Admin internal] Revenue analytics viewed</span></a>
+				<a href="#"><span class="value">Acknowledge overage</span></a>
+				<a href="#"><span class="value">Activity Feed landing page</span></a>
+				<a href="#"><span class="value">All Blog</span></a>
+				<a href="#"><span class="value">badge added</span></a>
+				<a href="#"><span class="value">badge email opened</span></a>
+				<a href="#"><span class="value">badge email sent</span></a>
+				<a href="#"><span class="value">Badge First Payment</span></a>
+				<a href="#"><span class="value">Billing - Cancel Clicked</span></a>
+				<a href="#"><span class="value">Billing - Change Clicked</span></a>
+				<a href="#"><span class="value">Billing - Failed First Payment</span></a>
+				<a href="#"><span class="value">Billing - Failed Upgrade</span></a>
+				<a href="#"><span class="value">Billing - First Payment</span></a>
+				<a href="#"><span class="value">Billing - Form Closed</span></a>
+				<a href="#"><span class="value">Billing - Successful Upgrade</span></a>
+				<a href="#"><span class="value">Billing - Update Error</span></a>
+				<a href="#"><span class="value">Billing - Updated</span></a>
+				<a href="#"><span class="value">Blog - Homepage Viewed</span></a>
+				<a href="#"><span class="value">Blog - Post Read</span></a>
+				<a href="#"><span class="value">Blog - Post Read After 5 Seconds</span></a>
+				<a href="#"><span class="value">Blog - Post Viewed</span></a>
+				<a href="#"><span class="value">Blog - Subscribed</span></a>
+				<a href="#"><span class="value">bookmark: add/change name</span></a>
+				<a href="#"><span class="value">bookmark: change email frequency</span></a>
+				<a href="#"><span class="value">bookmark: delete</span></a>
+				<a href="#"><span class="value">bookmarks: collapse menu</span></a>
+				<a href="#"><span class="value">bookmarks: expand menu</span></a>
+				<a href="#"><span class="value">bookmarks: toggle menu</span></a>
+				<a href="#"><span class="value">bookmarks: view bookmark</span></a>
+				<a href="#"><span class="value">CC Expiring Email Opened</span></a>
+				<a href="#"><span class="value">CC Expiring Email Sent</span></a>
+				<a href="#"><span class="value">Chrome iPhone Signup</span></a>
+				<a href="#"><span class="value">Chrome Signup by Andrew</span></a>
+				<a href="#"><span class="value">clicked logout link</span></a>
+				<a href="#"><span class="value">Custom Events: add alternative</span></a>
+				<a href="#"><span class="value">Custom Events: add property filter</span></a>
+				<a href="#"><span class="value">Custom Events: cancel inner modal</span></a>
+				<a href="#"><span class="value">Custom Events: create custom event button</span></a>
+				<a href="#"><span class="value">Custom Events: delete</span></a>
 			</div>
 		</menu>
 		<menu class="menu people">
@@ -142,11 +143,11 @@
 				<a href="#">exactly</a>
 			</div>
 		</menu>
-		<p class="fre within active"><span class="greyed">the last</span><input type="text" value="90" class="numberTime"><span class="greyed">days</span></p>
-		<p class="fre between"><input type="text" value="0" class="numberTime boo"><span class="greyed">and</span><input type="text" value="2" class="numberTime"><span class="greyed timestho">times</span><span class="greyed inthe">in the last</span> <input type="text" value="90" class="numberTime boo"><span class="greyed">days</span></p>
-		<p class="fre atleast"><input type="text" value="1" class="numberTime boo"><span class="greyed timestho">time</span><span class="greyed inthe">in the last</span> <input type="text" value="90" class="numberTime boo"><span class="greyed">days</span></p>
-		<p class="fre atmost"><input type="text" value="1" class="numberTime boo"><span class="greyed timestho">time</span><span class="greyed inthe">in the last</span> <input type="text" value="90" class="numberTime boo"><span class="greyed">days</span></p>
-		<p class="fre exactly"><input type="text" value="1" class="numberTime boo"><span class="greyed timestho">time</span><span class="greyed inthe">in the last</span> <input type="text" value="90" class="numberTime boo"><span class="greyed">days</span></p>
+		<p class="fre within active"><span class="greyed">the last</span><input type="text" value="90" class="numberTime days"><span class="greyed day">days</span></p>
+		<p class="fre between"><input type="text" value="0" class="numberTime boo"><span class="greyed">and</span><input type="text" value="2" class="numberTime"><span class="greyed timestho">times</span><span class="greyed inthe">in the last</span> <input type="text" value="90" class="numberTime boo days"><span class="greyed day">days</span></p>
+		<p class="fre atleast"><input type="text" value="1" class="numberTime boo bang"><span class="greyed timestho plur">time</span><span class="greyed inthe">in the last</span> <input type="text" value="90" class="numberTime boo days"><span class="greyed day">days</span></p>
+		<p class="fre atmost"><input type="text" value="1" class="numberTime boo bang"><span class="greyed timestho plur">time</span><span class="greyed inthe">in the last</span> <input type="text" value="90" class="numberTime boo days"><span class="greyed day">days</span></p>
+		<p class="fre exactly"><input type="text" value="1" class="numberTime boo bang"><span class="greyed timestho plur">time</span><span class="greyed inthe">in the last</span> <input type="text" value="90" class="numberTime boo days"><span class="greyed day">days</span></p>
 	</div>
 	<div class="properties">
 		<div class="dropdown ancil prosp">contains<span class="arrow left"></span></div>

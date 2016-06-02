@@ -1,0 +1,156 @@
+/*START
+************* COLOR ************/
+
+.text-blue { color: @primary-blue; }
+.text-white { color: #fff; }
+.text-grey1 { color: @grey1; }
+.text-grey2 { color: @grey2; }
+.text-grey3 { color: @grey3; }
+.text-grey4 { color: @grey4; }
+
+.bg-primary-blue { background: @primary-blue; }
+.bg-primary-green { background: @primary-green; }
+.bg-primary-yellow { background: @primary-yellow; }
+
+/*END
+*************** COLOR ***************/
+
+/*START
+************* TYPOGRAPHY ************/
+
+.fontSize-xxl { .fontSize-ExtraExtraLarge; }
+.fontSize-xl { .fontSize-ExtraLarge; }
+.fontSize-l { .fontSize-Large; }
+.fontSize-m { .fontSize-Medium; }
+.fontSize-s { .fontSize-Small; }
+.fontSize-xs { .fontSize-Micro; }
+
+/*END
+*************** TYPOGRAPHY ***************/
+
+.head {
+	font-family: @mpfont;
+	margin-bottom: @baseunit*4;
+	letter-spacing: -1px;
+}
+
+h1.head {
+	font-size: 54px;
+	margin-bottom: @baseunit*7;
+	.light;
+}
+
+h2.head {}
+
+h3.head {
+	font-size: 36px;
+	.light;
+}
+
+h4.head {
+	font-size: 23px;
+	margin-bottom: @baseunit;
+	.book;
+}
+
+.typography p span {
+	display: block;
+	letter-spacing: 0;
+	margin-top: @baseunit*1.5;
+}
+
+/************* LAYOUT ************/
+
+.wrapper { width: 100%; }
+.headerarea { width: 60%; }
+
+.col-left {
+	width: 60%;
+	float: left;
+}
+
+.col-right {
+	width: 40%;
+	float: left;
+	padding: 0 0 0 40px;
+}
+
+section {
+	padding: @baseunit*9 @baseunit*11;
+}
+
+.hero {
+	height: 100vh;
+}
+
+.hero .content {
+	position: absolute;
+	.vertical-center;
+}
+
+.hero h1 {
+	margin-bottom: 0;
+	font-size: 81px;
+}
+
+.hero h3 {
+	margin-top: -6px;
+}
+
+.desc::after {
+	width: 80px;
+	height: 5px;
+	background: fadeout(@grey1, 70);
+	display: block;
+	content: "";
+	margin: @baseunit*8 0;
+}
+
+.typography p {
+
+}
+
+section.grey {
+	background: #F4F7F9;
+	border-bottom: 1px solid fadeout(@grey1, 75);
+}
+
+pre {
+	margin-top: 6px;
+	padding: 15px 15px 0 15px;
+	box-shadow: 0 4px 34px fadeout(@grey4, 87);
+	background: #fff;
+	border-radius: 5px;
+}
+
+pre span {
+
+}
+
+/*START
+*************** COLOR ***************/
+
+.flexBlocks {
+	display: flex;
+}
+
+.colorBlock {
+	height: 200px;
+	padding: @baseunit*5;
+	float: left;
+	margin: 0;
+	text-transform: uppercase;
+	.hex {
+		background: rgba(0,0,0,.18);
+		text-align: center;
+		border-radius: 50em;
+		padding: @baseunit;
+	}
+	.name {
+
+	}
+	&.primary {
+		width: 33.333333%;
+	}
+}
+
