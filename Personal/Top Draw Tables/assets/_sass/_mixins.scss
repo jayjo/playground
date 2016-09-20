@@ -1,0 +1,29 @@
+@mixin twosecs {
+	transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+}
+
+@mixin onesec {
+	transition: all 0.05s;
+	-moz-transition: all 0.05s;
+	-webkit-transition: all 0.05s;
+}
+
+/************ BREAK POINTS *****************/
+
+$bp-small: 20em;
+$bp-med: 35.3em;
+$bp-tab: 46.8em;
+$bp-large: 46.9em;
+$bp-xl: 73em;
+
+/************** Icon Fonts ***************/
+
+
+/************** Font Fonts ***************/
+
+
+/************** Colors ***************/
+
+

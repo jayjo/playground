@@ -1,0 +1,29 @@
+@import url("assets/css/reset.css");
+@import url("assets/css/global.css");
+
+body {
+	background: #fff;
+	padding: 100px;
+}
+
+.output {
+	width: 100px;
+	height: 100px;
+	margin-top: 50px;
+}
+
+.color {
+	width: 80px;
+	height: 80px;
+}
+
+h3 {
+	color: #000;
+	margin-top: 10px;
+	font: 12px Helvetica;
+}
+
+textarea {
+	width: 300px;
+	height: 100px;
+}

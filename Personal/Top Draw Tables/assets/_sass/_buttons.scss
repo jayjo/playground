@@ -1,0 +1,102 @@
+.button {
+	border-radius: 50em;
+	text-align: center;
+	text-transform: capitalize;
+	display: inline-block;
+	margin: 0 auto;
+
+	&.large {
+		font-size: 17px;
+		padding: .9em 1.5em;
+	}
+
+	&.med {
+		font-size: 14px;
+		padding: .75em 1.15em;
+	}
+
+	&.small {
+		font-size: 11px;
+		padding: .5em .85em;
+	}
+
+	&.outline {
+		border: 2px solid;
+		background: transparent;
+
+		&.primary {
+				border-color: $primary;
+				color: $primary;
+			&:hover {
+				background: $primary;
+				color: #fff;
+			}
+		}
+
+		&.secondary {
+				border-color: $secondary;
+				color: $secondary;
+			&:hover {
+				background: $secondary;
+				color: #fff;
+			}
+		}
+
+		&.tertiary {
+				border-color: $tertiary;
+				color: $tertiary;
+			&:hover {
+				background: $tertiary;
+				color: #fff;
+			}
+		}
+
+		&.white {
+			color: #fff;
+			border-color: #fff;
+
+			&:hover {
+				background: rgba(255,255,255, .25);
+			}
+		}
+	}
+
+	&.solid {
+		border: 2px solid transparent;
+		color: #fff;
+
+		&.primary {
+			background: $primary;
+			&:hover {
+				border-color: $primary;
+				color: #fff;
+			}
+		}
+
+		&.secondary {
+			background: $secondary;
+			&:hover {
+				border-color: $secondary;
+				color: #fff;
+			}
+		}
+
+		&.tertiary {
+			background: $tertiary;
+			&:hover {
+				border-color: $tertiary;
+				color: #fff;
+			}
+		}
+
+		&.white {
+			background: #fff;
+			color: #555;
+
+			&:hover {
+				background: rgba(255,255,255, .25);
+				border: 2px solid #fff;
+			}
+		}
+	}
+}
