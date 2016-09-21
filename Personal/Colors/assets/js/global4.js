@@ -4,17 +4,29 @@ jQuery(document).ready(function($) {
 
         function displayColor(color, parent) {
             var div = document.createElement('div');
+            var colorName = document.createElement('h3');
+            console.log(color.length);
+
             div.style.backgroundColor = color;
-            div.style.width = div.style.height = '55px';
-            div.style.cssFloat = 'left';
+            colorName.innerHTML = color;
+
+            // div.style.width = div.style.height = '102px';
             div.style.position = 'relative';
-            div.style.margin = "5px";
+            // div.style.margin = "5px";
             parent.appendChild(div);
+            div.appendChild(colorName);
+            console.log(color);
         }
 
         function displayColors(id, colors) {
             var div = document.createElement("div");
+            var head = document.createElement('h1');
             div.id = id;
+
+            head.innerHTML = id;
+
+            div.appendChild(head);
+
             for (var i = 0; i < colors.length; i++)
                 displayColor(colors[i], div);
             document.body.appendChild(div);
