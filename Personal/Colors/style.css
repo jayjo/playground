@@ -8,10 +8,14 @@ body {
 
 h3 {
 	color: rgba(255,255,255,.60	);
+	width: 100%;
+	background: rgba(0,0,0,.12);
 	position: absolute;
-	bottom: 15px;
-	left: 15px;
-	font: 14px Lato, Avenir, Helvetica, sans-serif;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	padding: 5px 0;
+	font: 13px Lato, Avenir, Helvetica, sans-serif;
 	text-transform: uppercase;
 	transition: color 200ms;
 }
@@ -24,7 +28,7 @@ h3 {
 
 #Sorted div,
 #Original div {
-	width: 10%;
+	width: 5%;
 	display: inline-block;
 	margin: 0 0 -3px 0;
 }
