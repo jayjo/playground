@@ -6,6 +6,17 @@ body {
 	padding: 50px 50px 0 50px;
 }
 
+h1 {
+	color: rgba(0,3,55,.18);
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	padding: 20px 0 22px;
+	font: 900 46px Lato, Avenir, Helvetica, sans-serif;
+	text-transform: uppercase;
+}
+
 h3 {
 	color: rgba(255,255,255,.60	);
 	width: 100%;
