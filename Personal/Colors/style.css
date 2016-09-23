@@ -1,0 +1,102 @@
+@import url("assets/css/reset.css");
+@import url("assets/css/global.css");
+
+body {
+	background: #fff;
+	padding: 90px 50px 0 50px;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	text-align: center;
+	width: 100%;
+	background: #fff;
+	box-shadow: 0 1px 3px rgba(0,0,0,.11);
+	height: 70px;
+	padding-top: 26px;
+	z-index: 1;
+}
+
+nav a {
+	font: 900 13px Lato, Avenir, Helvetica, sans-serif;
+	color: rgba(0,3,55,.38);
+	margin: 0 10px;
+	padding: 0 0 10px 0;
+	text-decoration: none;
+}
+
+nav a.active {
+	color: rgba(0,3,55,1);
+	border-bottom: 2px solid #69B8EE;
+}
+
+#Sorted,
+#Pusher,
+#hueSort {
+  position: relative;
+}
+
+h1 {
+	color: rgba(0,3,55,.18);
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	padding: 20px 0 22px;
+	font: 900 46px Lato, Avenir, Helvetica, sans-serif;
+	text-transform: uppercase;
+}
+
+h3 {
+	color: rgba(255,255,255,.60	);
+	width: 100%;
+	background: rgba(0,0,0,.12);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	padding: 5px 0;
+	font: 13px Lato, Avenir, Helvetica, sans-serif;
+	text-transform: uppercase;
+	transition: color 200ms;
+}
+
+#Sorted,
+#Original {
+	display: block;
+	margin: 0 auto 50px;
+}
+
+#Sorted div,
+#Original div {
+	width: 5%;
+	display: inline-block;
+	margin: 0 0 -3px 0;
+}
+
+#Sorted div:before,
+#Original div:before {
+	content: "";
+	display: block;
+	padding-top: 100%;
+}
+
+#Sorted div:hover h3,
+#Original div:hover h3 {
+	color: rgba(255,255,255,1);
+	transition: color 200ms;
+}
+
+.byebye::after {
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	top: 8px;
+	left: 8px;
+	border-radius: 50em;
+	background: yellow;
+	content: "";
+	display: block;
+}
