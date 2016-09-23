@@ -10,10 +10,21 @@
 
 	<script type="text/javascript" src="assets/js/jquery-2.1.1.min.js"></script>
 
-	<script type="text/javascript" src="assets/js/global2.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+	<script type="text/javascript" src="assets/js/background-color.js"></script>
 
 </head>
+
+<?php
+
+$body_class = 'background-color';
+$page_title = 'Background Color';
+
+?>
+
 <body>
+
+<?php include 'inc/nav.php'; ?>
 
 <div class="wrapper">
 
