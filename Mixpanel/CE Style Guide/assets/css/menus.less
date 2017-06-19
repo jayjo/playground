@@ -1,5 +1,6 @@
 body, html {
 	-webkit-font-smoothing: antialiased;
+	background: #fff;
 }
 
 .content {
@@ -14,7 +15,7 @@ body, html {
 section.full {
 	min-height: 100%;
 	position: fixed;
-	background: #24A6F7;
+	background: #fff;
 	top: 0;
 	right: 0;
 	left: 0;
@@ -25,24 +26,42 @@ section.full {
 	margin: 50px 0 0 50px;
 }
 
-.total-of p {
-	color: rgba(255,255,255,1);
-	border-bottom: 1px dotted rgba(255,255,255,.75);
-	padding-bottom: 5px;
+.total-of input {
+	color: #C1CCD5;
+	border-bottom: 2px dotted #4BA8FF;
+	padding: 6px;
 	margin: 0;
 	display: inline;
-	cursor: pointer;
+	cursor: text;
+  outline: none;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-radius: 0;
+  width: 62px;
 	&:hover {
-		border-bottom: 1px solid rgba(255,255,255,1);
+		border-bottom: 1px solid #4BA8FF;
 	}
+	&:focus {
+		color: #4BA8FF;
+		border-bottom: 1px solid #4BA8FF;
+	}
+}
+
+.total-of input::-webkit-input-placeholder {
+	color: #4BA8FF;
+}
+
+.total-of input:focus::-webkit-input-placeholder {
+	color: #C1CCD5;
 }
 
 /*START
 ************* MENU GLOBAL ************/
 
 menucontainer {
-	width: 450px;
-	height: 440px;
+	width: 260px;
+	height: 110px;
 	border-radius: 8px;
 	position: absolute;
 	left: 50px;
@@ -60,9 +79,9 @@ menucontainer {
 	&:before {
 		position: absolute;
 		width: 94%;
-		height: 94%;
+		height: 82%;
 		left: 3%;
-		top: 10px;
+		top: -5px;
 		border-radius: 8px;
 		transform: translate3D(0, 0, 0);
 		display: block;
@@ -106,12 +125,13 @@ menu {
 
 menu header {
 	background: #192232;
-	padding: 15px 0;
-	height: 50px;
+	padding: 10px 0;
+	height: 40px;
 	position: absolute;
 	border-radius: 8px 8px 0 0;
 	text-align: center;
 	z-index: 1;
+	display: none;
 	&:before {
 		display: block;
 		background: url(http://f.cl.ly/items/0P3D1p3W0k3T0J0B0j2S/tip.svg) no-repeat;
@@ -131,7 +151,6 @@ menu header {
 		-webkit-font-smoothing: antialiased;
 	}
 	p.show-text {
-		text-transform: uppercase;
 		opacity: 1;
 		visibility: visible;
 		margin-left: 0;
@@ -181,13 +200,13 @@ menu header {
 
 menu search {
 	width: 100%;
-	height: 50px;
+	height: 34px;
 	position: absolute;
-	top: 50px;
+	top: 40px;
 	border-bottom: 1px solid #DCE6ED;
 	border-right: 1px solid #DCE6ED;
 	background: #F0F3F5;
-	padding: 12px 20px;
+	padding: 5px 15px;
 	transform: translate3D(0,0,0);
 	transition: transform 300ms 50ms;
 }
@@ -211,6 +230,10 @@ menu search .search-text:before {
 	margin-right: 10px;
 	position: relative;
 	top: 4px;
+}
+
+.operator {
+	display: none;
 }
 
 menu ul {
@@ -250,7 +273,8 @@ menu .col ul li:hover a,
 		color: #434e58;
 }
 
-menu .col.three ul li:hover {
+menu .col.three ul li:hover,
+menu .col.one ul li:hover {
 	background: #EDF2F6;
 	transition: background 150ms;
 	a {
@@ -268,13 +292,13 @@ menu pane {
 	position: absolute;
 	display: block;
 	&.step.one {
-		width: 450px;
-		height: 341px;
-		top: 99px;
+		width: 255px;
+		height: 108px;
+		top: 2px;
 		transform: translate3D(0, 0, 0);
 		transition: transform 375ms 50ms cubic-bezier(0.060, 0.325, 0.275, 0.970);
 		.col {
-			height: 341px;
+			height: 126px;
 		}
 	}
 	&.step.two {
@@ -321,15 +345,23 @@ menu pane .col {
 	padding: 17px 20px 17px;
 }
 
-menu pane .col.three {
+menu pane .col.one {
+
+}
+
+menu pane .col.three,
+menu pane .col.one {
 	padding: 8px 10px 17px;
 	overflow: scroll;
 	ul li a {
-		padding: 4px 8px 7px;
-		margin: 6px 0;
+		padding: 9px 8px;
+		margin: 0;
 		color: #838ca2;
 		margin-bottom: 0;
 		border-radius: 5px;
+		&:hover {
+			color: #4BA8FF;
+		}
 	}
 }
 
@@ -341,7 +373,8 @@ menu pane.three .col ul li a {
 	border-radius: 5px;
 }
 
-menu pane .col.three ul li a:after {
+menu pane .col.three ul li a:after,
+menu pane .col ul.carat li a:after {
 	width: 6px;
 	height: 10px;
 	-webkit-mask: url(http://f.cl.ly/items/2E090I2R0K2c0B0T0t3U/carrot.svg);
@@ -354,14 +387,24 @@ menu pane .col.three ul li a:after {
   top: 10px;
 }
 
+menu pane .col ul.carat li:hover a:after {
+	background: #4BA8FF;
+}
+
+menu pane .col ul.carat li.nocarat a:after {
+	display: none;
+}
+
 menu pane .col.three ul li a:hover:after {
 	background: #434E58;
 }
 
 menu pane.one .col.one {
 	width: 95px;
-	border-right: 1px solid #DCE6ED;
 	left: 0;
+	&.wider {
+		width: 255px;
+	}
 }
 
 menu pane.one .col.two {

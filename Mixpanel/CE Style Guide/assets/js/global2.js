@@ -69,16 +69,6 @@ jQuery(document).ready(function($) {
 
 	var headText = $('header p').text();
 
-	$(window).click(function(){
-		var offsetTop = $('.dropdown').offset().top;
-		var offsetLeft = $('.dropdown').offset().left;
-
-		$('.dropdown.added').css({
-			'top': offsetTop,
-			'left': offsetLeft
-		});
-	});
-
 	$('pane.one .col.three a').click(function() {
 
 		var text = $(this).text();
