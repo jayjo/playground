@@ -13,6 +13,7 @@ body, html {
   font-size: 100%;
   padding: 0;
   margin: 0;
+  font-weight: bold;
 }
 
 body {
@@ -40,11 +41,12 @@ li {
 li.header {
   color: #fff;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
-  font-size: 36px;
-  padding: 16px 20px 12px;
+  font-size: 28px;
+  padding: 55px 50px 56px;
   margin-top: 5px;
+  height: 170px;
   text-transform: uppercase;
-  font-family: "jaf-bernino-sans-comp";
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
 }
 
 li.amount {
@@ -53,8 +55,8 @@ li.amount {
   font-size: 70px;
   padding: 0;
   cursor: pointer;
-  height: 115px;
-  font-family: "proxima-nova";
+  height: 220px;
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
   position: relative;
   display: flex;
   align-items: center;
@@ -63,8 +65,11 @@ li.amount {
 }
 
 li.amount p {
-  padding: 15px 40px;
+  padding: 30px 40px;
   margin: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 150px;
 }
 
 li.amount:hover {
@@ -77,7 +82,7 @@ figure.answer {
   background-size: cover;
   position: fixed;
   display: block;
-  font-family: "legitima";
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
   text-transform: uppercase;
   text-align: center;
   color: #fff;
@@ -96,8 +101,6 @@ figure.answer {
 
 figure.answer.active {
   position: fixed;
-  min-width: 1440px;
-  min-height: 800px;
   background-size: cover;
   background: #005CC3;
   opacity: 1;
@@ -105,6 +108,8 @@ figure.answer.active {
   visibility: visible;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   cursor: auto;
   -webkit-transform: opacity 250ms;
   -webkit-transition: 200ms;
@@ -112,7 +117,8 @@ figure.answer.active {
 
 figure.answer p {
   max-width: 90%;
-  margin: -70px 0 0 0;
+  margin: 900px 0 0 0;
+  line-height: 80px;
 }
 
 figure.answer span {
@@ -122,7 +128,7 @@ figure.answer span {
   top: 15px;
   opacity: .3;
   cursor: pointer;
-  font-family: "proxima-nova";
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 25px;
   line-height: 1;
   border-radius: 50em;
